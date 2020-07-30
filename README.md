@@ -1,4 +1,4 @@
-amel shop
+# amel shop
 
 e commcerce website, that contains many brans
 
@@ -6,7 +6,7 @@ e commcerce website, that contains many brans
 products (buyable products)
 brands (used to categorize)
 
-###Dababase structre
+### Dababase structre
 
 1-Brand : 
 - name 
