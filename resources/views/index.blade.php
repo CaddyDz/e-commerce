@@ -16,13 +16,13 @@
 	============================================ -->
 
     <!-- Vendor CSS (Bootstrap & Icon Font) -->
-    <!-- <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/vendor/font-awesome-pro.min.css">
     <link rel="stylesheet" href="assets/css/vendor/themify-icons.css">
     <link rel="stylesheet" href="assets/css/vendor/customFonts.css"> -->
 
     <!-- Plugins CSS (All Plugins Files) -->
-    <!-- <link rel="stylesheet" href="assets/css/plugins/select2.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/select2.min.css">
     <link rel="stylesheet" href="assets/css/plugins/perfect-scrollbar.css">
     <link rel="stylesheet" href="assets/css/plugins/swiper.min.css">
     <link rel="stylesheet" href="assets/css/plugins/nice-select.css">
@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="assets/css/plugins/slick.css"> -->
 
     <!-- Main Style CSS -->
-    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+     <link rel="stylesheet" href="assets/css/style.css"> 
 
     <!-- Use the minified version files listed below for better performance and remove the files listed above -->
     <link rel="stylesheet" href="assets/css/vendor/vendor.min.css">
@@ -51,29 +51,29 @@
                 <div class="col d-none d-md-block">
                     <div class="topbar-menu">
                         <ul>
-                            <li><a href="#"><i class="fa fa-map-marker-alt"></i>Store Location</a></li>
+                           <!-- <li><a href="#"><i class="fa fa-map-marker-alt"></i>Store Location</a></li> -->
                             <li><a href="#"><i class="fa fa-truck"></i>Order Status</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="col d-md-none d-lg-block">
+               <!--  <div class="col d-md-none d-lg-block">
                     <p class="text-center my-2">Free shipping for orders over $59 !</p>
-                </div>
+                </div>-->
 
                 <!-- Header Language & Currency Start -->
                 <div class="col d-none d-md-block">
                     <ul class="header-lan-curr text-white justify-content-end">
-                        <li><a href="#">English</a>
+                        <li><a href="#">Français</a>
                             <ul class="curr-lan-sub-menu">
-                                <li><a href="#">Français</a></li>
-                                <li><a href="#">Deutsch</a></li>
+                                <li><a href="#">Arabe</a></li>
+                                <!-- <li><a href="#">Deutsch</a></li>-->
                             </ul>
                         </li>
-                        <li><a href="#">USD</a>
+                        <!-- <li><a href="#">USD</a>
                             <ul class="curr-lan-sub-menu">
                                 <li><a href="#">EUR</a></li>
                                 <li><a href="#">GBP</a></li>
-                            </ul>
+                            </ul> -->
                         </li>
                     </ul>
                 </div>
