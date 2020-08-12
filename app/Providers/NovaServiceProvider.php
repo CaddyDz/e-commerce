@@ -78,7 +78,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
 	{
 		return [
 			\Vyuldashev\NovaPermission\NovaPermissionTool::make()->canSee(function ($request) {
-				return $request->user()->hasRole('Admin');
+				return false;
 			}),
 		];
 	}
