@@ -2560,7 +2560,6 @@
 					<div class="widget-contact">
 						<p class="email">contact@learts.com</p>
 						<p class="phone">(+88) 123 4566 6868</p>
-						<img class="learts-mt-10" src="assets/images/others/pay.png" alt="">
 						<p class="copyright learts-mt-40">&copy; 2020 learts. All Rights Reserved</a></p>
 					</div>
 				</div>
