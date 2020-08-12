@@ -11,6 +11,26 @@ use Laravel\Nova\Http\Requests\NovaRequest;
 class Brand extends Resource
 {
 	/**
+	 * Get the displayable label of the resource.
+	 *
+	 * @return string
+	 */
+	public static function label(): string
+	{
+		return __('Brands');
+	}
+
+	/**
+	 * Get the displayable singular label of the resource.
+	 *
+	 * @return string
+	 */
+	public static function singularLabel(): string
+	{
+		return __('Brand');
+	}
+
+	/**
 	 * The model the resource corresponds to.
 	 *
 	 * @var string
