@@ -11,6 +11,16 @@ use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Order extends Resource
 {
+	public static function label()
+	{
+		return __('Orders');
+	}
+
+	public static function singularLabel()
+	{
+		return __('Order');
+	}
+
 	/**
 	 * The model the resource corresponds to.
 	 *
