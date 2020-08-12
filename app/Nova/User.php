@@ -13,26 +13,6 @@ use Vyuldashev\NovaPermission\PermissionBooleanGroup;
 class User extends Resource
 {
     /**
-     * Get the displayable label of the resource.
-     *
-     * @return string
-     */
-    public static function label()
-    {
-        return __('Workers');
-    }
-
-    /**
-     * Get the displayable singular label of the resource.
-     *
-     * @return string
-     */
-    public static function singularLabel()
-    {
-        return __('Worker');
-    }
-
-    /**
      * The model the resource corresponds to.
      *
      * @var string

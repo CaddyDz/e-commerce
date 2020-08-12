@@ -90,13 +90,13 @@
                 <!-- Header Logo Start -->
                 <div class="col-auto">
                     <div class="header-logo justify-content-center">
-                        <a href="index.html"><img src="assets/images/logo/logo.png" alt="Learts Logo"></a>
+                        <a href="/"><img src="assets/images/logo/logo.png" alt="Learts Logo"></a>
                     </div>
                 </div>
                 <!-- Header Logo End -->
 
                 <!-- Header Search Start -->
-                <div class="col">
+                {{-- <div class="col">
                     <div class="header6-search">
                         <form action="#">
                             <div class="row no-gutters">
@@ -119,11 +119,11 @@
                             </div>
                         </form>
                     </div>
-                </div>
+                </div> --}}
                 <!-- Header Search End -->
 
                 <!-- Header Tools Start -->
-                <div class="col-auto">
+                {{-- <div class="col-auto">
                     <div class="header-tools justify-content-end">
                         <div class="header-login">
                             <a href="my-account.html"><i class="fal fa-user"></i></a>
@@ -135,14 +135,14 @@
                             <a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count">3</span><i class="fal fa-shopping-cart"></i></a>
                         </div>
                     </div>
-                </div>
+                </div> --}}
                 <!-- Header Tools End -->
 
             </div>
         </div>
 
         <!-- Site Menu Section Start -->
-        <div class="site-menu-section section border-top">
+        {{-- <div class="site-menu-section section border-top">
             <div class="container">
                 <div class="header-categories">
                     <button class="category-toggle"><i class="fal fa-bars"></i> Browse Categories</button>
@@ -166,7 +166,7 @@
                                 <li>
                                     <a href="#" class="mega-menu-title"><span class="menu-text">HOME GROUP</span></a>
                                     <ul>
-                                        <li> <img class="mmh_img " src="assets/images/demo/menu/home-01.jpg"> <a href="index.html"><span class="menu-text">Arts Propelled</span></a></li>
+                                        <li> <img class="mmh_img " src="assets/images/demo/menu/home-01.jpg"> <a href="/"><span class="menu-text">Arts Propelled</span></a></li>
                                         <li> <img class="mmh_img " src="assets/images/demo/menu/home-02.jpg"> <a href="index-2.html"><span class="menu-text">Decor Thriving</span></a></li>
                                         <li> <img class="mmh_img " src="assets/images/demo/menu/home-03.jpg"> <a href="index-3.html"><span class="menu-text">Savvy Delight</span></a></li>
                                         <li> <img class="mmh_img " src="assets/images/demo/menu/home-04.jpg"> <a href="index-4.html"><span class="menu-text">Perfect Escapes</span></a></li>
@@ -337,7 +337,7 @@
                     <p><i class="fa fa-phone"></i> 0918 206 263</p>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- Site Menu Section End -->
 
     </div>
@@ -351,7 +351,7 @@
                 <!-- Header Logo Start -->
                 <div class="col">
                     <div class="header-logo">
-                        <a href="index.html"><img src="assets/images/logo/logo-2.png" alt="Learts Logo"></a>
+                        <a href="/"><img src="assets/images/logo/logo-2.png" alt="Learts Logo"></a>
                     </div>
                 </div>
                 <!-- Header Logo End -->
@@ -365,7 +365,7 @@
                                     <li>
                                         <a href="#" class="mega-menu-title"><span class="menu-text">HOME GROUP</span></a>
                                         <ul>
-                                            <li> <img class="mmh_img " src="assets/images/demo/menu/home-01.jpg"> <a href="index.html"><span class="menu-text">Arts Propelled</span></a></li>
+                                            <li> <img class="mmh_img " src="assets/images/demo/menu/home-01.jpg"> <a href="/"><span class="menu-text">Arts Propelled</span></a></li>
                                             <li> <img class="mmh_img " src="assets/images/demo/menu/home-02.jpg"> <a href="index-2.html"><span class="menu-text">Decor Thriving</span></a></li>
                                             <li> <img class="mmh_img " src="assets/images/demo/menu/home-03.jpg"> <a href="index-3.html"><span class="menu-text">Savvy Delight</span></a></li>
                                             <li> <img class="mmh_img " src="assets/images/demo/menu/home-04.jpg"> <a href="index-4.html"><span class="menu-text">Perfect Escapes</span></a></li>
@@ -576,7 +576,7 @@
                 <!-- Header Logo Start -->
                 <div class="col">
                     <div class="header-logo">
-                        <a href="index.html"><img src="assets/images/logo/logo-2.png" alt="Learts Logo"></a>
+                        <a href="/"><img src="assets/images/logo/logo-2.png" alt="Learts Logo"></a>
                     </div>
                 </div>
                 <!-- Header Logo End -->
@@ -622,7 +622,7 @@
                 <!-- Header Logo Start -->
                 <div class="col">
                     <div class="header-logo">
-                        <a href="index.html"><img src="assets/images/logo/logo-2.png" alt="Learts Logo"></a>
+                        <a href="/"><img src="assets/images/logo/logo-2.png" alt="Learts Logo"></a>
                     </div>
                 </div>
                 <!-- Header Logo End -->
@@ -798,7 +798,7 @@
                             <li>
                                 <a href="#"><span class="menu-text">Home Group</span></a>
                                 <ul class="sub-menu">
-                                    <li><a href="index.html"><span class="menu-text">Arts Propelled</span></a></li>
+                                    <li><a href="/"><span class="menu-text">Arts Propelled</span></a></li>
                                     <li><a href="index-2.html"><span class="menu-text">Decor Thriving</span></a></li>
                                     <li><a href="index-3.html"><span class="menu-text">Savvy Delight</span></a></li>
                                     <li><a href="index-4.html"><span class="menu-text">Perfect Escapes</span></a></li>

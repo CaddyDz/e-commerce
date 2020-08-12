@@ -17,6 +17,7 @@ class RolesAndPermissionsSeeder extends Seeder
         app()[\Spatie\Permission\PermissionRegistrar::class]->forgetCachedPermissions();
 
         $role = Role::create(['name' => 'Admin']);
+        Role::create(['name' => 'Worker']);
         $role->givePermissionTo(Permission::all());
     }
 }
