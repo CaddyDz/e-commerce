@@ -74,17 +74,44 @@
 						<p class="desc">If you don’t have an account, register now!</p>
 					</div>
 					<div class="login-register-form">
-						<form action="#">
+						<form action="{{ route('register') }}" method="POST">
+							@csrf
 							<div class="row learts-mb-n50">
 								<div class="col-12 learts-mb-20">
-									<label for="registerEmail">Email address <abbr class="required">*</abbr></label>
-									<input type="email" id="registerEmail">
+									<label for="name">
+										@lang('Name')
+										<abbr class="required">*</abbr>
+									</label>
+									<input type="text" id="name" name="name" required>
+								</div>
+								<div class="col-12 learts-mb-20">
+									<label for="registerEmail">
+										Email address
+										<abbr class="required">*</abbr>
+									</label>
+									<input type="email" id="registerEmail" name="email">
+								</div>
+								<div class="col-12 learts-mb-20">
+									<label for="password">
+										@lang('Password')
+										<abbr class="required">*</abbr>
+									</label>
+									<input type="password" id="password" name="password" required>
+								</div>
+								<div class="col-12 learts-mb-20">
+									<label for="password-confirmation">
+										@lang('Password Confirmation')
+										<abbr class="required">*</abbr>
+									</label>
+									<input type="password" id="password-confirmation" name="password_confirmation" required>
 								</div>
 								<div class="col-12 learts-mb-50">
 									<p>Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our privacy policy</p>
 								</div>
 								<div class="col-12 text-center learts-mb-50">
-									<button class="btn btn-dark btn-outline-hover-dark">Register</button>
+									<button class="btn btn-dark btn-outline-hover-dark" type="submit">
+										Register
+									</button>
 								</div>
 							</div>
 						</form>
