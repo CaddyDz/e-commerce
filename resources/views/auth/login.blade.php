@@ -89,7 +89,14 @@
 										Email address
 										<abbr class="required">*</abbr>
 									</label>
-									<input type="email" id="registerEmail" name="email">
+									<input type="email" id="registerEmail" name="email" required>
+								</div>
+								<div class="col-12 learts-mb-20">
+									<label for="phone">
+										@lang('Phone number')
+										<abbr class="required">*</abbr>
+									</label>
+									<input type="tel" pattern="(0)(5|6|7)(4|5|6|7)[0-9]{7}" id="phone" name="phone" required>
 								</div>
 								<div class="col-12 learts-mb-20">
 									<label for="password">
