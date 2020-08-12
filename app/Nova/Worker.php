@@ -11,7 +11,7 @@ class Worker extends User
 	 *
 	 * @return string
 	 */
-	public static function label()
+	public static function label(): string
 	{
 		return __('Workers');
 	}
@@ -21,7 +21,7 @@ class Worker extends User
 	 *
 	 * @return string
 	 */
-	public static function singularLabel()
+	public static function singularLabel(): string
 	{
 		return __('Worker');
 	}

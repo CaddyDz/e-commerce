@@ -11,12 +11,22 @@ use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Order extends Resource
 {
-	public static function label()
+	/**
+	 * Get the displayable label of the resource.
+	 *
+	 * @return string
+	 */
+	public static function label(): string
 	{
 		return __('Orders');
 	}
 
-	public static function singularLabel()
+	/**
+	 * Get the displayable singular label of the resource.
+	 *
+	 * @return string
+	 */
+	public static function singularLabel(): string
 	{
 		return __('Order');
 	}
