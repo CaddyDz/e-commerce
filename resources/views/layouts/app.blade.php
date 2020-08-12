@@ -126,7 +126,7 @@
 				<div class="col-auto">
 					<div class="header-tools justify-content-end">
 						<div class="header-login">
-							<a href="{{ route('login') }}">
+							<a href="{{ route('home') }}">
 								<i class="fal fa-user"></i>
 							</a>
 						</div>
