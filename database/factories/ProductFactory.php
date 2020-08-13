@@ -9,7 +9,7 @@ $factory->define(Product::class, function (Faker $faker) {
 	return [
 		'name' => $faker->unique()->realText(20),
 		'description' => $faker->realText(1500),
-		'price' => $faker->randomFloat(2, 1000, 10000),
+		'price' => $faker->randomNumber(),
 		'image' => 'products/' . $faker->file(
 			$sourceDir = 'public/assets/images/product/s328',
 			$targetDir = storage_path('/app/public/products'),

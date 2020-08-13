@@ -8,10 +8,13 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Gloudemans\Shoppingcart\Contracts\Buyable;
 use Gloudemans\Shoppingcart\CanBeBought;
 use Illuminate\Database\Eloquent\Relations\HasOne;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
+use Spatie\MediaLibrary\Models\Media;
 
-class Product extends Model implements Buyable
+class Product extends Model implements Buyable, HasMedia
 {
-	use SoftDeletes, CanBeBought;
+	use SoftDeletes, CanBeBought, InteractsWithMedia;
 
 	public function getBuyableIdentifier($options = null)
 	{
@@ -51,5 +54,10 @@ class Product extends Model implements Buyable
 	public function getNewPriceAttribute()
 	{
 		return $this->price - $this->price * $this->discount->value / 100;
+	}
+
+	public function registerMediaCollections(): void
+	{
+		$this->addMediaCollection('images');
 	}
 }

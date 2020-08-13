@@ -18,7 +18,7 @@ class CreateProductsTable extends Migration
 			$table->foreignId('brand_id');
 			$table->string('name')->unique();
 			$table->text('description');
-			$table->decimal('price', 8, 2);
+			$table->integer('price');
 			$table->string('image');
 			$table->string('slug')->unique();
 			$table->boolean('available')->default(true);
