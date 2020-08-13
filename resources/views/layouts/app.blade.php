@@ -132,10 +132,15 @@
 						</div>
 						{{-- <div class="header-wishlist">
 							<a href="#offcanvas-wishlist" class="offcanvas-toggle"><span class="wishlist-count">3</span><i class="fal fa-heart"></i></a>
-						</div>
-						<div class="header-cart">
-							<a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count">3</span><i class="fal fa-shopping-cart"></i></a>
 						</div> --}}
+						<div class="header-cart">
+							<a href="#offcanvas-cart" class="offcanvas-toggle">
+								<span class="cart-count">
+									{{ $cart->count() }}
+								</span>
+								<i class="fal fa-shopping-cart"></i>
+							</a>
+						</div>
 					</div>
 				</div>
 				<!-- Header Tools End -->

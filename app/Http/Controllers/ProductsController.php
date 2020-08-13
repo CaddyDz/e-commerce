@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Brand;
 use App\Product;
 use Illuminate\Http\Request;
 
-class ProductController extends Controller
+class ProductsController extends Controller
 {
 	/**
 	 * Display a listing of the resource.
@@ -14,7 +15,9 @@ class ProductController extends Controller
 	 */
 	public function index()
 	{
-		//
+		$products = Product::all();
+		$brands = Brand::all();
+		return view('index', compact('products', 'brands'));
 	}
 
 	/**
@@ -46,7 +49,7 @@ class ProductController extends Controller
 	 */
 	public function show(Product $product)
 	{
-		//
+		return view('product', compact('product'));
 	}
 
 	/**

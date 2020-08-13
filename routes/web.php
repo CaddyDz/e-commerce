@@ -13,8 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'index');
+Route::get('/', 'ProductsController@index');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/cart/add/{product}', 'CartController@add')->name('cart.add');
+Route::post('/cart/remove/{product}', 'CartController@remove')->name('cart.remove');
+Route::get('/products/{product}', 'ProductsController@show')->name('product');
+Route::get('/brands/{brand}', 'BrandsController@show')->name('brand');

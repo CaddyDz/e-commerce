@@ -2,9 +2,11 @@
 
 namespace App\Nova;
 
+use Ebess\AdvancedNovaMediaLibrary\Fields\Images;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Avatar;
 use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Text;
@@ -71,6 +73,8 @@ class Product extends Resource
 			Textarea::make(__('Description'), 'description'),
 			Number::make(__('Price'), 'price')->required(),
 			Avatar::make(__('Image'), 'image'),
+			Boolean::make(__('Available'), 'available'),
+			Images::make(__('Images'), 'images'),
 		];
 	}
 

@@ -3,46 +3,27 @@
 namespace App\Nova;
 
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\Avatar;
+use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Brand extends Resource
+class Discount extends Resource
 {
-	/**
-	 * Get the displayable label of the resource.
-	 *
-	 * @return string
-	 */
-	public static function label(): string
-	{
-		return __('Brands');
-	}
-
-	/**
-	 * Get the displayable singular label of the resource.
-	 *
-	 * @return string
-	 */
-	public static function singularLabel(): string
-	{
-		return __('Brand');
-	}
-
 	/**
 	 * The model the resource corresponds to.
 	 *
 	 * @var string
 	 */
-	public static $model = 'App\Brand';
+	public static $model = 'App\Discount';
 
 	/**
 	 * The single value that should be used to represent the resource when being displayed.
 	 *
 	 * @var string
 	 */
-	public static $title = 'name';
+	public static $title = 'id';
 
 	/**
 	 * The columns that should be searched.
@@ -50,7 +31,7 @@ class Brand extends Resource
 	 * @var array
 	 */
 	public static $search = [
-		'id', 'name'
+		'id',
 	];
 
 	/**
@@ -63,8 +44,9 @@ class Brand extends Resource
 	{
 		return [
 			ID::make()->sortable(),
-			Avatar::make('Logo'),
-			Text::make('Name')->required(),
+			DateTime::make(__('Expires at'), 'expires_at')->sortable(),
+			BelongsTo::make(__('Product'), 'product', Product::class),
+			Number::make(__('Percentage'), 'value'),
 		];
 	}
 

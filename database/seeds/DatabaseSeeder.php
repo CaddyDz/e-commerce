@@ -14,5 +14,9 @@ class DatabaseSeeder extends Seeder
 		$this->call(RolesAndPermissionsSeeder::class);
 		$this->call(UserSeeder::class);
 		$this->call(OrderSeeder::class);
+		// Have to seed brands first, necessary to create products
+		$this->call(BrandSeeder::class);
+		$this->call(ProductSeeder::class);
+		$this->call(DiscountSeeder::class);
 	}
 }
