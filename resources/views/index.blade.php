@@ -20,77 +20,25 @@
 	<div class="section section-fluid learts-pt-30">
 		<div class="container">
 			<div class="category-banner1-carousel">
-
-				<div class="col">
-					<div class="category-banner1">
-						<div class="inner">
-							<a href="shop.html" class="image"><img src="assets/images/banner/category/banner-s1-1.jpg" alt=""></a>
-							<div class="content">
-								<h3 class="title">
-									<a href="shop.html">Gift ideas</a>
-									<span class="number">16</span>
-								</h3>
+				@foreach ($brands as $brand)
+					<div class="col">
+						<div class="category-banner1">
+							<div class="inner">
+								<a href="{{ route('brand', ['brand' => $brand]) }}" class="image">
+									<img src="{{ secure_asset('storage/' . $brand->logo) }}" alt="@lang('Brand Logo')">
+								</a>
+								<div class="content">
+									<h3 class="title">
+										<a href="{{ route('brand', ['brand' => $brand]) }}">
+											{{ $brand->name }}
+										</a>
+										<span class="number">{{ $brand->products()->count() }}</span>
+									</h3>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-
-				<div class="col">
-					<div class="category-banner1">
-						<div class="inner">
-							<a href="shop.html" class="image"><img src="assets/images/banner/category/banner-s1-2.jpg" alt=""></a>
-							<div class="content">
-								<h3 class="title">
-									<a href="shop.html">Home Decor</a>
-									<span class="number">16</span>
-								</h3>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col">
-					<div class="category-banner1">
-						<div class="inner">
-							<a href="shop.html" class="image"><img src="assets/images/banner/category/banner-s1-3.jpg" alt=""></a>
-							<div class="content">
-								<h3 class="title">
-									<a href="shop.html">Kids & Babies</a>
-									<span class="number">6</span>
-								</h3>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col">
-					<div class="category-banner1">
-						<div class="inner">
-							<a href="shop.html" class="image"><img src="assets/images/banner/category/banner-s1-4.jpg" alt=""></a>
-							<div class="content">
-								<h3 class="title">
-									<a href="shop.html">Kitchen</a>
-									<span class="number">15</span>
-								</h3>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col">
-					<div class="category-banner1">
-						<div class="inner">
-							<a href="shop.html" class="image"><img src="assets/images/banner/category/banner-s1-5.jpg" alt=""></a>
-							<div class="content">
-								<h3 class="title">
-									<a href="shop.html">Kniting & Sewing</a>
-									<span class="number">4</span>
-								</h3>
-							</div>
-						</div>
-					</div>
-				</div>
-
+				@endforeach
 			</div>
 		</div>
 	</div>
