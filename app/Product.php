@@ -53,7 +53,7 @@ class Product extends Model implements Buyable, HasMedia
 
 	public function getNewPriceAttribute()
 	{
-		return $this->price - $this->price * $this->discount->value / 100;
+		return round($this->price - $this->price * $this->discount->value / 100);
 	}
 
 	public function registerMediaCollections(): void
