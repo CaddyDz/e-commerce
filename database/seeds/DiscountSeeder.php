@@ -1,7 +1,7 @@
 <?php
 
-use App\Discount;
 use App\Product;
+use App\Discount;
 use Illuminate\Database\Seeder;
 
 class DiscountSeeder extends Seeder
@@ -13,10 +13,10 @@ class DiscountSeeder extends Seeder
 	 */
 	public function run()
 	{
-		$products = Product::select('id')->pluck('id');
+		$products = Product::take(20)->select('id')->pluck('id');
 		foreach ($products as $product) {
-			factory(Discount::class, rand(1, 5))->create([
-				'product_id' => $product->id,
+			factory(Discount::class)->create([
+				'product_id' => $product,
 			]);
 		}
 	}

@@ -46,7 +46,7 @@ class Discount extends Resource
 			ID::make()->sortable(),
 			DateTime::make(__('Expires at'), 'expires_at')->sortable(),
 			BelongsTo::make(__('Product'), 'product', Product::class),
-			Number::make(__('Percentage'), 'percentage'),
+			Number::make(__('Percentage'), 'value'),
 		];
 	}
 
