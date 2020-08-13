@@ -18,3 +18,5 @@ Route::view('/', 'index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/cart/add/{part}', 'CartController@add')->name('cart.add');
+Route::post('/cart/remove/{part}', 'CartController@remove')->name('cart.remove');
