@@ -28,9 +28,12 @@
 			<a href="#quickViewModal" data-toggle="modal" class="product-button hintT-top" data-hint="@lang('Quick View')">
 				<i class="fal fa-search"></i>
 			</a>
-			<a href="{{ route('cart.add', ['product' => $product]) }}" class="product-button hintT-top" data-hint="@lang('Add to Cart')">
+			<a class="product-button hintT-top" data-hint="@lang('Add to Cart')" onclick="event.preventDefault();document.getElementById('{{ $product->slug }}').submit();">
 				<i class="fal fa-shopping-cart"></i>
 			</a>
+			<form action="{{ route('cart.add', ['product' => $product]) }}" method="post" id="{{ $product->slug }}">
+				@csrf
+			</form>
 		</div>
 	</div>
 </div>

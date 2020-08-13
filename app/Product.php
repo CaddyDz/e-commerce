@@ -33,7 +33,7 @@ class Product extends Model implements Buyable, HasMedia
 
 	public function getBuyableWeight($options = null)
 	{
-		return $this->weight;
+		return 0;
 	}
 
 	public function brand(): BelongsTo
