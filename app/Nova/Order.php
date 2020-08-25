@@ -7,6 +7,7 @@ use Timothyasp\Badge\Badge;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use App\Nova\Filters\OrderStatus;
+use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Order extends Resource
 {
@@ -28,6 +29,15 @@ class Order extends Resource
 	public static function singularLabel(): string
 	{
 		return __('Order');
+	}
+
+	protected static function applyOrderings($query, array $orderings)
+	{
+		if (empty($orderings)) {
+			// This is your default order
+			$orderings['status'] = 'asc';
+		}
+		return parent::applyOrderings($query, $orderings);
 	}
 
 	/**
