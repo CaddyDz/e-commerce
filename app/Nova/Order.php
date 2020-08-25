@@ -7,10 +7,12 @@ use Timothyasp\Badge\Badge;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use App\Nova\Filters\OrderStatus;
+use Laravel\Nova\Fields\BelongsTo;
 use App\Nova\Lenses\OrdersRejected;
 use App\Nova\Lenses\OrdersSuspended;
 use App\Nova\Lenses\OrdersValidated;
 use App\Nova\Lenses\OrdersAwaitingReview;
+use Laravel\Nova\Fields\Select;
 
 class Order extends Resource
 {
@@ -32,15 +34,6 @@ class Order extends Resource
 	public static function singularLabel(): string
 	{
 		return __('Order');
-	}
-
-	protected static function applyOrderings($query, array $orderings)
-	{
-		if (empty($orderings)) {
-			// This is your default order
-			$orderings['status'] = 'asc';
-		}
-		return parent::applyOrderings($query, $orderings);
 	}
 
 	/**
@@ -96,14 +89,21 @@ class Order extends Resource
 				)->css(function () {
 					$options = [
 						'pending' => 'text-info',
-						'validated'   => 'text-success',
-						'rejected'   => 'text-danger',
-						'suspended'   => 'text-black',
+						'validated' => 'text-success',
+						'rejected' => 'text-danger',
+						'suspended' => 'text-black',
 					];
 
 					return $options[$this->status];
-				}),
-			Badge::make('Status')
+				})->exceptOnForms(),
+			Select::make(__('Status'), 'status')
+				->options([
+					'pending' => __('Awaiting review'),
+					'validated' => __('Validated'),
+					'rejected' => __('Refused'),
+					'suspended' => __('On hold'),
+				])->onlyOnForms()->displayUsingLabels(),
+			Badge::make(__('Status'), 'status')
 				->options([
 					'pending' => __('Awaiting review'),
 					'validated' => __('Validated'),
@@ -116,7 +116,9 @@ class Order extends Resource
 					'suspended' => '#000',
 					'rejected' => '#ca404d',
 				])->displayUsingLabels()
-				->sortable(),
+				->sortable()
+				->exceptOnForms(),
+			BelongsTo::make(__('Reviewer'), 'reviewer', 'App\Nova\User')->sortable()
 		];
 	}
 

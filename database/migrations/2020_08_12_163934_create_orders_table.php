@@ -15,6 +15,7 @@ class CreateOrdersTable extends Migration
 	{
 		Schema::create('orders', function (Blueprint $table) {
 			$table->id();
+			$table->foreignId('reviewer_id')->nullable()->constrained('users');
 			$table->enum('status', [
 				'pending', 'validated', 'rejected', 'suspended'
 			])->default('pending');
