@@ -7,7 +7,10 @@ use Timothyasp\Badge\Badge;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use App\Nova\Filters\OrderStatus;
-use Laravel\Nova\Http\Requests\NovaRequest;
+use App\Nova\Lenses\OrdersRejected;
+use App\Nova\Lenses\OrdersSuspended;
+use App\Nova\Lenses\OrdersValidated;
+use App\Nova\Lenses\OrdersAwaitingReview;
 
 class Order extends Resource
 {
@@ -149,7 +152,12 @@ class Order extends Resource
 	 */
 	public function lenses(Request $request)
 	{
-		return [];
+		return [
+			new OrdersAwaitingReview(),
+			new OrdersValidated(),
+			new OrdersRejected(),
+			new OrdersSuspended()
+		];
 	}
 
 	/**
