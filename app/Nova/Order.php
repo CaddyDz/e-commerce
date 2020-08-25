@@ -103,7 +103,8 @@ class Order extends Resource
 					'validated' => '#42d6a9',
 					'suspended' => '#000',
 					'rejected' => '#ca404d',
-				])->displayUsingLabels(),
+				])->displayUsingLabels()
+				->sortable(),
 		];
 	}
 
