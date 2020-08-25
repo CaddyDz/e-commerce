@@ -4,10 +4,9 @@ namespace App\Nova;
 
 use NovaIcon\Icon;
 use Timothyasp\Badge\Badge;
-
-use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Http\Requests\NovaRequest;
+use Illuminate\Http\Request;
+use App\Nova\Filters\OrderStatus;
 
 class Order extends Resource
 {
@@ -127,7 +126,9 @@ class Order extends Resource
 	 */
 	public function filters(Request $request)
 	{
-		return [];
+		return [
+			new OrderStatus(),
+		];
 	}
 
 	/**
