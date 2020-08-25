@@ -6,6 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
 {
+
+	public function reviewer()
+	{
+		return $this->belongsTo(User::class, 'reviewer_id');
+	}
+
 	public function getIconAttribute(): string
 	{
 		switch ($this->status) {

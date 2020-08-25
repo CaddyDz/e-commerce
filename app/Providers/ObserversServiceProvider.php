@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Observers\OrderObserver;
 use App\Observers\ProductsObserver;
+use App\Order;
 use App\Product;
 use Illuminate\Support\ServiceProvider;
 
@@ -26,5 +28,6 @@ class ObserversServiceProvider extends ServiceProvider
 	public function boot()
 	{
 		Product::observe(ProductsObserver::class);
+		Order::observe(OrderObserver::class);
 	}
 }
