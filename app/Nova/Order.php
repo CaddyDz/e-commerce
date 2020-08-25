@@ -4,10 +4,13 @@ namespace App\Nova;
 
 use NovaIcon\Icon;
 use Timothyasp\Badge\Badge;
-
-use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Http\Requests\NovaRequest;
+use Illuminate\Http\Request;
+use App\Nova\Filters\OrderStatus;
+use App\Nova\Lenses\OrdersRejected;
+use App\Nova\Lenses\OrdersSuspended;
+use App\Nova\Lenses\OrdersValidated;
+use App\Nova\Lenses\OrdersAwaitingReview;
 
 class Order extends Resource
 {
@@ -29,6 +32,15 @@ class Order extends Resource
 	public static function singularLabel(): string
 	{
 		return __('Order');
+	}
+
+	protected static function applyOrderings($query, array $orderings)
+	{
+		if (empty($orderings)) {
+			// This is your default order
+			$orderings['status'] = 'asc';
+		}
+		return parent::applyOrderings($query, $orderings);
 	}
 
 	/**
@@ -127,7 +139,9 @@ class Order extends Resource
 	 */
 	public function filters(Request $request)
 	{
-		return [];
+		return [
+			new OrderStatus(),
+		];
 	}
 
 	/**
@@ -138,7 +152,12 @@ class Order extends Resource
 	 */
 	public function lenses(Request $request)
 	{
-		return [];
+		return [
+			new OrdersAwaitingReview(),
+			new OrdersValidated(),
+			new OrdersRejected(),
+			new OrdersSuspended()
+		];
 	}
 
 	/**
