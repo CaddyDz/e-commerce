@@ -2,6 +2,7 @@
 
 namespace App\Nova;
 
+use App\Nova\Filters\OrdersByWorker;
 use NovaIcon\Icon;
 use Timothyasp\Badge\Badge;
 use Laravel\Nova\Fields\ID;
@@ -143,6 +144,7 @@ class Order extends Resource
 	{
 		return [
 			new OrderStatus(),
+			new OrdersByWorker()
 		];
 	}
 
