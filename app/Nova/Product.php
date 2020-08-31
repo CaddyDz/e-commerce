@@ -13,7 +13,6 @@ use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Ebess\AdvancedNovaMediaLibrary\Fields\Images;
 use Laravel\Nova\Fields\BelongsToMany;
-use Laravel\Nova\Fields\KeyValue;
 
 class Product extends Resource
 {
@@ -75,7 +74,7 @@ class Product extends Resource
 			Textarea::make(__('Description'), 'description'),
 			BelongsToMany::make(__('Sizes'), 'sizes', Size::class),
 			BelongsToMany::make(__('Colors'), 'colors', Color::class),
-			KeyValue::make(__('Properties'), 'properties'),
+			BelongsToMany::make(__('Properties'), 'properties', Property::class),
 			Number::make(__('Price'), 'price')->required(),
 			Avatar::make(__('Image'), 'image'),
 			Boolean::make(__('Available'), 'available'),
