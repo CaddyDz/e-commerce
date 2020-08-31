@@ -2,7 +2,6 @@
 
 namespace App\Nova;
 
-use Timothyasp\Color\Color;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
@@ -74,8 +73,8 @@ class Product extends Resource
 			BelongsTo::make(__('Brand'), 'brand', Brand::class),
 			Text::make(__('Name'), 'name')->required(),
 			Textarea::make(__('Description'), 'description'),
-			BelongsToMany::make(__('Sizes'), 'sizes', 'App\Nova\Size'),
-			Color::make(__('Color'), 'color')->hideFromIndex(),
+			BelongsToMany::make(__('Sizes'), 'sizes', Size::class),
+			BelongsToMany::make(__('Colors'), 'colors', Color::class),
 			KeyValue::make(__('Properties'), 'properties'),
 			Number::make(__('Price'), 'price')->required(),
 			Avatar::make(__('Image'), 'image'),
