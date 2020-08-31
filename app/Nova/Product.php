@@ -14,6 +14,7 @@ use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Ebess\AdvancedNovaMediaLibrary\Fields\Images;
 use Laravel\Nova\Fields\KeyValue;
+use OptimistDigital\MultiselectField\Multiselect;
 
 class Product extends Resource
 {
@@ -73,13 +74,28 @@ class Product extends Resource
 			BelongsTo::make(__('Brand'), 'brand', Brand::class),
 			Text::make(__('Name'), 'name')->required(),
 			Textarea::make(__('Description'), 'description'),
-			Text::make(__('Size'), 'size'),
-			Color::make(__('Color'), 'color'),
+			Multiselect
+				::make(__('Size'), 'size')
+				->options([
+					's' => 'Small',
+					'm' => 'Medium',
+					'l' => 'Large',
+					'xl' => 'Extra Large',
+					'xxl' => 'Double Extra Large',
+				])
+
+				// Optional:
+				->placeholder(__('Pick available sizes')) // Placeholder text
+				->max(5) // Maximum number of items the user can choose
+				->optionsLimit(5) // How many items to display at once
+				->reorderable()
+				->hideFromIndex(), // Allows reordering functionality
+			Color::make(__('Color'), 'color')->hideFromIndex(),
 			KeyValue::make(__('Properties'), 'properties'),
 			Number::make(__('Price'), 'price')->required(),
 			Avatar::make(__('Image'), 'image'),
 			Boolean::make(__('Available'), 'available'),
-			Images::make(__('Images'), 'images'),
+			Images::make(__('Images'), 'images')->hideFromIndex(),
 		];
 	}
 

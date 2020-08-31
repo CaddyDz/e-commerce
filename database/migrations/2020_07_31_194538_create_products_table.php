@@ -22,7 +22,7 @@ class CreateProductsTable extends Migration
 			$table->string('image');
 			$table->string('size');
 			$table->string('color');
-			$table->json('properties');
+			$table->json('properties')->nullable();
 			$table->string('slug')->unique();
 			$table->boolean('available')->default(true);
 			$table->timestamp('deleted_at')->nullable();
