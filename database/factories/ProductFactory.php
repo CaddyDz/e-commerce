@@ -15,6 +15,8 @@ $factory->define(Product::class, function (Faker $faker) {
 			$targetDir = storage_path('/app/public/products'),
 			false
 		),
+		'size' => $faker->randomElement(['S', 'M', 'L', 'XL', 'XXL']),
+		'color' => $faker->colorName,
 		'available' => $faker->boolean($chancesOfGettingTrue = 90)
 	];
 });

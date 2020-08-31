@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "309e08b28b146e648a6e8376c71cd289",
+    "content-hash": "353c4705bb685475d1d3569ef398853b",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5800,6 +5800,49 @@
                 "nova"
             ],
             "time": "2019-11-03T21:57:56+00:00"
+        },
+        {
+            "name": "timothyasp/nova-color-field",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/timothyasp/nova-color-field.git",
+                "reference": "e94011fb80fa1807e7a607deab1cdc9f8adb0ccb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/timothyasp/nova-color-field/zipball/e94011fb80fa1807e7a607deab1cdc9f8adb0ccb",
+                "reference": "e94011fb80fa1807e7a607deab1cdc9f8adb0ccb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Timothyasp\\Color\\FieldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Timothyasp\\Color\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova Color Picker field.",
+            "keywords": [
+                "color picker",
+                "field",
+                "laravel",
+                "nova"
+            ],
+            "time": "2019-03-14T07:29:30+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
