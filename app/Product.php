@@ -69,4 +69,9 @@ class Product extends Model implements Buyable, HasMedia
 	{
 		$this->addMediaCollection('images');
 	}
+
+	public function sizes()
+	{
+		return $this->belongsToMany(Size::class);
+	}
 }
