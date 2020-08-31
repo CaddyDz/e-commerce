@@ -2,16 +2,18 @@
 
 namespace App\Nova;
 
-use Ebess\AdvancedNovaMediaLibrary\Fields\Images;
-use Illuminate\Http\Request;
-use Laravel\Nova\Fields\Avatar;
-use Laravel\Nova\Fields\BelongsTo;
-use Laravel\Nova\Fields\Boolean;
+use Timothyasp\Color\Color;
 use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Fields\Number;
+use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Avatar;
+use Laravel\Nova\Fields\Number;
+use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\Textarea;
+use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Ebess\AdvancedNovaMediaLibrary\Fields\Images;
+use Laravel\Nova\Fields\KeyValue;
 
 class Product extends Resource
 {
@@ -71,6 +73,9 @@ class Product extends Resource
 			BelongsTo::make(__('Brand'), 'brand', Brand::class),
 			Text::make(__('Name'), 'name')->required(),
 			Textarea::make(__('Description'), 'description'),
+			Text::make(__('Size'), 'size'),
+			Color::make(__('Color'), 'color'),
+			KeyValue::make(__('Properties'), 'properties'),
 			Number::make(__('Price'), 'price')->required(),
 			Avatar::make(__('Image'), 'image'),
 			Boolean::make(__('Available'), 'available'),
