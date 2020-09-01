@@ -2,53 +2,27 @@
 
 namespace App\Nova;
 
-use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\Avatar;
-use Laravel\Nova\Fields\Number;
-use Laravel\Nova\Fields\Boolean;
-use Laravel\Nova\Fields\Textarea;
-use Laravel\Nova\Fields\BelongsTo;
-use Laravel\Nova\Http\Requests\NovaRequest;
-use Ebess\AdvancedNovaMediaLibrary\Fields\Images;
 use Laravel\Nova\Fields\BelongsToMany;
+use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Http\Requests\NovaRequest;
+use Timothyasp\Color\Color as ColorField;
 
-class Product extends Resource
+class Color extends Resource
 {
-	/**
-	 * Get the displayable label of the resource.
-	 *
-	 * @return string
-	 */
-	public static function label(): string
-	{
-		return __('Products');
-	}
-
-	/**
-	 * Get the displayable singular label of the resource.
-	 *
-	 * @return string
-	 */
-	public static function singularLabel(): string
-	{
-		return __('Product');
-	}
-
 	/**
 	 * The model the resource corresponds to.
 	 *
 	 * @var string
 	 */
-	public static $model = 'App\Product';
+	public static $model = 'App\Color';
 
 	/**
 	 * The single value that should be used to represent the resource when being displayed.
 	 *
 	 * @var string
 	 */
-	public static $title = 'name';
+	public static $title = 'color';
 
 	/**
 	 * The columns that should be searched.
@@ -56,7 +30,7 @@ class Product extends Resource
 	 * @var array
 	 */
 	public static $search = [
-		'id', 'name', 'description', 'price'
+		'id', 'color'
 	];
 
 	/**
@@ -69,16 +43,8 @@ class Product extends Resource
 	{
 		return [
 			ID::make()->sortable(),
-			BelongsTo::make(__('Brand'), 'brand', Brand::class),
-			Text::make(__('Name'), 'name')->required(),
-			Textarea::make(__('Description'), 'description'),
-			BelongsToMany::make(__('Sizes'), 'sizes', Size::class),
-			BelongsToMany::make(__('Colors'), 'colors', Color::class),
-			BelongsToMany::make(__('Properties'), 'properties', Property::class),
-			Number::make(__('Price'), 'price')->required(),
-			Avatar::make(__('Image'), 'image'),
-			Boolean::make(__('Available'), 'available'),
-			Images::make(__('Images'), 'images')->hideFromIndex(),
+			ColorField::make(__('Color'), 'color'),
+			BelongsToMany::make(__('Product'), 'products', Product::class),
 		];
 	}
 

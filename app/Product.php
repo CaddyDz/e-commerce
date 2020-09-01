@@ -16,15 +16,6 @@ class Product extends Model implements Buyable, HasMedia
 {
 	use SoftDeletes, CanBeBought, InteractsWithMedia;
 
-	/**
-	 * The attributes that should be cast.
-	 *
-	 * @var array
-	 */
-	protected $casts = [
-		'properties' => 'array',
-	];
-
 	public function getBuyableIdentifier($options = null)
 	{
 		return $this->id;
@@ -68,5 +59,20 @@ class Product extends Model implements Buyable, HasMedia
 	public function registerMediaCollections(): void
 	{
 		$this->addMediaCollection('images');
+	}
+
+	public function sizes()
+	{
+		return $this->belongsToMany(Size::class);
+	}
+
+	public function colors()
+	{
+		return $this->belongsToMany(Color::class);
+	}
+
+	public function properties()
+	{
+		return $this->belongsToMany(Property::class);
 	}
 }
