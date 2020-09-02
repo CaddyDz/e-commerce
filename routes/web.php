@@ -24,3 +24,6 @@ Route::get('/products/{product}', 'ProductsController@show')->name('product');
 Route::get('/brands/{brand}', 'BrandsController@show')->name('brand');
 Route::get('/cart', 'CartController@index')->name('cart');
 Route::get('/checkout', 'CheckoutController@index');
+Route::view('about', 'about');
+Route::view('tos', 'tos');
+Route::view('faq', 'faq');
