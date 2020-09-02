@@ -31,10 +31,10 @@
 <div class="section section-padding">
 	<div class="container">
 		<div class="checkout-coupon">
-			<p class="coupon-toggle">Have a coupon? <a href="#checkout-coupon-form" data-toggle="collapse">Click here to enter your code</a></p>
+			<p class="coupon-toggle">@lang('Have a coupon?') <a href="#checkout-coupon-form" data-toggle="collapse">Click here to enter your code</a></p>
 			<div id="checkout-coupon-form" class="collapse">
 				<div class="coupon-form">
-					<p>If you have a coupon code, please apply it below.</p>
+					<p>@lang('If you have a coupon code, please apply it below. ')</p>
 					<form action="#" class="learts-mb-n10">
 						<input class="learts-mb-10" type="text" placeholder="Coupon code">
 						<button class="btn btn-dark btn-outline-hover-dark learts-mb-10">apply coupon</button>
