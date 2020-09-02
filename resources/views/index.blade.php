@@ -49,7 +49,7 @@
 					<!-- Section Title Start -->
 					<div class="section-title text-center mb-0">
 						
-						<h2 class="title title-icon-both">Making & crafting</h2>
+						<h2 class="title title-icon-both">Nos Partenaires :</h2>
 					</div>
 					<!-- Section Title End -->
 				</div>

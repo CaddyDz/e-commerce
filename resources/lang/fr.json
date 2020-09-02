@@ -24,6 +24,24 @@
 	"Confirm Password":"Confirmation du Mot de Passe",
 	"Follow us on Instagram":"Suivez-nous sur Instagram",
 	"Have a coupon?":"Vous avez un coupon?",
-	"If you have a coupon code, please apply it below.":"Entrer le code Coupon Ci-dessous"
+	"If you have a coupon code, please apply it below.":"Entrer le code Coupon Ci-dessous",
+	"Pay with cash upon delivery.":"Payer à la main lors de la livraison",
+	"Cash on delivery":"Payment main à main",
+	"place order":"Confirmer la commande",
+	"Product":"Produit",
+	"Price":"Prix",
+	"Cart":"Panier",
+	"Subtotal":"Montant",
+	"View Cart":"Voir le panier",
+	"Checkout":"Confirmer",
+	"FIrst Name": "Prénom",
+	"Last Name":"Nom",
+	"Town / City":"Commune",
+	"District":"Wilaya",
+	"Billing details":"Details de la Facture",
+	"Click here to enter your code":"Clicker pour entrer votre code",
+	"Street address":"Addresse",
+	"Your order":"Votre Commande"
+
 
 }
