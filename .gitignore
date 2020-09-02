@@ -14,3 +14,4 @@ yarn-error.log
 public/vendor/
 public/vendor/
 .php_cs.cache
+*.db
