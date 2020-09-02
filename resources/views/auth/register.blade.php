@@ -12,8 +12,8 @@
                         @csrf
 
                         <div class="login-register-title">
-						<h2 class="title">Register</h2>
-						<p class="desc">If you don’t have an account, register now!</p>
+						<h2 class="title">@lang('Register')</h2>
+						<p class="desc">@lang('If you don’t have an account, register now!')</p>
 					</div>
 
 

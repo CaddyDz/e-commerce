@@ -10,11 +10,11 @@
 
 				<div class="page-title">
 					<h1 class="title">
-						@lang('Login & Register')
+						@lang('Login')
 					</h1>
 					<ul class="breadcrumb">
 						<li class="breadcrumb-item"><a href="/">@lang('Home')</a></li>
-						<li class="breadcrumb-item active">@lang('Login & Register')</li>
+						<li class="breadcrumb-item active">@lang('Login')</li>
 					</ul>
 				</div>
 
@@ -46,7 +46,7 @@
 								</div>
 								<div class="col-12 text-center learts-mb-50">
 									<button class="btn btn-dark btn-outline-hover-dark" type="submit">
-										@lang('login')
+										@lang('Login')
 									</button>
 								</div>
 								<div class="col-12 learts-mb-50">
@@ -58,10 +58,10 @@
 											</div>
 										</div>
 										<div class="col-12 learts-mb-20">
-											<a href="lost-password.html" class="fw-400">Lost your password?</a>
+											<a href="lost-password.html" class="fw-400">@lang('Lost your password?')</a>
 										</div>
 										<div class="col-12 learts-mb-20">
-											<a href="lost-password.html" class="fw-400">Vous n'avez pas de compte? Inscriver Vous!</a>
+											<a href="/register" class="fw-400">Vous n'avez pas de compte? Inscriver Vous!</a>
 										</div>
 									</div>
 								</div>

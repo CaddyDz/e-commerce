@@ -10,8 +10,14 @@
 	"Color":"Couleur",
 	"Quantity":"Quantité",
 	"Add to Cart":"Ajouter au Panier",
-	"Login": "Se connecter",
+	"Login": "Se Connecter",
 	"Register": "S'inscrire",
 	"Great to have you back!":"Heureux de vous revoir!",
-	"Remember me":"Se souvenir de moi"
+	"Remember me":"Se souvenir de moi",
+	"Phone number":"Numéro de Téléphone",
+	"If you don’t have an account, register now!": "Vous n'avez pas de compte? inscrivez-vous dès maintenant",
+	"Lost your password?":"Vous avez oubliez votre mot de passe?",
+	"Email address":"Adresse Email",
+	"Password":"Mot de passe"
+
 }
