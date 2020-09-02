@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Brand;
+use App\Discount;
 use App\Product;
 use Illuminate\Http\Request;
 
@@ -17,7 +18,10 @@ class ProductsController extends Controller
 	{
 		$products = Product::all();
 		$brands = Brand::all();
-		return view('index', compact('products', 'brands'));
+		$deal = Discount::whereDay('updated_at', today())
+			->orderBy('value', 'desc')
+			->first();
+		return view('index', compact('products', 'brands', 'deal'));
 	}
 
 	/**
