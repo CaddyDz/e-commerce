@@ -16,6 +16,11 @@ class Product extends Model implements Buyable, HasMedia
 {
 	use SoftDeletes, CanBeBought, InteractsWithMedia;
 
+	protected $casts = [
+		'display_sizes' => 'bool',
+		'display_colors' => 'bool',
+	];
+
 	public function getBuyableIdentifier($options = null)
 	{
 		return $this->id;
