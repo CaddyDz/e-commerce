@@ -17,7 +17,10 @@
 	"Phone number":"Numéro de Téléphone",
 	"If you don’t have an account, register now!": "Vous n'avez pas de compte? inscrivez-vous dès maintenant",
 	"Lost your password?":"Vous avez oubliez votre mot de passe?",
-	"Email address":"Adresse Email",
-	"Password":"Mot de passe"
+	"Email address":"Adresse E-mail",
+	"Password":"Mot de passe",
+	"Name":"Nom Complet",
+	"E-Mail Address":"Adresse E-mail",
+	"Confirm Password":"Confirmation du Mot de Passe"
 
 }
