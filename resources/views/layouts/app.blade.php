@@ -744,47 +744,37 @@
 	<div id="offcanvas-cart" class="offcanvas offcanvas-cart">
 		<div class="inner">
 			<div class="head">
-				<span class="title">Cart</span>
+				<span class="title">@lang('Cart')</span>
 				<button class="offcanvas-close">×</button>
 			</div>
 			<div class="body customScroll">
 				<ul class="minicart-product-list">
+					@foreach ($cart as $item)
 					<li>
-						<a href="product-details.html" class="image"><img src="assets/images/product/cart-product-1.jpg" alt="Cart product Image"></a>
+						<a href="{{ route('product', ['product' => $item->model]) }}" class="image"><img src="{{ secure_asset('storage/'. $item->model->image) }}" alt="@lang('Cart product Image')"></a>
 						<div class="content">
-							<a href="product-details.html" class="title">Walnut Cutting Board</a>
-							<span class="quantity-price">1 x <span class="amount">$100.00</span></span>
-							<a href="#" class="remove">×</a>
+							<a href="{{ route('product', ['product' => $item->model]) }}" class="title">{{ $item->model->name }}</a>
+							<span class="quantity-price">{{ $item->qty }} x <span class="amount">{{ $item->price }}</span></span>
+							<a href="{{ route('cart.remove', ['product' => $item->rowId]) }}" class="remove" onclick="event.preventDefault();document.getElementById('remove-cart-{{ $item->rowId }}').submit();">×</a>
+							<form action="{{ route('cart.remove', ['product' => $item->rowId]) }}" method="post" style="display: none;" id="remove-cart-{{ $item->rowId }}">
+								@csrf
+							</form>
 						</div>
 					</li>
-					<li>
-						<a href="product-details.html" class="image"><img src="assets/images/product/cart-product-2.jpg" alt="Cart product Image"></a>
-						<div class="content">
-							<a href="product-details.html" class="title">Lucky Wooden Elephant</a>
-							<span class="quantity-price">1 x <span class="amount">$35.00</span></span>
-							<a href="#" class="remove">×</a>
-						</div>
-					</li>
-					<li>
-						<a href="product-details.html" class="image"><img src="assets/images/product/cart-product-3.jpg" alt="Cart product Image"></a>
-						<div class="content">
-							<a href="product-details.html" class="title">Fish Cut Out Set</a>
-							<span class="quantity-price">1 x <span class="amount">$9.00</span></span>
-							<a href="#" class="remove">×</a>
-						</div>
-					</li>
+					@endforeach
 				</ul>
 			</div>
 			<div class="foot">
 				<div class="sub-total">
-					<strong>Subtotal :</strong>
-					<span class="amount">$144.00</span>
+					<strong>@lang('Subtotal') :</strong>
+					<span class="amount">
+						{{ Cart::total() }} DZD
+					</span>
 				</div>
 				<div class="buttons">
-					<a href="shopping-cart.html" class="btn btn-dark btn-hover-primary">view cart</a>
-					<a href="checkout.html" class="btn btn-outline-dark">checkout</a>
+					<a href="/cart" class="btn btn-dark btn-hover-primary">@lang('View Cart')</a>
+					<a href="/checkout" class="btn btn-outline-dark">@lang('Checkout')</a>
 				</div>
-				<p class="minicart-message">Free Shipping on All Orders Over $100!</p>
 			</div>
 		</div>
 	</div>
