@@ -2,5 +2,12 @@
 	"Order": "Commande",
 	"Orders": "Commandes",
 	"Brands": "Marques",
-	"Brand": "Marque"
+	"Brand": "Marque",
+	"Categories":"Catégories",
+	"All":"Tous",
+	"Browse Categories":"Parcourir les catégories",
+	"Size":"Taille",
+	"Color":"Couleur",
+	"Quantity":"Quantité",
+	"Add to Cart":"Ajouter au Panier"
 }

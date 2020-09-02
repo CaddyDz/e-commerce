@@ -4,13 +4,9 @@
 @section('content')
 	<!-- Slider main container Start -->
 	<div class="home6-slider section">
-		<div class="home6-slide-item" data-bg-image="assets/images/slider/home6/slide1-1.jpg">
+		<div class="home6-slide-item" data-bg-image="assets/images/SKU.png">
 			<div class="container">
-				<div class="home6-slide1-content">
-					<h3 class="sub-title">Little Simple Things</h3>
-					<h2 class="title">Where Motivations Take Root</h2>
-					<div class="link"><a href="shop.html" class="btn btn-light btn-hover-black">shop now</a></div>
-				</div>
+				
 			</div>
 		</div>
 	</div>
@@ -63,7 +59,7 @@
 			<div class="row learts-mb-40">
 				<div class="col">
 					<ul class="nav text-uppercase justify-content-center mx-n1 mb-n2">
-						<li class="nav-item mx-1 mb-2"><a href="#product-all" data-toggle="tab" class="btn btn-md btn-light btn-hover-primary active">All</a></li>
+						<li class="nav-item mx-1 mb-2"><a href="#product-all" data-toggle="tab" class="btn btn-md btn-light btn-hover-primary active">@lang('All')</a></li>
 						<li class="nav-item mx-1 mb-2"><a href="#product-gift-ideas" data-toggle="tab" class="btn btn-md btn-light btn-hover-primary">Gift ideas</a></li>
 						<li class="nav-item mx-1 mb-2"><a href="#product-home-decor" data-toggle="tab" class="btn btn-md btn-light btn-hover-primary">Home Decor</a></li>
 						<li class="nav-item mx-1 mb-2"><a href="#product-kitchen" data-toggle="tab" class="btn btn-md btn-light btn-hover-primary">Kitchen</a></li>
@@ -427,7 +423,7 @@
 			<!-- Section Title Start -->
 			<div class="section-title2 text-center">
 				<h3 class="sub-title">Follow us on Instagram</h3>
-				<h2 class="title">@learts_shop</h2>
+				<h2 class="title">@dlaladz_shop</h2>
 			</div>
 			<!-- Section Title End -->
 

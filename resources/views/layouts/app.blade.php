@@ -153,7 +153,7 @@
 			<div class="container">
 				<div class="header-categories">
 					<button class="category-toggle">
-					<i class="fal fa-bars"></i> Browse Categories</button>
+					<i class="fal fa-bars"></i> @lang('Browse Categories')</button>
 					<ul class="header-category-list">
 						<li><a href="#"><img src="assets/images/icons/cat-icon-1.png" alt=""> Knitting</a></li>
 						<li><a href="#"><img src="assets/images/icons/cat-icon-2.png" alt=""> Sewing</a></li>
@@ -1099,7 +1099,7 @@
 								<table>
 									<tbody>
 										<tr>
-											<td class="label"><span>Size</span></td>
+											<td class="label"><span>@lang('Size')</span></td>
 											<td class="value">
 												<div class="product-sizes">
 													<a href="#">Large</a>
@@ -1109,7 +1109,7 @@
 											</td>
 										</tr>
 										<tr>
-											<td class="label"><span>Color</span></td>
+											<td class="label"><span>@lang('Color')</span></td>
 											<td class="value">
 												<div class="product-colors">
 													<a href="#" data-bg-color="#000000"></a>
@@ -1118,7 +1118,7 @@
 											</td>
 										</tr>
 										<tr>
-											<td class="label"><span>Quantity</span></td>
+											<td class="label"><span>@lang('Quantity')</span></td>
 											<td class="value">
 												<div class="product-quantity">
 													<span class="qty-btn minus"><i class="ti-minus"></i></span>
@@ -1132,11 +1132,11 @@
 							</div>
 							<div class="product-buttons">
 								<a href="#" class="btn btn-icon btn-outline-body btn-hover-dark"><i class="fal fa-heart"></i></a>
-								<a href="#" class="btn btn-dark btn-outline-hover-dark"><i class="fal fa-shopping-cart"></i> Add to Cart</a>
+								<a href="#" class="btn btn-dark btn-outline-hover-dark"><i class="fal fa-shopping-cart"></i> @lang('Add to Cart')</a>
 								<a href="#" class="btn btn-icon btn-outline-body btn-hover-dark"><i class="fal fa-random"></i></a>
 							</div>
 							<div class="product-brands">
-								<span class="title">Brands</span>
+								<span class="title">@lang('Brands')</span>
 								<div class="brands">
 									<a href="#"><img src="assets/images/brands/brand-3.png" alt=""></a>
 									<a href="#"><img src="assets/images/brands/brand-8.png" alt=""></a>

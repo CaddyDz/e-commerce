@@ -110,7 +110,7 @@
 
 					<!-- Categories Start -->
 					<div class="col learts-mb-30">
-						<h3 class="widget-title product-filter-widget-title">Categories</h3>
+						<h3 class="widget-title product-filter-widget-title">@lang('Categories')</h3>
 						<ul class="widget-list product-filter-widget customScroll">
 							<li><a href="#">Gift ideas</a> <span class="count">16</span></li>
 							<li><a href="#">Home Decor</a> <span class="count">16</span></li>
@@ -139,7 +139,7 @@
 
 					<!-- Brands Start -->
 					<div class="col learts-mb-30">
-						<h3 class="widget-title product-filter-widget-title">Brands</h3>
+						<h3 class="widget-title product-filter-widget-title">@lang('Brands')</h3>
 						<ul class="widget-list product-filter-widget customScroll">
 							<li><a href="#">Alexander</a> <span class="count">(2)</span></li>
 							<li><a href="#">Carmella</a> <span class="count">(4)</span></li>
