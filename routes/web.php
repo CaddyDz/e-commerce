@@ -23,3 +23,4 @@ Route::post('/cart/remove/{product}', 'CartController@remove')->name('cart.remov
 Route::get('/products/{product}', 'ProductsController@show')->name('product');
 Route::get('/brands/{brand}', 'BrandsController@show')->name('brand');
 Route::get('/cart', 'CartController@index')->name('cart');
+Route::view('/checkout', 'checkout');
