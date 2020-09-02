@@ -37,7 +37,9 @@
 					<p>@lang('If you have a coupon code, please apply it below. ')</p>
 					<form action="#" class="learts-mb-n10">
 						<input class="learts-mb-10" type="text" placeholder="Coupon code">
-						<button class="btn btn-dark btn-outline-hover-dark learts-mb-10">apply coupon</button>
+						<button class="btn btn-dark btn-outline-hover-dark learts-mb-10">
+							@lang('apply coupon')
+						</button>
 					</form>
 				</div>
 			</div>
@@ -55,9 +57,9 @@
 					<label for="bdFirstName">@lang('FIrst Name') <abbr class="required">*</abbr></label>
 					<input type="text" id="bdFirstName">
 				</div>
-				
-			
-				
+
+
+
 				<div class="col-12 learts-mb-20">
 					<label for="bdAddress1">@lang('Street address') <abbr class="required">*</abbr></label>
 				<input type="text" id="bdAddress1" placeholder="Nom du Quartier, N° de porte">
@@ -75,7 +77,7 @@
 					<select id="bdDistrict" class="select2-basic">
 						<option value="">@lang('Select an option…')</option>
 						@foreach ($states as $state)
-							<option value="{{ $state->id }}">
+							<option value="{{ $state->price }}">
 								@lang($state->state) {{ $state->price }}
 							</option>
 						@endforeach
@@ -114,32 +116,30 @@
 					<table class="table">
 						<thead>
 							<tr>
-								<th class="name">Product</th>
-								<th class="total">Subtotal</th>
+								<th class="name">@lang('Product')</th>
+								<th class="total">@lang('Subtotal')</th>
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<td class="name">Walnut Cutting Board&nbsp; <strong class="quantity">×&nbsp;1</strong></td>
-								<td class="total"><span>£100.00</span></td>
-							</tr>
-							<tr>
-								<td class="name">Pizza Plate Tray&nbsp; <strong class="quantity">×&nbsp;1</strong></td>
-								<td class="total"><span>£22.00</span></td>
-							</tr>
-							<tr>
-								<td class="name">Minimalist Ceramic Pot - Pearl river, Large&nbsp; <strong class="quantity">×&nbsp;1</strong></td>
-								<td class="total"><span>£120.00</span></td>
-							</tr>
+							@foreach (Cart::content() as $item)
+								<tr>
+									<td class="name">{{ $item->model->name }}&nbsp; <strong class="quantity">×&nbsp;{{ $item->qty }}</strong></td>
+									<td class="total"><span>{{ $item->subtotal }}</span></td>
+								</tr>
+							@endforeach
 						</tbody>
 						<tfoot>
 							<tr class="subtotal">
-								<th>Subtotal</th>
-								<td><span>£242.00</span></td>
+								<th>@lang('Subtotal')</th>
+								<td><span>{{ Cart::total() }}</span></td>
+							</tr>
+							<tr class="subtotal">
+								<th>@lang('Shipping')</th>
+								<td><span id="shippingPrice">N/A</span></td>
 							</tr>
 							<tr class="total">
-								<th>Total</th>
-								<td><strong><span>£242.00</span></strong></td>
+								<th>@lang('Total')</th>
+								<td><strong><span id="finalPrice">{{ Cart::total() }}</span></strong></td>
 							</tr>
 						</tfoot>
 					</table>
@@ -149,7 +149,7 @@
 				<div class="order-payment">
 					<div class="payment-method">
 						<div class="accordion" id="paymentMethod">
-							
+
 							<div class="card">
 								<div class="card-header">
 									<button data-toggle="collapse" data-target="#cashkPayments">@lang('Cash on delivery')</button>
@@ -173,8 +173,9 @@
 						</div>
 					</div>
 					<div class="text-center">
-						
-						<button class="btn btn-dark btn-outline-hover-dark">@lang('place order')</button>
+						<button class="btn btn-dark btn-outline-hover-dark">
+							@lang('place order')
+						</button>
 					</div>
 				</div>
 			</div>
@@ -183,3 +184,7 @@
 </div>
 <!-- Checkout Section End -->
 @stop
+
+@push('scripts')
+	<script src="/assets/js/checkout.js"></script>
+@endpush
