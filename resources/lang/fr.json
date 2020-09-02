@@ -9,5 +9,9 @@
 	"Size":"Taille",
 	"Color":"Couleur",
 	"Quantity":"Quantité",
-	"Add to Cart":"Ajouter au Panier"
+	"Add to Cart":"Ajouter au Panier",
+	"Login": "Se connecter",
+	"Register": "S'inscrire",
+	"Great to have you back!":"Heureux de vous revoir!",
+	"Remember me":"Se souvenir de moi"
 }

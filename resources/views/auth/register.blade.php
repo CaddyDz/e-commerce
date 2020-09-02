@@ -11,6 +11,15 @@
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
+                        <div class="login-register-title">
+						<h2 class="title">Register</h2>
+						<p class="desc">If you don’t have an account, register now!</p>
+					</div>
+
+
+
+
+
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
@@ -60,7 +69,13 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
-
+                        <div class="col-12 learts-mb-20">
+									<label for="phone">
+										@lang('Phone number')
+										<abbr class="required">*</abbr>
+									</label>
+									<input type="tel" pattern="(0)(5|6|7|9)(4|5|6|7|8)[0-9]{7}" id="phone" name="phone" required>
+						</div>
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">

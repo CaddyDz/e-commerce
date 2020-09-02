@@ -54,11 +54,14 @@
 										<div class="col-12 learts-mb-20">
 											<div class="form-check">
 												<input type="checkbox" class="form-check-input" id="rememberMe">
-												<label class="form-check-label" for="rememberMe">Remember me</label>
+												<label class="form-check-label" for="rememberMe">@lang('Remember me')</label>
 											</div>
 										</div>
 										<div class="col-12 learts-mb-20">
 											<a href="lost-password.html" class="fw-400">Lost your password?</a>
+										</div>
+										<div class="col-12 learts-mb-20">
+											<a href="lost-password.html" class="fw-400">Vous n'avez pas de compte? Inscriver Vous!</a>
 										</div>
 									</div>
 								</div>
@@ -67,68 +70,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-6">
-				<div class="user-login-register">
-					<div class="login-register-title">
-						<h2 class="title">Register</h2>
-						<p class="desc">If you don’t have an account, register now!</p>
-					</div>
-					<div class="login-register-form">
-						<form action="{{ route('register') }}" method="POST">
-							@csrf
-							<div class="row learts-mb-n50">
-								<div class="col-12 learts-mb-20">
-									<label for="name">
-										@lang('Name')
-										<abbr class="required">*</abbr>
-									</label>
-									<input type="text" id="name" name="name" required>
-								</div>
-								<div class="col-12 learts-mb-20">
-									<label for="registerEmail">
-										Email address
-										<abbr class="required">*</abbr>
-									</label>
-									<input type="email" id="registerEmail" name="email" required>
-								</div>
-								<div class="col-12 learts-mb-20">
-									<label for="phone">
-										@lang('Phone number')
-										<abbr class="required">*</abbr>
-									</label>
-									<input type="tel" pattern="(0)(5|6|7)(4|5|6|7)[0-9]{7}" id="phone" name="phone" required>
-								</div>
-								<div class="col-12 learts-mb-20">
-									<label for="password">
-										@lang('Password')
-										<abbr class="required">*</abbr>
-									</label>
-									<input type="password" id="password" name="password" required>
-								</div>
-								<div class="col-12 learts-mb-20">
-									<label for="password-confirmation">
-										@lang('Password Confirmation')
-										<abbr class="required">*</abbr>
-									</label>
-									<input type="password" id="password-confirmation" name="password_confirmation" required>
-								</div>
-								<div class="col-12 learts-mb-50">
-									<p>Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our privacy policy</p>
-								</div>
-								<div class="col-12 text-center learts-mb-50">
-									<button class="btn btn-dark btn-outline-hover-dark" type="submit">
-										Register
-									</button>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
 
-	</div>
-
+	
 </div>
 <!-- Login & Register Section End -->
 @stop
