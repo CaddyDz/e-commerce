@@ -28,7 +28,8 @@
 <div class="section section-padding">
 	<div class="container">
 		<div class="row no-gutters">
-			<div class="col-lg-12">
+			<div class="col-lg-3"></div>
+			<div class="col-lg-6">
 				<div class="user-login-register bg-light">
 					<div class="login-register-title">
 						<h2 class="title">@lang('Login')</h2>
@@ -70,8 +71,9 @@
 					</div>
 				</div>
 			</div>
-
-
+			<div class="col-lg-3"></div>
+		</div>
+	</div>
 </div>
 <!-- Login & Register Section End -->
 @stop
