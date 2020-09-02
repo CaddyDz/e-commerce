@@ -92,60 +92,9 @@
     </div>
     <!-- Feature Section End -->
 
-    <!-- Video Banner Section Start -->
-    <div class="section">
-        <div class="container">
-            <div class="video-banner2" data-bg-image="assets/images/banner/video/video-banner-2.jpg">
-                <div class="content">
-                    <a href="https://www.youtube.com/watch?v=1jSsy7DtYgc" class="video-popup">
-                        <img src="assets/images/icons/button-play-light.png" alt="">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Video Banner Section End -->
+    
 
-    <!-- Feature Section Start -->
-    <div class="section section-padding">
-        <div class="container">
-
-            <div class="row learts-mb-n30">
-
-                <div class="col-xl-3 col-lg-4 col-12 mr-auto learts-mb-30">
-                    <h1 class="fw-400">The difference when you shop Learts!</h1>
-                </div>
-                <div class="col-lg-8 col-12 learts-mb-30">
-                    <div class="row learts-mb-n30">
-
-                        <div class="col-md-6 col-12 learts-mb-30">
-                            <p class="text-heading fw-600 learts-mb-10">Free Shipping</p>
-                            <p>Once receiving your order, we will turn your products around in 3-5 business days.</p>
-                        </div>
-
-                        <div class="col-md-6 col-12 learts-mb-30">
-                            <p class="text-heading fw-600 learts-mb-10">Free Returns</p>
-                            <p>We accept returns for freshly purchased products within 7 days from the payment.</p>
-                        </div>
-
-                        <div class="col-md-6 col-12 learts-mb-30">
-                            <p class="text-heading fw-600 learts-mb-10">Superb Quality</p>
-                            <p>We make commitments that the quality of our products will and always will be superb.</p>
-                        </div>
-
-                        <div class="col-md-6 col-12 learts-mb-30">
-                            <p class="text-heading fw-600 learts-mb-10">Free Wrapping</p>
-                            <p>Upon request, items bought as gifts from our store can receive free wrapping service.</p>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-    <!-- Feature Section End -->
+  
 
     <!-- Instagram Section Start -->
     <div class="section section-padding border-top">
@@ -153,7 +102,7 @@
 
             <!-- Section Title Start -->
             <div class="section-title2 text-center">
-                <h2 class="title">@learts_shop</h2>
+                <h2 class="title">@dlala_dz</h2>
                 <p class="fw-400">Follow us on Instagram</p>
             </div>
             <!-- Section Title End -->

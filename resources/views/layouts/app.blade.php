@@ -1000,10 +1000,10 @@
 					<div class="row row-cols-sm-3 row-cols-1 learts-mb-n40">
 						<div class="col learts-mb-40">
 							<ul class="widget-list">
-								<li><a href="#">@lang('About us')</a></li>
+								<li><a href="/about">@lang('About us')</a></li>
 								<li><a href="#">@lang('Store location')</a></li>
-								<li><a href="#">@lang('Shipping policy')</a></li>
-								<li><a href="#">FAQs</a></li>
+								<li><a href="/shipping">@lang('Shipping policy')</a></li>
+								<li><a href="/faq">FAQs</a></li>
 							</ul>
 						</div>
 						<div class="col learts-mb-40">

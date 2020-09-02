@@ -27,3 +27,4 @@ Route::get('/checkout', 'CheckoutController@index');
 Route::view('about', 'about');
 Route::view('tos', 'tos');
 Route::view('faq', 'faq');
+Route::view('shipping', 'shipping');
