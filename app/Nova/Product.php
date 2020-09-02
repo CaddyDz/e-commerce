@@ -60,6 +60,19 @@ class Product extends Resource
 	];
 
 	/**
+	 * Get a fresh instance of the model represented by the resource.
+	 */
+	public static function newModel()
+	{
+		$model = static::$model;
+		$product = new $model;
+		$product->display_sizes = true;
+		$product->display_colors = true;
+
+		return $product;
+	}
+
+	/**
 	 * Get the fields displayed by the resource.
 	 *
 	 * @param  \Illuminate\Http\Request  $request
@@ -73,7 +86,9 @@ class Product extends Resource
 			Text::make(__('Name'), 'name')->required(),
 			Textarea::make(__('Description'), 'description'),
 			BelongsToMany::make(__('Sizes'), 'sizes', Size::class),
+			Boolean::make(__('Display Sizes'), 'display_sizes')->hideFromIndex(),
 			BelongsToMany::make(__('Colors'), 'colors', Color::class),
+			Boolean::make(__('Display Colors'), 'display_colors')->hideFromIndex(),
 			BelongsToMany::make(__('Properties'), 'properties', Property::class),
 			Number::make(__('Price'), 'price')->required(),
 			Avatar::make(__('Image'), 'image'),

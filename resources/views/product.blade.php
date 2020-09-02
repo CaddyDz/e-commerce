@@ -90,25 +90,30 @@
 						<div class="product-variations">
 							<table>
 								<tbody>
+									@if($product->display_sizes && $product->sizes->isNotEmpty())
 									<tr>
-										<td class="label"><span>Size</span></td>
+										<td class="label"><span>@lang('Available Sizes')</span></td>
 										<td class="value">
 											<div class="product-sizes">
-												<a href="#">Large</a>
-												<a href="#">Medium</a>
-												<a href="#">Small</a>
+												@foreach ($product->sizes as $size)
+													<a href="#">{{ $size->label }}</a>
+												@endforeach
 											</div>
 										</td>
 									</tr>
+									@endif
+									@if($product->display_colors && $product->colors->isNotEmpty())
 									<tr>
-										<td class="label"><span>Color</span></td>
+										<td class="label"><span>@lang('Available Colors')</span></td>
 										<td class="value">
 											<div class="product-colors">
-												<a href="#" data-bg-color="#000000"></a>
-												<a href="#" data-bg-color="#ffffff"></a>
+												@foreach ($product->colors as $color)
+													<a href="#" data-bg-color="#000000"></a>
+												@endforeach
 											</div>
 										</td>
 									</tr>
+									@endif
 									<tr>
 										<td class="label"><span>Quantity</span></td>
 										<td class="value">
@@ -231,14 +236,26 @@
 							<div class="table-responsive">
 								<table class="table table-bordered">
 									<tbody>
+										@if($product->display_sizes)
 										<tr>
-											<td>Size</td>
-											<td>Large, Medium, Small</td>
+											<td>@lang('Available Sizes')</td>
+											<td>
+												@foreach ($product->sizes as $size)
+													{{ $size->label }}
+												@endforeach
+											</td>
 										</tr>
+										@endif
+										@if($product->display_colors)
 										<tr>
-											<td>Color</td>
-											<td>Black, White</td>
+											<td>@lang('Available Colors')</td>
+											<td>
+												@foreach ($product->colors as $color)
+													{{ $color->color }}
+												@endforeach
+											</td>
 										</tr>
+										@endif
 									</tbody>
 								</table>
 							</div>
