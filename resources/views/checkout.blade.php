@@ -60,11 +60,11 @@
 				
 				<div class="col-12 learts-mb-20">
 					<label for="bdAddress1">@lang('Street address') <abbr class="required">*</abbr></label>
-				<input type="text" id="bdAddress1" placeholder="House number and street name">
+				<input type="text" id="bdAddress1" placeholder="Nom du Quartier, N° de porte">
 				</div>
 				<div class="col-12 learts-mb-20">
 					<label for="bdAddress2" class="sr-only">Apartment, suite, unit etc. (optional)</label>
-					<input type="text" id="bdAddress2" placeholder="Apartment, suite, unit etc. (optional) ">
+					<input type="text" id="bdAddress2" placeholder="Apartment, Batiment, unit etc. (optionel) ">
 				</div>
 				<div class="col-12 learts-mb-20">
 					<label for="bdTownOrCity">@lang('Town / City') <abbr class="required">*</abbr></label>
@@ -73,7 +73,7 @@
 				<div class="col-12 learts-mb-20">
 					<label for="bdDistrict">@lang('District') <abbr class="required">*</abbr></label>
 					<select id="bdDistrict" class="select2-basic">
-						<option value="">Select an option…</option>
+						<option value="">@lang('Select an option…')</option>
 						@foreach ($states as $state)
 							<option value="{{ $state->id }}">
 								@lang($state->state) {{ $state->price }}
@@ -82,26 +82,26 @@
 					</select>
 				</div>
 				<div class="col-12 learts-mb-20">
-					<label for="bdPostcode">Postcode / ZIP (optional)</label>
+					<label for="bdPostcode">@lang('Postcode') / ZIP (optionel)</label>
 					<input type="text" id="bdPostcode">
 				</div>
 				<div class="col-md-6 col-12 learts-mb-20">
-					<label for="bdEmail">Email address <abbr class="required">*</abbr></label>
+					<label for="bdEmail">@lang('Email address') <abbr class="required">*</abbr></label>
 					<input type="text" id="bdEmail">
 				</div>
 				<div class="col-md-6 col-12 learts-mb-30">
-					<label for="bdPhone">Phone <abbr class="required">*</abbr></label>
+					<label for="bdPhone">@lang('Phone') <abbr class="required">*</abbr></label>
 					<input type="text" id="bdPhone">
 				</div>
 				<div class="col-12 learts-mb-40">
 					<div class="form-check">
 						<input type="checkbox" class="form-check-input" id="exampleCheck1">
-						<label class="form-check-label" for="exampleCheck1">Create an account?</label>
+						<label class="form-check-label" for="exampleCheck1">@lang('Create an account?')</label>
 					</div>
 				</div>
 				<div class="col-12 learts-mb-20">
-					<label for="bdOrderNote">Order Notes (optional)</label>
-					<textarea id="bdOrderNote" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
+					<label for="bdOrderNote">@lang('Order Notes (optional)')</label>
+					<textarea id="bdOrderNote" placeholder="Remarques sur votre commande, par exemple : notes spéciales pour la livraison."></textarea>
 				</div>
 			</div>
 		</form>

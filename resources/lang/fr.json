@@ -48,7 +48,12 @@
 	"Men":"Homme",
 	"Women":"Femme",
 	"Flash sale":"Articles en Promotions",
-	"Store location":"Emplacement du Magasin"
+	"Store location":"Emplacement du Magasin",
+	"Postcode":"Code Postale",
+	"Phone": "N° Téléphone",
+	"Order Notes (optional)":"Remarque (Optionel)",
+	"Create an account?":"Crée un Compte",
+	"Select an option…":"Selectionner une option..."
 
 
 
