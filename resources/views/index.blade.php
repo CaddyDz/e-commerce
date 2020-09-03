@@ -48,7 +48,7 @@
 				<div class="col">
 					<!-- Section Title Start -->
 					<div class="section-title text-center mb-0">
-						
+
 						<h2 class="title title-icon-both">Nos Partenaires :</h2>
 					</div>
 					<!-- Section Title End -->
@@ -58,32 +58,7 @@
 	</div>
 
 
-	<!-- Deal of the Day Section Start -->
-	<div class="section section-fluid section-padding" data-bg-color="#f4f3ec">
-		<div class="container">
-			<div class="row align-items-center learts-mb-n30">
-
-				<div class="col-lg-6 col-12 learts-mb-30">
-					<div class="product-deal-image text-center">
-						<img src="assets/images/product/deal-product-2.png" alt="">
-					</div>
-				</div>
-
-				<div class="col-lg-6 col-12 learts-mb-30">
-					<div class="product-deal-content">
-						<h2 class="title">Deal of the day</h2>
-						<div class="desc">
-							<p>Years of experience brought about by our skilled craftsmen could ensure that every piece produced is a work of art. Our focus is always the best quality possible.</p>
-						</div>
-						<div class="countdown1" data-countdown="2021/01/01"></div>
-						<a href="shop.html" class="btn btn-dark btn-hover-primary">Shop Now</a>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
-	<!-- Deal of the Day Section End -->
+	@include('partials.deal_of_the_day')
 
 	<!-- Instagram Section Start -->
 	<div class="section section-fluid section-padding pt-0">
