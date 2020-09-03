@@ -55,7 +55,18 @@
 	"Create an account?":"Crée un Compte",
 	"Select an option…":"Selectionner une option...",
 	"Continue Shopping":"Continuer vos achats",
-	"Proceed to checkout":"Passer la commande"
+	"Proceed to checkout":"Passer la commande",
+	"My Account":"Mon Compte",
+	"Dashboard":"Tableau de bord",
+	"Account Details":"informations du compte",
+	"Logout":"Se déconnecté",
+	"Shipping Address":"Addresse de livraison",
+	"The following addresses will be used on the checkout page by default.":"L'adresses suivante sera utilisée par défaut sur la page de confirmation.",
+	"For kids & babies":"Enfants & Bébés",
+	"Sale":"Solde",
+	"decor":"Maison et Décor",
+	"Accessories":"Accessoires"
+
 
 
 

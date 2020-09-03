@@ -8,10 +8,10 @@
 				<div class="col">
 
 					<div class="page-title">
-						<h1 class="title">My Account</h1>
+						<h1 class="title">@lang('My Account')</h1>
 						<ul class="breadcrumb">
 							<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-							<li class="breadcrumb-item active">My Account</li>
+							<li class="breadcrumb-item active">@lang('My Account')</li>
 						</ul>
 					</div>
 
@@ -29,11 +29,11 @@
 				<!-- My Account Tab List Start -->
 				<div class="col-lg-4 col-12 learts-mb-30">
 					<div class="myaccount-tab-list nav">
-						<a href="#dashboad" class="active" data-toggle="tab">Dashboard <i class="far fa-home"></i></a>
-						<a href="#orders" data-toggle="tab">Orders <i class="far fa-file-alt"></i></a>
+						<a href="#dashboad" class="active" data-toggle="tab">@lang('Dashboard') <i class="far fa-home"></i></a>
+						<a href="#orders" data-toggle="tab">@lang('Orders') <i class="far fa-file-alt"></i></a>
 						<a href="#download" data-toggle="tab">Download <i class="far fa-arrow-to-bottom"></i></a>
-						<a href="#address" data-toggle="tab">address <i class="far fa-map-marker-alt"></i></a>
-						<a href="#account-info" data-toggle="tab">Account Details <i class="far fa-user"></i></a>
+						<a href="#address" data-toggle="tab">@lang('address') <i class="far fa-map-marker-alt"></i></a>
+						<a href="#account-info" data-toggle="tab">@lang('Account Details') <i class="far fa-user"></i></a>
 						<a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
 							@lang('Logout')
 							<i class="far fa-sign-out-alt"></i>
@@ -145,10 +145,10 @@
 						<!-- Single Tab Content Start -->
 						<div class="tab-pane fade" id="address">
 							<div class="myaccount-content address">
-								<p>The following addresses will be used on the checkout page by default.</p>
+								<p>@lang('The following addresses will be used on the checkout page by default.')</p>
 								<div class="row learts-mb-n30">
 									<div class="col-md-6 col-12 learts-mb-30">
-										<h4 class="title">Billing Address <a href="#" class="edit-link">edit</a></h4>
+										<h4 class="title">@lang('Shipping Address') <a href="#" class="edit-link">edit</a></h4>
 										<address>
 											<p><strong>Alex Tuntuni</strong></p>
 											<p>1355 Market St, Suite 900 <br>
@@ -156,15 +156,7 @@
 											<p>Mobile: (123) 456-7890</p>
 										</address>
 									</div>
-									<div class="col-md-6 col-12 learts-mb-30">
-										<h4 class="title">Shipping Address <a href="#" class="edit-link">edit</a></h4>
-										<address>
-											<p><strong>Alex Tuntuni</strong></p>
-											<p>1355 Market St, Suite 900 <br>
-												San Francisco, CA 94103</p>
-											<p>Mobile: (123) 456-7890</p>
-										</address>
-									</div>
+									
 								</div>
 							</div>
 						</div>

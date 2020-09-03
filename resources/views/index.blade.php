@@ -4,7 +4,7 @@
 @section('content')
 	<!-- Slider main container Start -->
 	<div class="home6-slider section">
-		<div class="home6-slide-item" data-bg-image="assets/images/SKU.png">
+		<div class="home6-slide-item" data-bg-image="assets/images/baner.jpg">
 			<div class="container">
 				
 			</div>
