@@ -155,16 +155,16 @@
 					<button class="category-toggle">
 					<i class="fal fa-bars"></i> @lang('Browse Categories')</button>
 					<ul class="header-category-list">
-						<li><a href="#"><img src="assets/images/icons/female-3-32.png" alt=""> Femmes</a></li>
-						<li><a href="#"><img src="assets/images/icons/male-3-32.png" alt=""> Hommes</a></li>
-						<li><a href="#"><img src="assets/images/icons/cat-icon-3.png" alt=""> Vêtements</a></li>
-						<li><a href="#"><img src="assets/images/icons/cat-icon-4.png" alt=""> Chaussures</a></li>
+						<li><a href="#"><img src="" alt=""> Femmes</a></li>
+						<li><a href="#"><img src="" alt=""> Hommes</a></li>
+						<li><a href="#"><img src="" alt=""> Vêtements</a></li>
+						<li><a href="#"><img src="" alt=""> Chaussures</a></li>
 						
-						<li><a href="#"><img src="assets/images/icons/cat-icon-6.png" alt=""> @lang('For kids & babies')</a></li>
-						<li><a href="#"><img src="assets/images/icons/cat-icon-7.png" alt=""> @lang('decor')</a></li>
-						<li><a href="#"><img src="assets/images/icons/cat-icon-8.png" alt=""> @lang('Accessories')</a></li>
-						<li><a href="#"><img src="assets/images/icons/cat-icon-9.png" alt=""> Montres</a></li>
-						<li><a href="#"><img src="assets/images/icons/cat-icon-10.png" alt=""> @lang('Sale')</a></li>
+						<li><a href="#"><img src="" alt=""> @lang('For kids & babies')</a></li>
+						<li><a href="#"><img src="" alt=""> @lang('decor')</a></li>
+						<li><a href="#"><img src="" alt=""> @lang('Accessories')</a></li>
+						<li><a href="#"><img src="" alt=""> Montres</a></li>
+						<li><a href="#"><img src=" alt=""> @lang('Sale')</a></li>
 					</ul>
 				</div>
 

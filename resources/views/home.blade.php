@@ -61,7 +61,7 @@
 										@csrf
 									</form>
 								</p>
-								<p>@lang('From your account dashboard you can view your') <span>recent orders</span>, manage your <span>shipping and billing addresses</span>, and <span>edit your password and account details</span>.</p>
+								<p>@lang('From your account dashboard you can view your') <span>@lang('recent orders')</span>, @lang('manage your') <span>@lang('shipping addresse')</span>, @lang('and') <span>@lang('edit your password and account details')</span>.</p>
 							</div>
 						</div>
 						<!-- Single Tab Content End -->
