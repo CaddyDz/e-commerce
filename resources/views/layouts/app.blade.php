@@ -52,7 +52,7 @@
 					<div class="topbar-menu">
 						<ul>
 						   <!-- <li><a href="#"><i class="fa fa-map-marker-alt"></i>Store Location</a></li> -->
-							<li><a href="#"><i class="fa fa-truck"></i>Order Status</a></li>
+							<li><a href="#"><i class="fa fa-truck"></i>@lang('Order Status')</a></li>
 						</ul>
 					</div>
 				</div>
@@ -459,7 +459,7 @@
 				<!-- Header Logo Start -->
 				<div class="col">
 					<div class="header-logo">
-						<a href="/"><img src="assets/images/logo/logo-2.png" alt="Learts Logo"></a>
+						<a href="/"><img src="assets/images/logo/Logofinal.png" alt="DlalaDz"></a>
 					</div>
 				</div>
 				<!-- Header Logo End -->
