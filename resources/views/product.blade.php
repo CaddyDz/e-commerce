@@ -76,14 +76,14 @@
 							<a href="#"><i class="fal fa-long-arrow-left"></i></a>
 							<a href="#"><i class="fal fa-long-arrow-right"></i></a>
 						</div>
-						<div class="product-ratings">
+						<!--<div class="product-ratings">
 							<span class="star-rating">
 								<span class="rating-active" style="width: 100%;">@lang('ratings')</span>
 							</span>
 							<a href="#reviews" class="review-link">(<span class="count">3</span> @lang('customer reviews'))</a>
-						</div>
+						</div> -->
 						<h3 class="product-title">{{ $product->name }}</h3>
-						<div class="product-price">{{ $product->price}}<h1> Dz </h1></div>
+						<div class="product-price">{{ $product->price}} Dzd </div>
 						<div class="product-description">
 							<p>{{ $product->descrption }}</p>
 						</div>
@@ -128,9 +128,9 @@
 							</table>
 						</div>
 						<div class="product-buttons">
-							<a href="#" class="btn btn-icon btn-outline-body btn-hover-dark hintT-top" data-hint="Add to Wishlist"><i class="fal fa-heart"></i></a>
-							<a href="#" class="btn btn-dark btn-outline-hover-dark"><i class="fal fa-shopping-cart"></i> @lang('Add to Cart')</a>
-							<a href="#" class="btn btn-icon btn-outline-body btn-hover-dark hintT-top" data-hint="Compare"><i class="fal fa-random"></i></a>
+							<!-- <a href="#" class="btn btn-icon btn-outline-body btn-hover-dark hintT-top" data-hint="Add to Wishlist"><i class="fal fa-heart"></i></a> -->
+							<a href="{{ route('cart.add', ['product'=>$product])}}" class="btn btn-dark btn-outline-hover-dark"><i class="fal fa-shopping-cart"></i> @lang('Add to Cart')</a>
+							
 						</div>
 						<div class="product-brands">
 							<span class="title">@lang('Brands')</span>
@@ -153,7 +153,7 @@
 										</td>
 									</tr>
 									<tr>
-										<td class="label"><span>Tags</span></td>
+									<!--	<td class="label"><span>Tags</span></td>
 										<td class="value">
 											<ul class="product-tags">
 												<li><a href="#">handmade</a></li>
@@ -162,8 +162,9 @@
 												<li><a href="#">product</a></li>
 												<li><a href="#">learts</a></li>
 											</ul>
-										</td>
+										</td> -->
 									</tr>
+									<!--
 									<tr>
 										<td class="label"><span>@lang('Share on')</span></td>
 										<td class="va">
@@ -175,7 +176,7 @@
 												<a href="#"><i class="fal fa-envelope"></i></a>
 											</div>
 										</td>
-									</tr>
+									</tr> -->
 								</tbody>
 							</table>
 						</div>
@@ -190,6 +191,7 @@
 	<!-- Single Products Section End -->
 
 	<!-- Single Products Infomation Section Start -->
+	<!--
 	<div class="section section-padding border-bottom">
 		<div class="container">
 
@@ -197,7 +199,7 @@
 				
 				<li><a data-toggle="tab" href="#tab-additional_information">@lang('Additional information')</a></li>
 				<li><a data-toggle="tab" href="#tab-reviews">@lang('Reviews')</a></li>
-			</ul>
+			</ul> 
 			<div class="tab-content product-infor-tab-content">
 				<div class="tab-pane fade show active" id="tab-description">
 					<div class="row">
@@ -225,7 +227,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> 
 				<div class="tab-pane fade" id="tab-additional_information">
 					<div class="row">
 						<div class="col-lg-8 col-md-10 col-12 mx-auto">
@@ -337,7 +339,7 @@
 			</div>
 
 		</div>
-	</div>
+	</div> -->
 	<!-- Single Products Infomation Section End -->
 
 	<!-- Recommended Products Section Start -->
