@@ -156,7 +156,7 @@
 					<i class="fal fa-bars"></i> @lang('Browse Categories')</button>
 					<ul class="header-category-list">
 					@foreach($categories as $category)
-						<li><a href=""><img src="" alt=""> {{ $category->name}} </a></li>
+						<li><a href="{{ route('category', ['category' => $category]) }}"><img src="" alt=""> {{ $category->name}} </a></li>
 					@endforeach	
 					</ul>
 				</div>
