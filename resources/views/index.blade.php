@@ -11,6 +11,18 @@
 	<!-- Slider main container End -->
 
 	<!-- Category Banner Section Start -->
+	
+	<div class="row learts-mb-50">
+				<div class="col">
+					<!-- Section Title Start -->
+					<div></div>
+					<div class="section-title text-center mb-0">
+
+						<h2 class="title title-icon-both">Nos Marques :</h2>
+					</div>
+					<!-- Section Title End -->
+				</div>
+			</div>
 	<div class="section section-fluid learts-pt-30">
 		<div class="container">
 			<div class="category-banner1-carousel">
