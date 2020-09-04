@@ -29,3 +29,5 @@ Route::view('about', 'about');
 Route::view('tos', 'tos');
 Route::view('faq', 'faq');
 Route::view('shipping', 'shipping');
+Route::post('applyCoupon', 'CheckoutController@applyCoupon');
+Route::post('/order', 'CheckoutController@store');
