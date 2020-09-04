@@ -33,7 +33,7 @@
 	<link rel="stylesheet" href="/assets/css/plugins/slick.css"> --}}
 
 	<!-- Main Style CSS -->
-	 {{-- <link rel="stylesheet" href="/assets/css/style.css"> --}}
+	{{-- <link rel="stylesheet" href="/assets/css/style.css"> --}}
 
 	<!-- Use the minified version files listed below for better performance and remove the files listed above -->
 	<link rel="stylesheet" href="/assets/css/vendor/vendor.min.css">
@@ -51,12 +51,12 @@
 				<div class="col d-none d-md-block">
 					<div class="topbar-menu">
 						<ul>
-						   <!-- <li><a href="#"><i class="fa fa-map-marker-alt"></i>Store Location</a></li> -->
+							<!-- <li><a href="#"><i class="fa fa-map-marker-alt"></i>Store Location</a></li> -->
 							<li><a href="#"><i class="fa fa-truck"></i>@lang('Order Status')</a></li>
 						</ul>
 					</div>
 				</div>
-			   <!--  <div class="col d-md-none d-lg-block">
+				<!--  <div class="col d-md-none d-lg-block">
 					<p class="text-center my-2">Free shipping for orders over $59 !</p>
 				</div>-->
 
@@ -90,7 +90,7 @@
 				<!-- Header Logo Start -->
 				<div class="col-auto">
 					<div class="header-logo justify-content-center">
-						<a href="/"><img src="assets/images/logo/logo.png" alt="Learts Logo"></a>
+						<a href="/"><img src="/assets/images/logo/logo.png" alt="@lang('Logo')"></a>
 					</div>
 				</div>
 				<!-- Header Logo End -->
@@ -153,16 +153,20 @@
 			<div class="container">
 				<div class="header-categories">
 					<button class="category-toggle">
-					<i class="fal fa-bars"></i> @lang('Browse Categories')</button>
+						<i class="fal fa-bars"></i> @lang('Browse Categories')</button>
 					<ul class="header-category-list">
-					@foreach($categories as $category)
-						<li><a href="{{ route('category', ['category' => $category]) }}"><img src="" alt=""> {{ $category->name}} </a></li>
-					@endforeach	
+						@foreach($categories as $category)
+							<li>
+								<a href="{{ route('category', ['category' => $category]) }}">
+									<img src="" alt="">{{ $category->name }}
+								</a>
+							</li>
+						@endforeach
 					</ul>
 				</div>
 
 
-				
+
 				<div class="header-call">
 					<p><i class="fa fa-phone"></i> 0918 206 263</p>
 				</div>
@@ -181,7 +185,7 @@
 				<!-- Header Logo Start -->
 				<div class="col">
 					<div class="header-logo">
-						<a href="/"><img src="assets/images/logo/logo-2.png" alt="Learts Logo"></a>
+						<a href="/"><img src="/assets/images/logo/logo-2.png" alt="Learts Logo"></a>
 					</div>
 				</div>
 				<!-- Header Logo End -->
@@ -195,31 +199,31 @@
 									<li>
 										<a href="#" class="mega-menu-title"><span class="menu-text">HOME GROUP</span></a>
 										<ul>
-											<li> <img class="mmh_img " src="assets/images/demo/menu/home-01.jpg"> <a href="/"><span class="menu-text">Arts Propelled</span></a></li>
-											<li> <img class="mmh_img " src="assets/images/demo/menu/home-02.jpg"> <a href="index-2.html"><span class="menu-text">Decor Thriving</span></a></li>
-											<li> <img class="mmh_img " src="assets/images/demo/menu/home-03.jpg"> <a href="index-3.html"><span class="menu-text">Savvy Delight</span></a></li>
-											<li> <img class="mmh_img " src="assets/images/demo/menu/home-04.jpg"> <a href="index-4.html"><span class="menu-text">Perfect Escapes</span></a></li>
+											<li> <img class="mmh_img " src="/assets/images/demo/menu/home-01.jpg"> <a href="/"><span class="menu-text">Arts Propelled</span></a></li>
+											<li> <img class="mmh_img " src="/assets/images/demo/menu/home-02.jpg"> <a href="index-2.html"><span class="menu-text">Decor Thriving</span></a></li>
+											<li> <img class="mmh_img " src="/assets/images/demo/menu/home-03.jpg"> <a href="index-3.html"><span class="menu-text">Savvy Delight</span></a></li>
+											<li> <img class="mmh_img " src="/assets/images/demo/menu/home-04.jpg"> <a href="index-4.html"><span class="menu-text">Perfect Escapes</span></a></li>
 										</ul>
 									</li>
 									<li>
 										<a href="index-2.html" class="mega-menu-title"><span class="menu-text">HOME GROUP</span></a>
 										<ul>
-											<li> <img class="mmh_img " src="assets/images/demo/menu/home-05.jpg"> <a href="index-5.html"><span class="menu-text">Kitchen Cozy</span></a></li>
-											<li> <img class="mmh_img " src="assets/images/demo/menu/home-06.jpg"> <a href="index-6.html"><span class="menu-text">Dreamy Designs</span></a></li>
-											<li> <img class="mmh_img " src="assets/images/demo/menu/home-07.jpg"> <a href="index-7.html"><span class="menu-text">Crispy Recipes</span></a></li>
-											<li> <img class="mmh_img " src="assets/images/demo/menu/home-08.jpg"> <a href="index-8.html"><span class="menu-text">Decoholic Chic</span></a></li>
+											<li> <img class="mmh_img " src="/assets/images/demo/menu/home-05.jpg"> <a href="index-5.html"><span class="menu-text">Kitchen Cozy</span></a></li>
+											<li> <img class="mmh_img " src="/assets/images/demo/menu/home-06.jpg"> <a href="index-6.html"><span class="menu-text">Dreamy Designs</span></a></li>
+											<li> <img class="mmh_img " src="/assets/images/demo/menu/home-07.jpg"> <a href="index-7.html"><span class="menu-text">Crispy Recipes</span></a></li>
+											<li> <img class="mmh_img " src="/assets/images/demo/menu/home-08.jpg"> <a href="index-8.html"><span class="menu-text">Decoholic Chic</span></a></li>
 										</ul>
 									</li>
 									<li>
 										<a href="index-2.html" class="mega-menu-title"><span class="menu-text">HOME GROUP</span></a>
 										<ul>
-											<li> <img class="mmh_img " src="assets/images/demo/menu/home-9.jpg"> <a href="index-9.html"><span class="menu-text">Reblended Dish</span></a></li>
-											<li> <img class="mmh_img " src="assets/images/demo/menu/home-10.jpg"> <a href="index-10.html"><span class="menu-text">Craftin House</span></a></li>
-											<li> <img class="mmh_img " src="assets/images/demo/menu/home-11.jpg"> <a href="index-11.html"><span class="menu-text">Craftswork Biz</span></a></li>
+											<li> <img class="mmh_img " src="/assets/images/demo/menu/home-9.jpg"> <a href="index-9.html"><span class="menu-text">Reblended Dish</span></a></li>
+											<li> <img class="mmh_img " src="/assets/images/demo/menu/home-10.jpg"> <a href="index-10.html"><span class="menu-text">Craftin House</span></a></li>
+											<li> <img class="mmh_img " src="/assets/images/demo/menu/home-11.jpg"> <a href="index-11.html"><span class="menu-text">Craftswork Biz</span></a></li>
 										</ul>
 									</li>
 									<li>
-										<a href="#" class="menu-banner"><img src="assets/images/banner/menu-banner-1.jpg" alt="Home Menu Banner"></a>
+										<a href="#" class="menu-banner"><img src="/assets/images/banner/menu-banner-1.jpg" alt="Home Menu Banner"></a>
 									</li>
 								</ul>
 							</li>
@@ -264,7 +268,7 @@
 										</ul>
 									</li>
 									<li class="align-self-center">
-										<a href="#" class="menu-banner"><img src="assets/images/banner/menu-banner-2.png" alt="Shop Menu Banner"></a>
+										<a href="#" class="menu-banner"><img src="/assets/images/banner/menu-banner-2.png" alt="Shop Menu Banner"></a>
 									</li>
 								</ul>
 							</li>
@@ -406,7 +410,7 @@
 				<!-- Header Logo Start -->
 				<div class="col">
 					<div class="header-logo">
-						<a href="/"><img src="assets/images/logo/logo-2.png" alt="Learts Logo"></a>
+						<a href="/"><img src="/assets/images/logo/logo-2.png" alt="Learts Logo"></a>
 					</div>
 				</div>
 				<!-- Header Logo End -->
@@ -452,7 +456,7 @@
 				<!-- Header Logo Start -->
 				<div class="col">
 					<div class="header-logo">
-						<a href="/"><img src="assets/images/logo/Logofinal.png" alt="DlalaDz"></a>
+						<a href="/"><img src="/assets/images/logo/Logofinal.png" alt="DlalaDz"></a>
 					</div>
 				</div>
 				<!-- Header Logo End -->
@@ -528,7 +532,7 @@
 			<div class="body customScroll">
 				<ul class="minicart-product-list">
 					<li>
-						<a href="product-details.html" class="image"><img src="assets/images/product/cart-product-1.jpg" alt="Cart product Image"></a>
+						<a href="product-details.html" class="image"><img src="/assets/images/product/cart-product-1.jpg" alt="Cart product Image"></a>
 						<div class="content">
 							<a href="product-details.html" class="title">Walnut Cutting Board</a>
 							<span class="quantity-price">1 x <span class="amount">$100.00</span></span>
@@ -536,7 +540,7 @@
 						</div>
 					</li>
 					<li>
-						<a href="product-details.html" class="image"><img src="assets/images/product/cart-product-2.jpg" alt="Cart product Image"></a>
+						<a href="product-details.html" class="image"><img src="/assets/images/product/cart-product-2.jpg" alt="Cart product Image"></a>
 						<div class="content">
 							<a href="product-details.html" class="title">Lucky Wooden Elephant</a>
 							<span class="quantity-price">1 x <span class="amount">$35.00</span></span>
@@ -544,7 +548,7 @@
 						</div>
 					</li>
 					<li>
-						<a href="product-details.html" class="image"><img src="assets/images/product/cart-product-3.jpg" alt="Cart product Image"></a>
+						<a href="product-details.html" class="image"><img src="/assets/images/product/cart-product-3.jpg" alt="Cart product Image"></a>
 						<div class="content">
 							<a href="product-details.html" class="title">Fish Cut Out Set</a>
 							<span class="quantity-price">1 x <span class="amount">$9.00</span></span>
@@ -571,18 +575,18 @@
 			</div>
 			<div class="body customScroll">
 				<ul class="minicart-product-list">
-					@foreach ($cart as $item)
-					<li>
-						<a href="{{ route('product', ['product' => $item->model]) }}" class="image"><img src="{{ secure_asset('storage/'. $item->model->image) }}" alt="@lang('Cart product Image')"></a>
-						<div class="content">
-							<a href="{{ route('product', ['product' => $item->model]) }}" class="title">{{ $item->model->name }}</a>
-							<span class="quantity-price">{{ $item->qty }} x <span class="amount">{{ $item->price }}</span></span>
-							<a href="{{ route('cart.remove', ['product' => $item->rowId]) }}" class="remove" onclick="event.preventDefault();document.getElementById('remove-cart-{{ $item->rowId }}').submit();">×</a>
-							<form action="{{ route('cart.remove', ['product' => $item->rowId]) }}" method="post" style="display: none;" id="remove-cart-{{ $item->rowId }}">
-								@csrf
-							</form>
-						</div>
-					</li>
+					@foreach($cart as $item)
+						<li>
+							<a href="{{ route('product', ['product' => $item->model]) }}" class="image"><img src="{{ secure_asset('storage/'. $item->model->image) }}" alt="@lang('Cart product Image')"></a>
+							<div class="content">
+								<a href="{{ route('product', ['product' => $item->model]) }}" class="title">{{ $item->model->name }}</a>
+								<span class="quantity-price">{{ $item->qty }} x <span class="amount">{{ $item->price }}</span></span>
+								<a href="{{ route('cart.remove', ['product' => $item->rowId]) }}" class="remove" onclick="event.preventDefault();document.getElementById('remove-cart-{{ $item->rowId }}').submit();">×</a>
+								<form action="{{ route('cart.remove', ['product' => $item->rowId]) }}" method="post" style="display: none;" id="remove-cart-{{ $item->rowId }}">
+									@csrf
+								</form>
+							</div>
+						</li>
 					@endforeach
 				</ul>
 			</div>
@@ -838,14 +842,14 @@
 						</div>
 					</div>
 				</div>
-                <!--
+				<!--
 				<div class="col-xl-4 col-12 learts-mb-40">
 					<h5 class="widget-title mb-2">Newsletter</h5>
 					<form id="mc-form" class="mc-form widget-subscibe2">
 						<input id="mc-email" autocomplete="off" type="email" placeholder="Enterer votre addresse e-mail">
 						<button id="mc-submit" class="btn">@lang('subscibe')</button>
 					</form>
-					
+
 					<div class="mailchimp-alerts text-centre">
 						<div class="mailchimp-submitting"></div>
 						<div class="mailchimp-success text-success"></div>
@@ -867,17 +871,17 @@
 					<div class="col-lg-6 col-12 learts-mb-30">
 						<div class="product-images">
 							<div class="product-gallery-slider-quickview">
-								<div class="product-zoom" data-image="assets/images/product/single/1/product-zoom-1.jpg">
-									<img src="assets/images/product/single/1/product-1.jpg" alt="">
+								<div class="product-zoom" data-image="/assets/images/product/single/1/product-zoom-1.jpg">
+									<img src="/assets/images/product/single/1/product-1.jpg" alt="">
 								</div>
-								<div class="product-zoom" data-image="assets/images/product/single/1/product-zoom-2.jpg">
-									<img src="assets/images/product/single/1/product-2.jpg" alt="">
+								<div class="product-zoom" data-image="/assets/images/product/single/1/product-zoom-2.jpg">
+									<img src="/assets/images/product/single/1/product-2.jpg" alt="">
 								</div>
-								<div class="product-zoom" data-image="assets/images/product/single/1/product-zoom-3.jpg">
-									<img src="assets/images/product/single/1/product-3.jpg" alt="">
+								<div class="product-zoom" data-image="/assets/images/product/single/1/product-zoom-3.jpg">
+									<img src="/assets/images/product/single/1/product-3.jpg" alt="">
 								</div>
-								<div class="product-zoom" data-image="assets/images/product/single/1/product-zoom-4.jpg">
-									<img src="assets/images/product/single/1/product-4.jpg" alt="">
+								<div class="product-zoom" data-image="/assets/images/product/single/1/product-zoom-4.jpg">
+									<img src="/assets/images/product/single/1/product-4.jpg" alt="">
 								</div>
 							</div>
 						</div>
@@ -889,7 +893,7 @@
 						<div class="product-summery customScroll">
 							<div class="product-ratings">
 								<span class="star-rating">
-								<span class="rating-active" style="width: 100%;">ratings</span>
+									<span class="rating-active" style="width: 100%;">ratings</span>
 								</span>
 								<a href="#reviews" class="review-link">(<span class="count">3</span> customer reviews)</a>
 							</div>
@@ -941,8 +945,8 @@
 							<div class="product-brands">
 								<span class="title">@lang('Brands')</span>
 								<div class="brands">
-									<a href="#"><img src="assets/images/brands/brand-3.png" alt=""></a>
-									<a href="#"><img src="assets/images/brands/brand-8.png" alt=""></a>
+									<a href="#"><img src="/assets/images/brands/brand-3.png" alt=""></a>
+									<a href="#"><img src="/assets/images/brands/brand-8.png" alt=""></a>
 								</div>
 							</div>
 							<div class="product-meta mb-0">
@@ -1030,11 +1034,12 @@
 <script src="assets/js/plugins/scrollax.min.js"></script> -->
 
 	<!-- Use the minified version files listed below for better performance and remove the files listed above -->
-	<script src="assets/js/vendor/vendor.min.js"></script>
-	<script src="assets/js/plugins/plugins.min.js"></script>
+	<script src="/assets/js/vendor/vendor.min.js"></script>
+	<script src="/assets/js/plugins/plugins.min.js"></script>
 
 	<!-- Main Activation JS -->
-	<script src="assets/js/main.js"></script>
+	<script src="/assets/js/main.js"></script>
 	@stack('scripts')
 </body>
+
 </html>

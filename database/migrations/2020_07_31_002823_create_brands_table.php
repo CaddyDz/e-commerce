@@ -15,11 +15,11 @@ class CreateBrandsTable extends Migration
 	{
 		Schema::create('brands', function (Blueprint $table) {
 			$table->id();
+			$table->foreignId('category_id')->constrained();
 			$table->string('name');
 			$table->string('logo');
 			$table->timestamp('deleted_at')->nullable();
 			$table->timestamps();
-			$table->foreignID('category_id')->constrained();
 		});
 	}
 
