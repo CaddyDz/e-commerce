@@ -2,7 +2,7 @@
 
 @section('content')
 	<!-- Page Title/Header Start -->
-	<div class="page-title-section section" data-bg-image="assets/images/bg/page-title-1.jpg">
+	<div class="page-title-section section" data-bg-image="/assets/images/bg/page-title-1.jpg">
 		<div class="container">
 			<div class="row">
 				<div class="col">
@@ -164,7 +164,7 @@
 				<div id="shop-products" class="products isotope-grid row row-cols-xl-5 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1">
 
 					<div class="grid-sizer col-1"></div>
-					@foreach ($categories->Brands as $brand)
+					@foreach ($category->brands as $brand)
 						<div class="grid-item col featured">
 							@include('partials.brand')
 						</div>
