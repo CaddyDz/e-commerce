@@ -155,16 +155,9 @@
 					<button class="category-toggle">
 					<i class="fal fa-bars"></i> @lang('Browse Categories')</button>
 					<ul class="header-category-list">
-						<li><a href="#"><img src="" alt=""> Femmes</a></li>
-						<li><a href="#"><img src="" alt=""> Hommes</a></li>
-						<li><a href="#"><img src="" alt=""> Vêtements</a></li>
-						<li><a href="#"><img src="" alt=""> Chaussures</a></li>
-						
-						<li><a href="#"><img src="" alt=""> @lang('For kids & babies')</a></li>
-						<li><a href="#"><img src="" alt=""> @lang('decor')</a></li>
-						<li><a href="#"><img src="" alt=""> @lang('Accessories')</a></li>
-						<li><a href="#"><img src="" alt=""> Montres</a></li>
-						<li><a href="#"><img src=" alt=""> @lang('Sale')</a></li>
+					@foreach($categories as $category)
+						<li><a href=""><img src="" alt=""> {{ $category->name}} </a></li>
+					@endforeach	
 					</ul>
 				</div>
 
@@ -845,21 +838,21 @@
 						</div>
 					</div>
 				</div>
-
+                <!--
 				<div class="col-xl-4 col-12 learts-mb-40">
 					<h5 class="widget-title mb-2">Newsletter</h5>
 					<form id="mc-form" class="mc-form widget-subscibe2">
 						<input id="mc-email" autocomplete="off" type="email" placeholder="Enterer votre addresse e-mail">
 						<button id="mc-submit" class="btn">@lang('subscibe')</button>
 					</form>
-					<!-- mailchimp-alerts Start -->
+					
 					<div class="mailchimp-alerts text-centre">
-						<div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
-						<div class="mailchimp-success text-success"></div><!-- mailchimp-success end -->
-						<div class="mailchimp-error text-danger"></div><!-- mailchimp-error end -->
-					</div><!-- mailchimp-alerts end -->
+						<div class="mailchimp-submitting"></div>
+						<div class="mailchimp-success text-success"></div>
+						<div class="mailchimp-error text-danger"></div>
+					</div>
 				</div>
-
+                       -->
 			</div>
 		</div>
 	</div>
