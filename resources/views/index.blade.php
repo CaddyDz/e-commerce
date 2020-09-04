@@ -53,7 +53,7 @@
 			</div>
 			<!-- Section Title End -->
 
-			<div id="instagram-feed221" class="instagram-carousel instagram-carousel1 instagram-feed">
+			<!--<div id="instagram-feed221" class="instagram-carousel instagram-carousel1 instagram-feed">-->
 			</div>
 
 		</div>

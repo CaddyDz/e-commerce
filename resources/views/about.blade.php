@@ -30,12 +30,12 @@
 
 			<div class="col-md-6 col-12 align-self-center learts-mb-30">
 				<div class="about-us3">
-					<span class="sub-title">Live out your life.</span>
-					<h2 class="title">The happiness of <br> crafting artworks</h2>
+					<!-- <span class="sub-title">Live out your life.</span> -->
+					<h2 class="title">Le meilleur  <br> du marché algerien </h2>
 					<div class="desc">
-						<p>It’s all about the joy when finally you have done something beautiful on your own and observe it with quite a great deal of proud & successful feeling.</p>
+						<p>Site de vente en ligne qui reunit les meilleurs produits sur le marché algérien ; on vous propose une panoplie riche de divers produits triés sur le volet pour satisfaire vos besoins tout en vous offrant une expérience de shopping agréable depuis votre canapé...together we'll make it easy</p>
 					</div>
-					<a href="#" class="link">Learn more</a>
+					<!-- <a href="#" class="link">Learn more</a> -->
 				</div>
 			</div>
 			<div class="col-md-6 col-12 text-center learts-mb-30">
@@ -48,7 +48,7 @@
 </div>
 <!-- About Section End -->
 
-<!-- Feature Section Start -->
+<!--
 <div class="section section-padding">
 	<div class="container">
 		<div class="row row-cols-md-3 row-cols-1 learts-mb-n30">
@@ -89,7 +89,7 @@
 		</div>
 	</div>
 </div>
-<!-- Feature Section End -->
+-->
 <!-- Instagram Section Start -->
 <div class="section section-padding border-top">
 	<div class="container">
@@ -99,7 +99,7 @@
 			<p class="fw-400">Follow us on Instagram</p>
 		</div>
 		<!-- Section Title End -->
-		<div id="instagram-feed221" class="instagram-carousel instagram-carousel1 instagram-feed">
+	<!--	<div id="instagram-feed221" class="instagram-carousel instagram-carousel1 instagram-feed"> -->
 		</div>
 	</div>
 </div>
