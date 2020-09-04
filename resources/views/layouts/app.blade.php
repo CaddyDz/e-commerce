@@ -5,7 +5,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>{{ config('app.name') }}</title>
+	<title>{{ config('app.name') }} | @yield('title')</title>
 	<meta name="robots" content="noindex, follow" />
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -39,7 +39,8 @@
 	<link rel="stylesheet" href="/assets/css/vendor/vendor.min.css">
 	<link rel="stylesheet" href="/assets/css/plugins/plugins.min.css">
 	<link rel="stylesheet" href="/assets/css/style.min.css">
-
+	<script src="/assets/js/vendor/vue.js"></script>
+	<script src="/assets/js/vendor/axios.js"></script>
 </head>
 
 <body>
@@ -185,7 +186,7 @@
 				<!-- Header Logo Start -->
 				<div class="col">
 					<div class="header-logo">
-						<a href="/"><img src="/assets/images/logo/logo-2.png" alt="Learts Logo"></a>
+						<a href="/"><img src="/assets/images/logo/logo.png" alt="@lang('Logo')"></a>
 					</div>
 				</div>
 				<!-- Header Logo End -->
@@ -199,7 +200,14 @@
 									<li>
 										<a href="#" class="mega-menu-title"><span class="menu-text">HOME GROUP</span></a>
 										<ul>
-											<li> <img class="mmh_img " src="/assets/images/demo/menu/home-01.jpg"> <a href="/"><span class="menu-text">Arts Propelled</span></a></li>
+											<li>
+												<img class="mmh_img " src="/assets/images/demo/menu/home-01.jpg">
+													<a href="/">
+														<span class="menu-text">
+															Arts Propelled
+														</span>
+													</a>
+											</li>
 											<li> <img class="mmh_img " src="/assets/images/demo/menu/home-02.jpg"> <a href="index-2.html"><span class="menu-text">Decor Thriving</span></a></li>
 											<li> <img class="mmh_img " src="/assets/images/demo/menu/home-03.jpg"> <a href="index-3.html"><span class="menu-text">Savvy Delight</span></a></li>
 											<li> <img class="mmh_img " src="/assets/images/demo/menu/home-04.jpg"> <a href="index-4.html"><span class="menu-text">Perfect Escapes</span></a></li>
@@ -410,7 +418,7 @@
 				<!-- Header Logo Start -->
 				<div class="col">
 					<div class="header-logo">
-						<a href="/"><img src="/assets/images/logo/logo-2.png" alt="Learts Logo"></a>
+						<a href="/"><img src="/assets/images/logo/logo.png" alt="@lang('Logo')"></a>
 					</div>
 				</div>
 				<!-- Header Logo End -->

@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', __('My Account'))
+
 @section('content')
 <!-- Page Title/Header Start -->
 	<div class="page-title-section section" data-bg-image="assets/images/bg/page-title-1.jpg">
@@ -10,7 +12,7 @@
 					<div class="page-title">
 						<h1 class="title">@lang('My Account')</h1>
 						<ul class="breadcrumb">
-							<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+							<li class="breadcrumb-item"><a href="/">Home</a></li>
 							<li class="breadcrumb-item active">@lang('My Account')</li>
 						</ul>
 					</div>
@@ -73,35 +75,27 @@
 									<table class="table">
 										<thead>
 											<tr>
-												<th>Order</th>
-												<th>Date</th>
-												<th>Status</th>
-												<th>Total</th>
-												<th>Action</th>
+												<th>@lang('Order')</th>
+												<th>@lang('Date')</th>
+												<th>@lang('Status')</th>
+												<th>@lang('Total')</th>
+												<th>@lang('Action')</th>
 											</tr>
 										</thead>
 										<tbody>
-											<tr>
-												<td>1</td>
-												<td>Aug 22, 2018</td>
-												<td>Pending</td>
-												<td>$3000</td>
-												<td><a href="shopping-cart.html">View</a></td>
-											</tr>
-											<tr>
-												<td>2</td>
-												<td>July 22, 2018</td>
-												<td>Approved</td>
-												<td>$200</td>
-												<td><a href="shopping-cart.html">View</a></td>
-											</tr>
-											<tr>
-												<td>3</td>
-												<td>June 12, 2017</td>
-												<td>On Hold</td>
-												<td>$990</td>
-												<td><a href="shopping-cart.html">View</a></td>
-											</tr>
+											@foreach ($user->orders as $order)
+												<tr>
+													<td>{{ $order->id }}</td>
+													<td>{{ $order->created_at }}</td>
+													<td>@lang($order->status)</td>
+													<td>$3000</td>
+													<td>
+														<a href="shopping-cart.html">
+															@lang('View')
+														</a>
+													</td>
+												</tr>
+											@endforeach
 										</tbody>
 									</table>
 								</div>
@@ -156,7 +150,7 @@
 											<p>Mobile: (123) 456-7890</p>
 										</address>
 									</div>
-									
+
 								</div>
 							</div>
 						</div>

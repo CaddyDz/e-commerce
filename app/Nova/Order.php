@@ -14,6 +14,8 @@ use App\Nova\Lenses\OrdersSuspended;
 use App\Nova\Lenses\OrdersValidated;
 use App\Nova\Lenses\OrdersAwaitingReview;
 use Laravel\Nova\Fields\Select;
+use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Textarea;
 
 class Order extends Resource
 {
@@ -119,7 +121,17 @@ class Order extends Resource
 				])->displayUsingLabels()
 				->sortable()
 				->exceptOnForms(),
-			BelongsTo::make(__('Reviewer'), 'reviewer', 'App\Nova\User')->sortable()
+			BelongsTo::make(__('Reviewer'), 'reviewer', 'App\Nova\User')->sortable(),
+			Text::make(__('Last Name'), 'lastname'),
+			Text::make(__('First Name'), 'firstname'),
+			Text::make(__('Address 1'), 'address1'),
+			Text::make(__('Address 2'), 'address2'),
+			Text::make(__('Town'), 'town'),
+			Text::make(__('Zip Code'), 'zip'),
+			Text::make(__('District'), 'district'),
+			Text::make(__('Email'), 'email'),
+			Text::make(__('Phone Number'), 'phone'),
+			Textarea::make(__('Notes'), 'notes')
 		];
 	}
 

@@ -1,3 +1,23 @@
+// Coupon
+
+new Vue({
+	el: '#coupon',
+	data() {
+		return {
+			coupon: ''
+		}
+	},
+	methods: {
+		applyCoupon() {
+			axios.post('/applyCoupon', {
+				coupon: this.coupon
+			}).then(response => {
+				console.log(response.data);
+			});
+		}
+	}
+})
+
 /*
 // select2
 */

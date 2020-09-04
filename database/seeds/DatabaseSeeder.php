@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
 	{
 		$this->call(RolesAndPermissionsSeeder::class);
 		$this->call(UserSeeder::class);
-		$this->call(OrderSeeder::class);
+		// $this->call(OrderSeeder::class);
 		// Have to seed brands first, necessary to create products
 		$this->call(CategorySeeder::class);
 		$this->call(BrandSeeder::class);
@@ -23,6 +23,5 @@ class DatabaseSeeder extends Seeder
 		$this->call(SizeSeeder::class);
 		$this->call(ColorSeeder::class);
 		$this->call(ShippingSeeder::class);
-		
 	}
 }

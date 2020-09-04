@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
 {
-
+	protected $guarded = []; // yolo
 	public function reviewer()
 	{
 		return $this->belongsTo(User::class, 'reviewer_id');

@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', __('Login'))
+
 @section('content')
 
 <!-- Page Title/Header Start -->
