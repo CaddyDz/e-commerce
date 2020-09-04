@@ -4,7 +4,7 @@
 
 @section('content')
 <!-- Page Title/Header Start -->
-<div class="page-title-section section" data-bg-image="assets/images/bg/page-title-1.jpg">
+<div class="page-title-section section" data-bg-image="">
 	<div class="container">
 		<div class="row">
 			<div class="col">
@@ -39,7 +39,7 @@
 				</div>
 			</div>
 			<div class="col-md-6 col-12 text-center learts-mb-30">
-				<img src="assets/images/about/about-5.jpg" alt="">
+				<img src="" alt="">
 			</div>
 
 		</div>
