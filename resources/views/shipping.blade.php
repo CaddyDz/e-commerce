@@ -31,7 +31,7 @@
             <div class="row learts-mb-n30">
 
                 <div class="col-xl-3 col-lg-4 col-12 mr-auto learts-mb-30">
-                    <h1 class="fw-400">Quand vous faite vos courses chez nous :</h1>
+                    <h1 class="fw-400">Quand vous faites vos achats chez nous :</h1>
                 </div>
                 <div class="col-lg-8 col-12 learts-mb-30">
                     <div class="row learts-mb-n30">

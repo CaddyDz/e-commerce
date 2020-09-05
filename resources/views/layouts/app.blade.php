@@ -58,7 +58,7 @@
 					</div>
 				</div>
 				<!-- Header Language & Currency Start -->
-				<a href="tel:0918 206 263"> 0918 206 263</a> <i class="fa fa-phone"></i>
+				<a href="tel:0918 206 263"> 0</a> <i class="fa fa-phone"></i>
 				<!-- Header Language & Currency End -->
 			</div>
 		</div>
@@ -430,7 +430,7 @@
 				<div class="col-xl-4 col-lg-5 col-12 learts-mb-40">
 					<div class="widget-contact">
 						<p class="email">contact@dlaladz.com</p>
-						<p class="phone">(+88) 123 4566 6868</p>
+						<p class="phone">(+213)</p>
 						<p class="copyright learts-mt-40">&copy; 2020 DlalaDz. All Rights Reserved</a></p>
 					</div>
 				</div>

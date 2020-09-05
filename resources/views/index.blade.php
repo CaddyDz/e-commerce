@@ -19,7 +19,7 @@
 					<div></div>
 					<div class="section-title text-center mb-0">
 
-						<h2 class="title title-icon-both">Nos Marques :</h2>
+						<h2 class="title title-icon-both">Nos Partenaires :</h2>
 					</div>
 					<!-- Section Title End -->
 				</div>
@@ -44,7 +44,7 @@
 					<!-- Section Title Start -->
 					<div class="section-title text-center mb-0">
 
-						<h2 class="title title-icon-both">Nos Partenaires :</h2>
+						
 					</div>
 					<!-- Section Title End -->
 				</div>
@@ -62,7 +62,7 @@
 			<!-- Section Title Start -->
 			<div class="section-title2 text-center">
 				<h3 class="sub-title">@lang('Follow us on Instagram')</h3>
-				<h2 class="title">@dlaladz_shop</h2>
+				<h2 class="title">@</h2>
 			</div>
 			<!-- Section Title End -->
 

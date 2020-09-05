@@ -47,7 +47,8 @@
 									<div class="card-body">
 										<h5>Comment me faire rembourser ou retourner les produits en cas de problème ? </h5>
 										<p>Tout doit se faire avant le paiement, c’est-à-dire au moment de la livraison de votre colis
-                                    Le CLIENT s’engage à vérifier sa commande lors de la livraison . En cas de non-conformité des articles (mauvais ou endommagés) nous conseillons au client de ne pas accepter la commande et de la laisser au livreur pour retour à nos entrepôts. Le livreur fera le constat du problème, le notera sur le bon de livraison et reprendra la totalité de la marchandise sans frais supplémentaire. C’est le seul cas de retour possible.</p>
+									Le CLIENT s’engage à vérifier sa commande lors de la livraison . En cas de non-conformité des articles (mauvais ou endommagés) nous conseillons au client de ne pas accepter la commande et de la laisser au livreur pour retour à nos entrepôts. Le livreur fera le constat du problème, le notera sur le bon de livraison et reprendra la totalité de la marchandise sans frais supplémentaire. C’est le seul cas de retour possible.
+									En cas de défaut de fabrication sur les produits (non visible avant la première utilisation), le client doit nous aviser dans un délai ne dépassant pas 48h après réception de sa commande. Une proposition d’avoir commercial pourra se faire au cas par cas.</p>
 									</div>
 								</div>
 							</div>
