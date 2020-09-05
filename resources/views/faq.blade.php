@@ -32,7 +32,7 @@
 			<div class="col learts-mb-40">
 				<!-- Section Title Start -->
 				<div class="section-title2">
-					<h2 class="title">Accordion</h2>
+					<h2 class="title">Les Questions Les Plus Posées :</h2>
 				</div>
 				<!-- Section Title End -->
 				<div class="row">
@@ -40,7 +40,7 @@
 						<div class="accordion" id="faq-accordion">
 							
 								<div class="card-header">
-									<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#faq-accordion-2">Echange et retournement de produits</button>
+									<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#faq-accordion-2">Echange et Retour</button>
 								</div>
 
 								<div id="faq-accordion-2" class="collapse" data-parent="#faq-accordion">
