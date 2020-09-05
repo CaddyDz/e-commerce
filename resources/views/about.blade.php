@@ -10,10 +10,10 @@
 			<div class="col">
 
 				<div class="page-title">
-					<h1 class="title">About us</h1>
+					<h1 class="title">@lang('About us')</h1>
 					<ul class="breadcrumb">
 						<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-						<li class="breadcrumb-item active">About us</li>
+						<li class="breadcrumb-item active">@lang('About us')</li>
 					</ul>
 				</div>
 
@@ -95,8 +95,9 @@
 	<div class="container">
 		<!-- Section Title Start -->
 		<div class="section-title2 text-center">
+		<h3 class="sub-title">@lang('Follow us on Instagram')</h3>
 			<h2 class="title">@dlala_dz</h2>
-			<p class="fw-400">Follow us on Instagram</p>
+			
 		</div>
 		<!-- Section Title End -->
 	<!--	<div id="instagram-feed221" class="instagram-carousel instagram-carousel1 instagram-feed"> -->
