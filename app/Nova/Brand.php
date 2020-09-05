@@ -2,10 +2,11 @@
 
 namespace App\Nova;
 
-use Illuminate\Http\Request;
-use Laravel\Nova\Fields\Avatar;
 use Laravel\Nova\Fields\ID;
+use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Avatar;
+use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Brand extends Resource
@@ -64,7 +65,8 @@ class Brand extends Resource
 		return [
 			ID::make()->sortable(),
 			Avatar::make('Logo'),
-			Text::make('Name')->required(),
+			Text::make(__('Name'))->required(),
+			BelongsTo::make(__('Category'), 'category', Category::class)->required(),
 		];
 	}
 
