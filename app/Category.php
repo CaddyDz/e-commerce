@@ -11,4 +11,9 @@ class Category extends Model
 	{
 		return $this->hasMany(Brand::class);
 	}
+
+	public function getRouteKeyName()
+	{
+		return 'slug';
+	}
 }
