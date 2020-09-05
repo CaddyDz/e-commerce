@@ -2,7 +2,7 @@
 
 @section('content')
 	<!-- Page Title/Header Start -->
-	<div class="page-title-section section" data-bg-image="/assets/images/bg/page-title-1.jpg">
+	<div class="page-title-section section" data-bg-image="">
 		<div class="container">
 			<div class="row">
 				<div class="col">
