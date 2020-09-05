@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en">
 
 
 <head>
@@ -57,27 +57,8 @@
 						</ul>
 					</div>
 				</div>
-				<!--  <div class="col d-md-none d-lg-block">
-					<p class="text-center my-2">Free shipping for orders over $59 !</p>
-				</div>-->
-
 				<!-- Header Language & Currency Start -->
-				{{-- <div class="col d-none d-md-block">
-					<ul class="header-lan-curr text-white justify-content-end">
-						<li><a href="#">Français</a>
-							<ul class="curr-lan-sub-menu">
-								<li><a href="#">Arabe</a></li>
-								<!-- <li><a href="#">Deutsch</a></li>-->
-							</ul>
-						</li>
-						<!-- <li><a href="#">USD</a>
-							<ul class="curr-lan-sub-menu">
-								<li><a href="#">EUR</a></li>
-								<li><a href="#">GBP</a></li>
-							</ul> -->
-						</li>
-					</ul>
-				</div> --}}
+				<a href="tel:0918 206 263"> 0918 206 263</a> <i class="fa fa-phone"></i>
 				<!-- Header Language & Currency End -->
 			</div>
 		</div>
@@ -165,12 +146,6 @@
 						@endforeach
 					</ul>
 				</div>
-
-
-
-				<div class="header-call">
-					<p><i class="fa fa-phone"></i> 0918 206 263</p>
-				</div>
 			</div>
 		</div>
 		<!-- Site Menu Section End -->
@@ -186,65 +161,39 @@
 				<!-- Header Logo Start -->
 				<div class="col">
 					<div class="header-logo">
-						<a href="/"><img src="/assets/images/logo/logo.png" alt="@lang('Logo')"></a>
+						<a href="/">
+							<img src="/assets/images/logo/logo.png" alt="@lang('Logo')" width="90">
+						</a>
 					</div>
 				</div>
 				<!-- Header Logo End -->
 
 				<!-- Search Start -->
-				
 				<div class="col d-none d-xl-block">
-					<nav class="site-main-menu justify-content-center">
+					<nav class="site-main-menu">
 						<ul>
-						<!--
-							<li class="has-children"><a href="#"><span class="menu-text">Home</span></a>
-								<ul class="sub-menu mega-menu">
-									<li>
-										<a href="#" class="mega-menu-title"><span class="menu-text">HOME GROUP</span></a>
-										<ul>
-											<li>
-												<img class="mmh_img " src="/assets/images/demo/menu/home-01.jpg">
-													<a href="/">
-														<span class="menu-text">
-															Arts Propelled
-														</span>
-													</a>
-											</li>
-											<li> <img class="mmh_img " src="/assets/images/demo/menu/home-02.jpg"> <a href="index-2.html"><span class="menu-text">Decor Thriving</span></a></li>
-											<li> <img class="mmh_img " src="/assets/images/demo/menu/home-03.jpg"> <a href="index-3.html"><span class="menu-text">Savvy Delight</span></a></li>
-											<li> <img class="mmh_img " src="/assets/images/demo/menu/home-04.jpg"> <a href="index-4.html"><span class="menu-text">Perfect Escapes</span></a></li>
-										</ul>
-									</li>
-									<li>
-										<a href="index-2.html" class="mega-menu-title"><span class="menu-text">HOME GROUP</span></a>
-										<ul>
-											<li> <img class="mmh_img " src="/assets/images/demo/menu/home-05.jpg"> <a href="index-5.html"><span class="menu-text">Kitchen Cozy</span></a></li>
-											<li> <img class="mmh_img " src="/assets/images/demo/menu/home-06.jpg"> <a href="index-6.html"><span class="menu-text">Dreamy Designs</span></a></li>
-											<li> <img class="mmh_img " src="/assets/images/demo/menu/home-07.jpg"> <a href="index-7.html"><span class="menu-text">Crispy Recipes</span></a></li>
-											<li> <img class="mmh_img " src="/assets/images/demo/menu/home-08.jpg"> <a href="index-8.html"><span class="menu-text">Decoholic Chic</span></a></li>
-										</ul>
-									</li>
-									<li>
-										<a href="index-2.html" class="mega-menu-title"><span class="menu-text">HOME GROUP</span></a>
-										<ul>
-											<li> <img class="mmh_img " src="/assets/images/demo/menu/home-9.jpg"> <a href="index-9.html"><span class="menu-text">Reblended Dish</span></a></li>
-											<li> <img class="mmh_img " src="/assets/images/demo/menu/home-10.jpg"> <a href="index-10.html"><span class="menu-text">Craftin House</span></a></li>
-											<li> <img class="mmh_img " src="/assets/images/demo/menu/home-11.jpg"> <a href="index-11.html"><span class="menu-text">Craftswork Biz</span></a></li>
-										</ul>
-									</li>
-									<li>
-										<a href="#" class="menu-banner"><img src="/assets/images/banner/menu-banner-1.jpg" alt="Home Menu Banner"></a>
-									</li>
-								</ul>
-							</li>
--->
-                            <li class="has-children" class=pull-righ><span class="menu-text">        &nbsp; </span>
-							<li class="has-children" class=pull-righ><a href="#"><span class="menu-text">Pages</span></a>
+							<li class="has-children" class="pull-right">
+								<a href="#"><span class="menu-text">Menu</span></a>
 								<ul class="sub-menu">
-									<li><a href="/about"><span class="menu-text">About us</span></a></li>
-									<li><a href="/shipping"><span class="menu-text">@lang('Shipping policy')</span></a></li>
-									<li><a href="/faq"><span class="menu-text">FAQs</span></a></li>
-									
+									<li>
+										<a href="/about">
+											<span class="menu-text">@lang('About us')</span>
+										</a>
+									</li>
+									<li>
+										<a href="/shipping">
+											<span class="menu-text">
+												@lang('Shipping policy')
+											</span>
+										</a>
+									</li>
+									<li>
+										<a href="/faq">
+											<span class="menu-text">
+												Questions?
+											</span>
+										</a>
+									</li>
 								</ul>
 							</li>
 						</ul>
@@ -661,7 +610,7 @@
 							<li><a href="/about"><span class="menu-text">@lang('About us')</span></a></li>
 							<li><a href="about-us-2.html"><span class="menu-text">About us 02</span></a></li>
 							<li><a href="contact-us.html"><span class="menu-text">Contact us</span></a></li>
-							
+
 						</ul>
 					</li>
 				</ul>
@@ -710,7 +659,7 @@
 						<div class="col learts-mb-40">
 							<ul class="widget-list">
 								<li><a href="/about">@lang('About us')</a></li>
-							
+
 								<li><a href="/shipping">@lang('Shipping policy')</a></li>
 								<li><a href="/faq">FAQs</a></li>
 							</ul>

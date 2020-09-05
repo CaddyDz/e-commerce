@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+@section('title', __('Home'))
 
 @section('content')
 	<!-- Slider main container Start -->
@@ -11,7 +12,7 @@
 	<!-- Slider main container End -->
 
 	<!-- Category Banner Section Start -->
-	
+
 	<div class="row learts-mb-50">
 				<div class="col">
 					<!-- Section Title Start -->
@@ -52,7 +53,7 @@
 	</div>
 
 
-	@include('partials.deal_of_the_day')
+	@includeWhen($deal, 'partials.deal_of_the_day')
 
 	<!-- Instagram Section Start -->
 	<div class="section section-fluid section-padding pt-0">
