@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Gloudemans\Shoppingcart\Contracts\Buyable;
 use Gloudemans\Shoppingcart\CanBeBought;
 use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Support\Arr;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\Models\Media;
@@ -79,5 +80,18 @@ class Product extends Model implements Buyable, HasMedia
 	public function properties()
 	{
 		return $this->belongsToMany(Property::class);
+	}
+
+	/**
+	 * get product images
+	 *
+	 * return a collection of product images
+	 *
+	 * @return Illuminate\Foundation\Collection
+	 * @throws conditon
+	 **/
+	public function getImagesAttribute()
+	{
+		return $this->getMedia('images')->all();
 	}
 }
