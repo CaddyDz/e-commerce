@@ -43,7 +43,7 @@
 
                         <div class="col-md-6 col-12 learts-mb-30">
                             <p class="text-heading fw-600 learts-mb-10">Période de livraison</p>
-                            <p>de 24 à 72 jours.</p>
+                            <p>de 24 à 72 Heurs.</p>
                         </div>
 
                         <div class="col-md-6 col-12 learts-mb-30">

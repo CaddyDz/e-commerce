@@ -35,7 +35,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="/tos">
+					<a href="/shipping">
 						<span class="menu-text">
 							@lang('Shipping policy')
 						</span>
