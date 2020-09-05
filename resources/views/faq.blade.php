@@ -4,7 +4,7 @@
 
 @section('content')
 <!-- Page Title/Header Start -->
-<div class="page-title-section section" data-bg-image="assets/images/bg/page-title-1.jpg">
+<div class="page-title-section section" data-bg-image="">
 	<div class="container">
 		<div class="row">
 			<div class="col">
@@ -38,25 +38,15 @@
 				<div class="row">
 					<div class="col">
 						<div class="accordion" id="faq-accordion">
-							<div class="card active">
+							
 								<div class="card-header">
-									<button class="btn btn-link" data-toggle="collapse" data-target="#faq-accordion-1">Is the theme responsive and customizable?</button>
-								</div>
-
-								<div id="faq-accordion-1" class="collapse show" data-parent="#faq-accordion">
-									<div class="card-body">
-										<p>Learts appears professional in design and responsive in performance. It proves to be highly customizable and efficient for building eCommerce shops. Engage yourself in the most effortless and well-appointed process with Learts.</p>
-									</div>
-								</div>
-							</div>
-							<div class="card">
-								<div class="card-header">
-									<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#faq-accordion-2">How long can I get theme updates for free?</button>
+									<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#faq-accordion-2">Comment me faire rembourser ou retourner les produits en cas de problème ?</button>
 								</div>
 
 								<div id="faq-accordion-2" class="collapse" data-parent="#faq-accordion">
 									<div class="card-body">
-										<p>ThemeMove commits to deliver regular updates of all theme items with careful error detecting, bug fixing, and design updating. The purpose of constant updating is to ensure the theme you have is in sync with the latest technology and trend.</p>
+										<p>Tout doit se faire avant le paiement, c’est-à-dire au moment de la livraison de votre colis
+                                    Le CLIENT s’engage à vérifier sa commande lors de la livraison . En cas de non-conformité des articles (mauvais ou endommagés) nous conseillons au client de ne pas accepter la commande et de la laisser au livreur pour retour à nos entrepôts. Le livreur fera le constat du problème, le notera sur le bon de livraison et reprendra la totalité de la marchandise sans frais supplémentaire. C’est le seul cas de retour possible.</p>
 									</div>
 								</div>
 							</div>
@@ -67,21 +57,11 @@
 
 								<div id="faq-accordion-3" class="collapse" data-parent="#faq-accordion">
 									<div class="card-body">
-										<p>Our customer support team is available at office hours, six days a week to answer any kind of questions you have about our products, help you on problems with your themes, and give consultation for all of your presale questions.</p>
+										<p>l’importateur et/ou le producteur officiel pour l’Algérie de tous les produits que nous vous proposons à la vente sur notre site.Ce partenariat privilégié avec les grandes Marques Internationales vous garantit la qualité des produits .</p>
 									</div>
 								</div>
 							</div>
-							<div class="card">
-								<div class="card-header">
-									<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#faq-accordion-4">Do you accept extra theme services?</button>
-								</div>
-
-								<div id="faq-accordion-4" class="collapse" data-parent="#faq-accordion">
-									<div class="card-body">
-										<p>We are available to freelance hiring with on-demand extra services, including WordPress site design/ redesign, WordPress installation, all-in-one customization, video production, video editing and stop motion video producing.</p>
-									</div>
-								</div>
-							</div>
+							
 						</div>
 					</div>
 				</div>
