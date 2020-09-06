@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ app()->getLocale()}}">
 
 
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>{{ config('app.name') }} | @yield('title')</title>
-	<meta name="robots" content="noindex, follow" />
-	<meta name="description" content="">
+	<meta name="robots" content="index, follow" />
+	<meta name="description" content="Site algerien de vente enligne">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta property="og:title" content="@yield('title')">
+    <meta property="og:description" content="Site algerien de vente enligne">
+    <meta property="og:image" content="/assets/logo/logo.png">
+    <meta property="og:url" content="{{config('app.url')}}">
 	<!-- Favicon -->
 	<link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.png">
 
