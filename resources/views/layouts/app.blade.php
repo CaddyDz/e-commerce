@@ -11,7 +11,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta property="og:title" content="@yield('title')">
     <meta property="og:description" content="Site algerien de vente enligne">
-    <meta property="og:image" content="{{ secure_asset('/assets/logo/logo.png') }}">
+    <meta property="og:image" content="{{ secure_asset('/assets/images/logo/logo.png') }}">
     <meta property="og:url" content="{{config('app.url')}}">
 	<!-- Favicon -->
 	<link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.png">
