@@ -1,4 +1,6 @@
 {
+	"Page Expired": "Page expirée",
+	"Page Not Found": "Page non trouvée",
 	"Order": "Commande",
 	"Orders": "Commandes",
 	"Brands": "Marques",
@@ -88,5 +90,8 @@
 	"Category": "Catégorie",
 	"Share on": "Partger sur",
 	"You Might Also Like": "Vous Pouvez Aussi Aimer",
-	"Home": "Accueil"
+	"Home": "Accueil",
+	"You could either go back or go to homepage": "Vous pouvez revenir en arrière ou aller à la page d'accueil",
+	"Go back": "Retourner",
+	"Homepage": "Page d'accueil"
 }
