@@ -15,3 +15,4 @@ public/vendor/
 public/vendor/
 .php_cs.cache
 *.db
+public/assets/images/product/

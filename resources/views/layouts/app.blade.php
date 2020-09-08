@@ -306,78 +306,6 @@
 		</div>
 	</div>
 	<!-- Mobile Header Section End -->
-	<!-- OffCanvas Search Start -->
-	<div id="offcanvas-search" class="offcanvas offcanvas-search">
-		<div class="inner">
-			<div class="offcanvas-search-form">
-				<button class="offcanvas-close">×</button>
-				<form action="#">
-					<div class="row mb-n3">
-						<div class="col-lg-8 col-12 mb-3"><input type="text" placeholder="Search Products..."></div>
-						<div class="col-lg-4 col-12 mb-3">
-							<select class="search-select select2-basic">
-								<option value="0">All Categories</option>
-								<option value="kids-babies">Kids &amp; Babies</option>
-								<option value="home-decor">Home Decor</option>
-								<option value="gift-ideas">Gift ideas</option>
-								<option value="kitchen">Kitchen</option>
-								<option value="toys">Toys</option>
-								<option value="kniting-sewing">Kniting &amp; Sewing</option>
-								<option value="pots">Pots</option>
-							</select>
-						</div>
-					</div>
-				</form>
-			</div>
-			<p class="search-description text-body-light mt-2"> <span># Type at least 1 character to search</span> <span># Hit enter to search or ESC to close</span></p>
-
-		</div>
-	</div>
-	<!-- OffCanvas Search End -->
-
-	<!-- OffCanvas Wishlist Start -->
-	<div id="offcanvas-wishlist" class="offcanvas offcanvas-wishlist">
-		<div class="inner">
-			<div class="head">
-				<span class="title">Wishlist</span>
-				<button class="offcanvas-close">×</button>
-			</div>
-			<div class="body customScroll">
-				<ul class="minicart-product-list">
-					<li>
-						<a href="product-details.html" class="image"><img src="/assets/images/product/cart-product-1.jpg" alt="Cart product Image"></a>
-						<div class="content">
-							<a href="product-details.html" class="title">Walnut Cutting Board</a>
-							<span class="quantity-price">1 x <span class="amount">$100.00</span></span>
-							<a href="#" class="remove">×</a>
-						</div>
-					</li>
-					<li>
-						<a href="product-details.html" class="image"><img src="/assets/images/product/cart-product-2.jpg" alt="Cart product Image"></a>
-						<div class="content">
-							<a href="product-details.html" class="title">Lucky Wooden Elephant</a>
-							<span class="quantity-price">1 x <span class="amount">$35.00</span></span>
-							<a href="#" class="remove">×</a>
-						</div>
-					</li>
-					<li>
-						<a href="product-details.html" class="image"><img src="/assets/images/product/cart-product-3.jpg" alt="Cart product Image"></a>
-						<div class="content">
-							<a href="product-details.html" class="title">Fish Cut Out Set</a>
-							<span class="quantity-price">1 x <span class="amount">$9.00</span></span>
-							<a href="#" class="remove">×</a>
-						</div>
-					</li>
-				</ul>
-			</div>
-			<div class="foot">
-				<div class="buttons">
-					<a href="wishlist.html" class="btn btn-dark btn-hover-primary">view wishlist</a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- OffCanvas Wishlist End -->
 
 	<!-- OffCanvas Cart Start -->
 	<div id="offcanvas-cart" class="offcanvas offcanvas-cart">
@@ -390,11 +318,22 @@
 				<ul class="minicart-product-list">
 					@foreach($cart as $item)
 						<li>
-							<a href="{{ route('product', ['product' => $item->model]) }}" class="image"><img src="{{ secure_asset('storage/'. $item->model->image) }}" alt="@lang('Cart product Image')"></a>
+							<a href="{{ route('product', ['product' => $item->model]) }}" class="image">
+								<img src="{{ secure_asset('storage/'. $item->model->image) }}" alt="@lang('Cart product Image')">
+							</a>
 							<div class="content">
-								<a href="{{ route('product', ['product' => $item->model]) }}" class="title">{{ $item->model->name }}</a>
-								<span class="quantity-price">{{ $item->qty }} x <span class="amount">{{ $item->price }}</span></span>
-								<a href="{{ route('cart.remove', ['product' => $item->rowId]) }}" class="remove" onclick="event.preventDefault();document.getElementById('remove-cart-{{ $item->rowId }}').submit();">×</a>
+								<a href="{{ route('product', ['product' => $item->model]) }}" class="title">
+									{{ $item->model->name }}
+								</a>
+								<span class="quantity-price">
+									{{ $item->qty }} x
+									<span class="amount">
+										{{ $item->total }}
+									</span>
+								</span>
+								<a href="{{ route('cart.remove', ['product' => $item->rowId]) }}" class="remove" onclick="event.preventDefault();document.getElementById('remove-cart-{{ $item->rowId }}').submit();">
+									×
+								</a>
 								<form action="{{ route('cart.remove', ['product' => $item->rowId]) }}" method="post" style="display: none;" id="remove-cart-{{ $item->rowId }}">
 									@csrf
 								</form>
@@ -451,10 +390,10 @@
 						</div>
 						<div class="col learts-mb-40">
 							<ul class="widget-list">
-								
+
 								<li> <i class="fab fa-facebook-f"></i> <a href="https://www.facebook.com/">Facebook</a></li>
 								<li> <i class="fab fa-instagram"></i> <a href="https://www.instagram.com/">Instagram</a></li>
-								
+
 							</ul>
 						</div>
 					</div>
@@ -477,146 +416,6 @@
 			</div>
 		</div>
 	</div>
-	<!-- Modal -->
-	<div class="quickViewModal modal fade" id="quickViewModal">
-		<div class="modal-dialog modal-dialog-centered">
-			<div class="modal-content">
-				<button class="close" data-dismiss="modal">&times;</button>
-				<div class="row learts-mb-n30">
-
-					<!-- Product Images Start -->
-					<div class="col-lg-6 col-12 learts-mb-30">
-						<div class="product-images">
-							<div class="product-gallery-slider-quickview">
-								<div class="product-zoom" data-image="/assets/images/product/single/1/product-zoom-1.jpg">
-									<img src="/assets/images/product/single/1/product-1.jpg" alt="">
-								</div>
-								<div class="product-zoom" data-image="/assets/images/product/single/1/product-zoom-2.jpg">
-									<img src="/assets/images/product/single/1/product-2.jpg" alt="">
-								</div>
-								<div class="product-zoom" data-image="/assets/images/product/single/1/product-zoom-3.jpg">
-									<img src="/assets/images/product/single/1/product-3.jpg" alt="">
-								</div>
-								<div class="product-zoom" data-image="/assets/images/product/single/1/product-zoom-4.jpg">
-									<img src="/assets/images/product/single/1/product-4.jpg" alt="">
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- Product Images End -->
-
-					<!-- Product Summery Start -->
-					<div class="col-lg-6 col-12 overflow-hidden learts-mb-30">
-						<div class="product-summery customScroll">
-							<div class="product-ratings">
-								<span class="star-rating">
-									<span class="rating-active" style="width: 100%;">ratings</span>
-								</span>
-								<a href="#reviews" class="review-link">(<span class="count">3</span> customer reviews)</a>
-							</div>
-							<h3 class="product-title">Cleaning Dustpan & Brush</h3>
-							<div class="product-price">£38.00 – £50.00</div>
-							<div class="product-description">
-								<p>Easy clip-on handle – Hold the brush and dustpan together for storage; the dustpan edge is serrated to allow easy scraping off the hair without entanglement. High-quality bristles – no burr damage, no scratches, thick and durable, comfortable to remove dust and smaller particles.</p>
-							</div>
-							<div class="product-variations">
-								<table>
-									<tbody>
-										<tr>
-											<td class="label"><span>@lang('Size')</span></td>
-											<td class="value">
-												<div class="product-sizes">
-													<a href="#">Large</a>
-													<a href="#">Medium</a>
-													<a href="#">Small</a>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<td class="label"><span>@lang('Color')</span></td>
-											<td class="value">
-												<div class="product-colors">
-													<a href="#" data-bg-color="#000000"></a>
-													<a href="#" data-bg-color="#ffffff"></a>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<td class="label"><span>@lang('Quantity')</span></td>
-											<td class="value">
-												<div class="product-quantity">
-													<span class="qty-btn minus"><i class="ti-minus"></i></span>
-													<input type="text" class="input-qty" value="1">
-													<span class="qty-btn plus"><i class="ti-plus"></i></span>
-												</div>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-							<div class="product-buttons">
-								<a href="#" class="btn btn-icon btn-outline-body btn-hover-dark"><i class="fal fa-heart"></i></a>
-								<a href="#" class="btn btn-dark btn-outline-hover-dark"><i class="fal fa-shopping-cart"></i> @lang('Add to Cart')</a>
-								<a href="#" class="btn btn-icon btn-outline-body btn-hover-dark"><i class="fal fa-random"></i></a>
-							</div>
-							<div class="product-brands">
-								<span class="title">@lang('Brands')</span>
-								<div class="brands">
-									<a href="#"><img src="/assets/images/brands/brand-3.png" alt=""></a>
-									<a href="#"><img src="/assets/images/brands/brand-8.png" alt=""></a>
-								</div>
-							</div>
-							<div class="product-meta mb-0">
-								<table>
-									<tbody>
-										<tr>
-											<td class="label"><span>SKU</span></td>
-											<td class="value">0404019</td>
-										</tr>
-										<tr>
-											<td class="label"><span>Category</span></td>
-											<td class="value">
-												<ul class="product-category">
-													<li><a href="#">Kitchen</a></li>
-												</ul>
-											</td>
-										</tr>
-										<tr>
-											<td class="label"><span>Tags</span></td>
-											<td class="value">
-												<ul class="product-tags">
-													<li><a href="#">handmade</a></li>
-													<li><a href="#">learts</a></li>
-													<li><a href="#">mug</a></li>
-													<li><a href="#">product</a></li>
-													<li><a href="#">learts</a></li>
-												</ul>
-											</td>
-										</tr>
-										<tr>
-											<td class="label"><span>Share on</span></td>
-											<td class="va">
-												<div class="product-share">
-													<a href="#"><i class="fab fa-facebook-f"></i></a>
-													<a href="#"><i class="fab fa-twitter"></i></a>
-													<a href="#"><i class="fab fa-google-plus-g"></i></a>
-													<a href="#"><i class="fab fa-pinterest"></i></a>
-													<a href="#"><i class="fal fa-envelope"></i></a>
-												</div>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-					</div>
-					<!-- Product Summery End -->
-
-				</div>
-			</div>
-		</div>
-	</div>
-
 	<!-- JS
 ============================================ -->
 
