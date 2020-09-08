@@ -34,7 +34,7 @@ class Product extends Model implements Buyable, HasMedia
 
 	public function getBuyablePrice($options = null)
 	{
-		return $this->price;
+		return $this->newPrice;
 	}
 
 	public function getBuyableWeight($options = null)
