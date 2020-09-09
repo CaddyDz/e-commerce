@@ -18,7 +18,7 @@ class BrandSeeder extends Seeder
 		Storage::disk('public')->makeDirectory('brands');
 		$cats = Category::select('id')->pluck('id')->toArray();
 		foreach ($cats as $cat) {
-			factory(Brand::class, 10)->create([
+			factory(Brand::class, 2)->create([
 				'category_id' => $cat
 			]);
 		}

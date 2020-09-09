@@ -94,6 +94,11 @@ class Product extends Resource
 			Avatar::make(__('Image'), 'image'),
 			Boolean::make(__('Available'), 'available'),
 			Images::make(__('Images'), 'images')->hideFromIndex(),
+			BelongsToMany::make(__('Orders'), 'orders', Order::class)->fields(function () {
+				return [
+					Number::make(__('Quantity'), 'quantity'),
+				];
+			}),
 		];
 	}
 
