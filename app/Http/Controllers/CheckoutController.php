@@ -60,6 +60,12 @@ class CheckoutController extends Controller
 		}
 		if (auth()->check()) {
 			$order->user_id = auth()->id();
+			// If the authenticated user doesn't have an address
+			if (!auth()->user()->address) {
+				// Assign the address from the order
+				auth()->user()->address = $request->address1;
+				auth()->user()->save();
+			}
 			$order->save();
 		}
 		Cart::destroy();
