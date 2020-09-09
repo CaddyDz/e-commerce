@@ -59,7 +59,7 @@
 
 				<div class="col-12 learts-mb-20">
 					<label for="bdAddress1">@lang('Street address') <abbr class="required">*</abbr></label>
-					<input type="text" id="bdAddress1" placeholder="Nom du Quartier, N° de porte" required name="address1">
+					<input type="text" id="bdAddress1" placeholder="Nom du Quartier, N° de porte" required name="address1" value="{{ optional(auth()->user())->address }}">
 				</div>
 				<div class="col-12 learts-mb-20">
 					<label for="bdAddress2" class="sr-only">Apartment, suite, unit etc. (optional)</label>
@@ -74,9 +74,15 @@
 					<select id="bdDistrict" class="select2-basic" name="district" required>
 						<option value="">@lang('Select an option…')</option>
 						@foreach ($states as $state)
+							@if($state->available)
 							<option value="{{ $state->price }}">
 								@lang($state->state) {{ $state->price }}
 							</option>
+							@else
+							<option value="">
+								@lang($state->state) @lang('Unavailable')
+							</option>
+							@endif
 						@endforeach
 					</select>
 				</div>

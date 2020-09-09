@@ -2,21 +2,25 @@
 
 namespace App;
 
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\Models\Media;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Gloudemans\Shoppingcart\CanBeBought;
+use Spatie\MediaLibrary\InteractsWithMedia;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Gloudemans\Shoppingcart\Contracts\Buyable;
-use Gloudemans\Shoppingcart\CanBeBought;
 use Illuminate\Database\Eloquent\Relations\HasOne;
-use Illuminate\Support\Arr;
-use Spatie\MediaLibrary\HasMedia;
-use Spatie\MediaLibrary\InteractsWithMedia;
-use Spatie\MediaLibrary\Models\Media;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Product extends Model implements Buyable, HasMedia
 {
 	use SoftDeletes, CanBeBought, InteractsWithMedia;
 
+	/**
+	 * The attributes that should be cast.
+	 *
+	 * @var array
+	 */
 	protected $casts = [
 		'display_sizes' => 'bool',
 		'display_colors' => 'bool',
@@ -93,5 +97,10 @@ class Product extends Model implements Buyable, HasMedia
 	public function getImagesAttribute()
 	{
 		return $this->getMedia('images')->all();
+	}
+
+	public function orders()
+	{
+		return $this->belongsToMany(Order::class)->withPivot(['quantity', 'size', 'color']);
 	}
 }

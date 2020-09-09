@@ -13,6 +13,8 @@ use App\Nova\Lenses\OrdersRejected;
 use App\Nova\Lenses\OrdersSuspended;
 use App\Nova\Lenses\OrdersValidated;
 use App\Nova\Lenses\OrdersAwaitingReview;
+use Laravel\Nova\Fields\BelongsToMany;
+use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Textarea;
@@ -125,13 +127,19 @@ class Order extends Resource
 			Text::make(__('Last Name'), 'lastname'),
 			Text::make(__('First Name'), 'firstname'),
 			Text::make(__('Address 1'), 'address1'),
-			Text::make(__('Address 2'), 'address2'),
-			Text::make(__('Town'), 'town'),
-			Text::make(__('Zip Code'), 'zip'),
-			Text::make(__('District'), 'district'),
-			Text::make(__('Email'), 'email'),
+			Text::make(__('Address 2'), 'address2')->hideFromIndex(),
+			Text::make(__('Town'), 'town')->hideFromIndex(),
+			Text::make(__('Zip Code'), 'zip')->hideFromIndex(),
+			Text::make(__('District'), 'district')->hideFromIndex(),
+			Text::make(__('Email'), 'email')->hideFromIndex(),
 			Text::make(__('Phone Number'), 'phone'),
-			Textarea::make(__('Notes'), 'notes')
+			Textarea::make(__('Notes'), 'notes')->hideFromIndex(),
+			BelongsToMany::make(__('Products'), 'products', Product::class)->fields(function () {
+				return [
+					Number::make(__('Quantity'), 'quantity'),
+					Text::make(__('Size'), 'size'),
+				];
+			}),
 		];
 	}
 

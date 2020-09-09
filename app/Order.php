@@ -3,10 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Order extends Model
 {
 	protected $guarded = []; // yolo
+
 	public function reviewer()
 	{
 		return $this->belongsTo(User::class, 'reviewer_id');
@@ -26,5 +28,10 @@ class Order extends Model
 			default:
 				return 'entypo:controller-play';
 		}
+	}
+
+	public function products()
+	{
+		return $this->BelongsToMany(Product::class)->withPivot(['quantity', 'size', 'color']);
 	}
 }

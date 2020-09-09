@@ -4,10 +4,9 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
-use App\Part;
 use App\Product;
-use Illuminate\Http\Request;
 use Gloudemans\Shoppingcart\Facades\Cart;
+use Illuminate\Http\Request;
 
 class CartController extends Controller
 {
@@ -18,12 +17,16 @@ class CartController extends Controller
 		return view('cart', compact('cart'));
 	}
 
-	public function add(Product $product)
+	public function add(Product $product, Request $request)
 	{
 		Cart::setGlobalTax(0);
-		Cart::add($product);
+		Cart::add($product, $request->quantity, [
+			'size' => $request->size,
+			'color' => $request->color,
+			'properties' => $request->properties
+		]);
 		// request()->session()->flash('success', "$product->name added to cart!");
-		return back();
+		return redirect(url()->previous('/'));
 	}
 
 	public function remove(string $rowId)
