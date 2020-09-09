@@ -20,7 +20,11 @@ class CartController extends Controller
 	public function add(Product $product, Request $request)
 	{
 		Cart::setGlobalTax(0);
-		Cart::add($product, $request->quantity);
+		Cart::add($product, $request->quantity, [
+			'size' => $request->size,
+			'color' => $request->color,
+			'properties' => $request->properties
+		]);
 		// request()->session()->flash('success', "$product->name added to cart!");
 		return redirect(url()->previous('/'));
 	}

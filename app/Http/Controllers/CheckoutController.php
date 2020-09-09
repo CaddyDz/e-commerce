@@ -53,7 +53,9 @@ class CheckoutController extends Controller
 		]);
 		foreach (Cart::content() as $product) {
 			$order->products()->attach($product->id, [
-				'quantity' => $product->qty
+				'quantity' => $product->qty,
+				'size' => $product->options->size,
+				'color' => $product->options->color
 			]);
 		}
 		if (auth()->check()) {

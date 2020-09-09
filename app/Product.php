@@ -2,16 +2,15 @@
 
 namespace App;
 
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\Models\Media;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Gloudemans\Shoppingcart\CanBeBought;
+use Spatie\MediaLibrary\InteractsWithMedia;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Gloudemans\Shoppingcart\Contracts\Buyable;
-use Gloudemans\Shoppingcart\CanBeBought;
 use Illuminate\Database\Eloquent\Relations\HasOne;
-use Illuminate\Support\Arr;
-use Spatie\MediaLibrary\HasMedia;
-use Spatie\MediaLibrary\InteractsWithMedia;
-use Spatie\MediaLibrary\Models\Media;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Product extends Model implements Buyable, HasMedia
 {
@@ -97,6 +96,6 @@ class Product extends Model implements Buyable, HasMedia
 
 	public function orders()
 	{
-		return $this->belongsToMany(Order::class)->withPivot('quantity');
+		return $this->belongsToMany(Order::class)->withPivot(['quantity', 'size', 'color']);
 	}
 }
