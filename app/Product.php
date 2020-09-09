@@ -94,4 +94,9 @@ class Product extends Model implements Buyable, HasMedia
 	{
 		return $this->getMedia('images')->all();
 	}
+
+	public function orders()
+	{
+		return $this->belongsToMany(Order::class)->withPivot('quantity');
+	}
 }

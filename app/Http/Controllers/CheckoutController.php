@@ -27,6 +27,9 @@ class CheckoutController extends Controller
 
 	public function store(Request $request)
 	{
+		if (Cart::content()->isEmpty()) {
+			return back()->with('message', __('Your cart is empty'));
+		}
 		$this->validate($request, [
 			'lastname' => 'bail|required|string',
 			'firstname' => 'bail|required|string',
@@ -48,6 +51,11 @@ class CheckoutController extends Controller
 			'zip' => $request->zip,
 			'notes' => $request->notes,
 		]);
+		foreach (Cart::content() as $product) {
+			$order->products()->attach($product->id, [
+				'quantity' => $product->qty
+			]);
+		}
 		if (auth()->check()) {
 			$order->user_id = auth()->id();
 			$order->save();
