@@ -59,7 +59,7 @@
 
 				<div class="col-12 learts-mb-20">
 					<label for="bdAddress1">@lang('Street address') <abbr class="required">*</abbr></label>
-					<input type="text" id="bdAddress1" placeholder="Nom du Quartier, N° de porte" required name="address1">
+					<input type="text" id="bdAddress1" placeholder="Nom du Quartier, N° de porte" required name="address1" value="{{ optional(auth()->user())->address }}">
 				</div>
 				<div class="col-12 learts-mb-20">
 					<label for="bdAddress2" class="sr-only">Apartment, suite, unit etc. (optional)</label>
