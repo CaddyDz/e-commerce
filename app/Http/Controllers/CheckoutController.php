@@ -63,7 +63,8 @@ class CheckoutController extends Controller
 			$order->save();
 		}
 		Cart::destroy();
-		return redirect('/checkout');
+		session()->flash('confirmed');
+		return redirect('/');
 	}
 
 	/**

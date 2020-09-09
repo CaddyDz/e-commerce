@@ -10,34 +10,11 @@
 	<meta name="description" content="Site algerien de vente enligne">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta property="og:title" content="@yield('title')">
-    <meta property="og:description" content="Site algerien de vente enligne">
-    <meta property="og:image" content="{{ secure_asset('/assets/images/logo/logofinal1.png') }}">
-    <meta property="og:url" content="{{config('app.url')}}">
+	<meta property="og:description" content="Site algerien de vente enligne">
+	<meta property="og:image" content="{{ secure_asset('/assets/images/logo/logofinal1.png') }}">
+	<meta property="og:url" content="{{config('app.url')}}">
 	<!-- Favicon -->
 	<link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.png">
-
-	<!-- CSS
-	============================================ -->
-
-	<!-- Vendor CSS (Bootstrap & Icon Font) -->
-	{{-- <link rel="stylesheet" href="/assets/css/vendor/bootstrap.min.css">
-	<link rel="stylesheet" href="/assets/css/vendor/font-awesome-pro.min.css">
-	<link rel="stylesheet" href="/assets/css/vendor/themify-icons.css">
-	<link rel="stylesheet" href="/assets/css/vendor/customFonts.css"> --}}
-
-	<!-- Plugins CSS (All Plugins Files) -->
-	{{-- <link rel="stylesheet" href="/assets/css/plugins/select2.min.css">
-	<link rel="stylesheet" href="/assets/css/plugins/perfect-scrollbar.css">
-	<link rel="stylesheet" href="/assets/css/plugins/swiper.min.css">
-	<link rel="stylesheet" href="/assets/css/plugins/nice-select.css">
-	<link rel="stylesheet" href="/assets/css/plugins/ion.rangeSlider.min.css">
-	<link rel="stylesheet" href="/assets/css/plugins/photoswipe.css">
-	<link rel="stylesheet" href="/assets/css/plugins/photoswipe-default-skin.css">
-	<link rel="stylesheet" href="/assets/css/plugins/magnific-popup.css">
-	<link rel="stylesheet" href="/assets/css/plugins/slick.css"> --}}
-
-	<!-- Main Style CSS -->
-	{{-- <link rel="stylesheet" href="/assets/css/style.css"> --}}
 
 	<!-- Use the minified version files listed below for better performance and remove the files listed above -->
 	<link rel="stylesheet" href="/assets/css/vendor/vendor.min.css">
@@ -45,268 +22,15 @@
 	<link rel="stylesheet" href="/assets/css/style.min.css">
 	<script src="/assets/js/vendor/vue.js"></script>
 	<script src="/assets/js/vendor/axios.js"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
-
-	<!-- Topbar Section Start -->
-	<div class="topbar-section section border-bottom">
-		<div class="container">
-			<div class="row align-items-center">
-				<div class="col d-none d-md-block">
-					<div class="topbar-menu">
-						<ul>
-							<!-- <li><a href="#"><i class="fa fa-map-marker-alt"></i>Store Location</a></li> -->
-							<li><a href="#"><i class="fa fa-truck"></i>@lang('Order Status')</a></li>
-						</ul>
-					</div>
-				</div>
-				<!-- Header Language & Currency Start -->
-				<a href="tel:0918 206 263"> 0</a> <i class="fa fa-phone"></i>
-				<!-- Header Language & Currency End -->
-			</div>
-		</div>
-	</div>
-	<!-- Topbar Section End -->
-	<!-- Header Section Start -->
-	<div class="header-section section bg-white d-none d-xl-block">
-		<div class="container">
-			<div class="row justify-content-between align-items-center">
-
-				<!-- Header Logo Start -->
-				<div class="col-auto">
-					<div class="header-logo justify-content-center">
-						<a href="/"><img src="/assets/images/logo/logo.png" alt="@lang('Logo')"></a>
-					</div>
-				</div>
-				<!-- Header Logo End -->
-
-				<!-- Header Search Start -->
-				{{-- <div class="col">
-					<div class="header6-search">
-						<form action="#">
-							<div class="row no-gutters">
-								<div class="col-auto">
-									<select class="search-select select2-basic">
-										<option value="0">All Categories</option>
-										<option value="kids-babies">Kids &amp; Babies</option>
-										<option value="home-decor">Home Decor</option>
-										<option value="gift-ideas">Gift ideas</option>
-										<option value="kitchen">Kitchen</option>
-										<option value="toys">Toys</option>
-										<option value="kniting-sewing">Kniting &amp; Sewing</option>
-										<option value="pots">Pots</option>
-									</select>
-								</div>
-								<div class="col">
-									<input type="text" placeholder="Search Products...">
-								</div>
-								<button type="submit"><i class="fal fa-search"></i></button>
-							</div>
-						</form>
-					</div>
-				</div> --}}
-				<!-- Header Search End -->
-
-				<!-- Header Tools Start -->
-				<div class="col-auto">
-					<div class="header-tools justify-content-end">
-						<div class="header-login">
-							<a href="{{ route('home') }}">
-								<i class="fal fa-user"></i>
-							</a>
-						</div>
-						{{-- <div class="header-wishlist">
-							<a href="#offcanvas-wishlist" class="offcanvas-toggle"><span class="wishlist-count">3</span><i class="fal fa-heart"></i></a>
-						</div> --}}
-						<div class="header-cart">
-							<a href="#offcanvas-cart" class="offcanvas-toggle">
-								<span class="cart-count">
-									{{ $cart->count() }}
-								</span>
-								<i class="fal fa-shopping-cart"></i>
-							</a>
-						</div>
-					</div>
-				</div>
-				<!-- Header Tools End -->
-
-			</div>
-		</div>
-
-		<!-- Site Menu Section Start -->
-		<div class="site-menu-section section border-top">
-			<div class="container">
-				<div class="header-categories">
-					<button class="category-toggle">
-						<i class="fal fa-bars"></i> @lang('Browse Categories')</button>
-					<ul class="header-category-list">
-						@foreach($categories as $category)
-							<li>
-								<a href="{{ route('category', ['category' => $category]) }}">
-									<img src="" alt="">{{ $category->name }}
-								</a>
-							</li>
-						@endforeach
-					</ul>
-				</div>
-			</div>
-		</div>
-		<!-- Site Menu Section End -->
-
-	</div>
-	<!-- Header Section End -->
-
-	<!-- Header Sticky Section Start -->
-	<div class="sticky-header header-menu-center section bg-white d-none d-xl-block">
-		<div class="container">
-			<div class="row align-items-center">
-
-				<!-- Header Logo Start -->
-				<div class="col">
-					<div class="header-logo">
-						<a href="/">
-							<img src="/assets/images/logo/logo.png" alt="@lang('Logo')" width="90">
-						</a>
-					</div>
-				</div>
-				<!-- Header Logo End -->
-
-				<!-- Search Start -->
-				<div class="col d-none d-xl-block">
-					<nav class="site-main-menu">
-						<ul>
-							<li class="has-children" class="pull-right">
-								<a href="#"><span class="menu-text">Menu</span></a>
-								<ul class="sub-menu">
-									<li>
-										<a href="/about">
-											<span class="menu-text">@lang('About us')</span>
-										</a>
-									</li>
-									<li>
-										<a href="/shipping">
-											<span class="menu-text">
-												@lang('Shipping policy')
-											</span>
-										</a>
-									</li>
-									<li>
-										<a href="/faq">
-											<span class="menu-text">
-												Questions?
-											</span>
-										</a>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</nav>
-				</div>
-				<!-- Search End -->
-
-				<!-- Header Tools Start -->
-				<div class="col-auto">
-					<div class="header-tools justify-content-end">
-						<div class="header-login">
-							<a href="/home"><i class="fal fa-user"></i></a>
-						</div>
-						<!--
-						<div class="header-search d-none d-sm-block">
-							<a href="#offcanvas-search" class="offcanvas-toggle"><i class="fal fa-search"></i></a>
-						</div>
-						<div class="header-wishlist">
-							<a href="#offcanvas-wishlist" class="offcanvas-toggle"><span class="wishlist-count">3</span><i class="fal fa-heart"></i></a>
-						</div> -->
-						<div class="header-cart">
-							<a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count">{{ $cart->count() }}</span><i class="fal fa-shopping-cart"></i></a>
-						</div>
-						<div class="mobile-menu-toggle d-xl-none">
-							<a href="#offcanvas-mobile-menu" class="offcanvas-toggle">
-								<svg viewBox="0 0 800 600">
-									<path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" id="top"></path>
-									<path d="M300,320 L540,320" id="middle"></path>
-									<path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" id="bottom" transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
-								</svg>
-							</a>
-						</div>
-					</div>
-				</div>
-				<!-- Header Tools End -->
-
-			</div>
-		</div>
-
-	</div>
-	<!-- Header Sticky Section End -->
-	<!-- Mobile Header Section Start -->
-	<div class="mobile-header bg-white section d-xl-none">
-		<div class="container">
-			<div class="row align-items-center">
-
-				<!-- Header Logo Start -->
-				<div class="col">
-					<div class="header-logo">
-						<a href="/"><img src="/assets/images/logo/logo.png" alt="@lang('Logo')"></a>
-					</div>
-				</div>
-				<!-- Header Logo End -->
-
-				<!-- Header Tools Start -->
-				@include('layouts.header.tools')
-				<!-- Header Tools End -->
-
-			</div>
-		</div>
-	</div>
-	<!-- Mobile Header Section End -->
-
-	<!-- Mobile Header Section Start -->
-	<div class="mobile-header sticky-header bg-white section d-xl-none">
-		<div class="container">
-			<div class="row align-items-center">
-
-				<!-- Header Logo Start -->
-				<div class="col">
-					<div class="header-logo">
-						<a href="/"><img src="/assets/images/logo/Logofinal.png" alt="DlalaDz"></a>
-					</div>
-				</div>
-				<!-- Header Logo End -->
-
-				<!-- Header Tools Start -->
-				<div class="col-auto">
-					<div class="header-tools justify-content-end">
-						<div class="header-login d-none d-sm-block">
-							<a href="/home"><i class="fal fa-user"></i></a>
-						</div>
-						<div class="header-search d-none d-sm-block">
-							<a href="#offcanvas-search" class="offcanvas-toggle"><i class="fal fa-search"></i></a>
-						</div>
-						<div class="header-wishlist d-none d-sm-block">
-							<a href="#offcanvas-wishlist" class="offcanvas-toggle"><span class="wishlist-count">3</span><i class="fal fa-heart"></i></a>
-						</div>
-						<div class="header-cart">
-							<a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count">{{ $cart->count() }}</span><i class="fal fa-shopping-cart"></i></a>
-						</div>
-						<div class="mobile-menu-toggle">
-							<a href="#offcanvas-mobile-menu" class="offcanvas-toggle">
-								<svg viewBox="0 0 800 600">
-									<path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" id="top"></path>
-									<path d="M300,320 L540,320" id="middle"></path>
-									<path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" id="bottom" transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
-								</svg>
-							</a>
-						</div>
-					</div>
-				</div>
-				<!-- Header Tools End -->
-
-			</div>
-		</div>
-	</div>
-	<!-- Mobile Header Section End -->
-
+	@include('layouts.header.topbar')
+	@include('layouts.header.header')
+	@include('layouts.header.sticky')
+	@include('layouts.header.mobile')
+	@include('layouts.header.mobile_sticky')
 	<!-- OffCanvas Cart Start -->
 	<div id="offcanvas-cart" class="offcanvas offcanvas-cart">
 		<div class="inner">
@@ -357,104 +81,21 @@
 		</div>
 	</div>
 	<!-- OffCanvas Cart End -->
-
 	<!-- OffCanvas Search Start -->
 	@include('partials.mobile_menu')
 	<!-- OffCanvas Search End -->
-
 	<div class="offcanvas-overlay"></div>
-
 	@yield('content')
-
-	<div class="footer4-section bg-light section section-fluid section-padding">
-		<div class="container">
-			<div class="row learts-mb-n40">
-
-				<div class="col-xl-4 col-lg-5 col-12 learts-mb-40">
-					<div class="widget-contact">
-						<p class="email">contact@dlaladz.com</p>
-						<p class="phone">(+213)</p>
-						<p class="copyright learts-mt-40">&copy; 2020 DlalaDz. All Rights Reserved</a></p>
-					</div>
-				</div>
-
-				<div class="col-xl-4 col-lg-7 col-12 learts-mb-40">
-					<div class="row row-cols-sm-3 row-cols-1 learts-mb-n40">
-						<div class="col learts-mb-40">
-							<ul class="widget-list">
-								<li><a href="/about">@lang('About us')</a></li>
-
-								<li><a href="/shipping">@lang('Shipping policy')</a></li>
-								<li><a href="/faq">FAQs</a></li>
-							</ul>
-						</div>
-						<div class="col learts-mb-40">
-							<ul class="widget-list">
-
-								<li> <i class="fab fa-facebook-f"></i> <a href="https://www.facebook.com/">Facebook</a></li>
-								<li> <i class="fab fa-instagram"></i> <a href="https://www.instagram.com/">Instagram</a></li>
-
-							</ul>
-						</div>
-					</div>
-				</div>
-				<!--
-				<div class="col-xl-4 col-12 learts-mb-40">
-					<h5 class="widget-title mb-2">Newsletter</h5>
-					<form id="mc-form" class="mc-form widget-subscibe2">
-						<input id="mc-email" autocomplete="off" type="email" placeholder="Enterer votre addresse e-mail">
-						<button id="mc-submit" class="btn">@lang('subscibe')</button>
-					</form>
-
-					<div class="mailchimp-alerts text-centre">
-						<div class="mailchimp-submitting"></div>
-						<div class="mailchimp-success text-success"></div>
-						<div class="mailchimp-error text-danger"></div>
-					</div>
-				</div>
-                       -->
-			</div>
-		</div>
-	</div>
-	<!-- JS
-============================================ -->
-
-	<!-- Vendors JS -->
-	<!-- <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
-<script src="assets/js/vendor/jquery-3.4.1.min.js"></script>
-<script src="assets/js/vendor/jquery-migrate-3.1.0.min.js"></script>
-<script src="assets/js/vendor/bootstrap.bundle.min.js"></script> -->
-
-	<!-- Plugins JS -->
-	<!-- <script src="assets/js/plugins/select2.min.js"></script>
-<script src="assets/js/plugins/jquery.nice-select.min.js"></script>
-<script src="assets/js/plugins/perfect-scrollbar.min.js"></script>
-<script src="assets/js/plugins/swiper.min.js"></script>
-<script src="assets/js/plugins/slick.min.js"></script>
-<script src="assets/js/plugins/mo.min.js"></script>
-<script src="assets/js/plugins/jquery.instagramFeed.min.js"></script>
-<script src="assets/js/plugins/jquery.ajaxchimp.min.js"></script>
-<script src="assets/js/plugins/jquery.countdown.min.js"></script>
-<script src="assets/js/plugins/imagesloaded.pkgd.min.js"></script>
-<script src="assets/js/plugins/isotope.pkgd.min.js"></script>
-<script src="assets/js/plugins/jquery.matchHeight-min.js"></script>
-<script src="assets/js/plugins/ion.rangeSlider.min.js"></script>
-<script src="assets/js/plugins/photoswipe.min.js"></script>
-<script src="assets/js/plugins/photoswipe-ui-default.min.js"></script>
-<script src="assets/js/plugins/jquery.zoom.min.js"></script>
-<script src="assets/js/plugins/ResizeSensor.js"></script>
-<script src="assets/js/plugins/jquery.sticky-sidebar.min.js"></script>
-<script src="assets/js/plugins/product360.js"></script>
-<script src="assets/js/plugins/jquery.magnific-popup.min.js"></script>
-<script src="assets/js/plugins/jquery.scrollUp.min.js"></script>
-<script src="assets/js/plugins/scrollax.min.js"></script> -->
-
-	<!-- Use the minified version files listed below for better performance and remove the files listed above -->
+	@include('layouts.footer')
 	<script src="/assets/js/vendor/vendor.min.js"></script>
 	<script src="/assets/js/plugins/plugins.min.js"></script>
-
 	<!-- Main Activation JS -->
 	<script src="/assets/js/main.js"></script>
+	@if(session()->has('confirmed'))
+	<script>
+		swal("{{ __('Order Confirmed!') }}", "{{ __('Your order has been placed and will be processed shortly.') }}", "success");
+	</script>
+	@endif
 	@stack('scripts')
 </body>
 
