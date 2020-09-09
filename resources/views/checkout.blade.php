@@ -74,9 +74,15 @@
 					<select id="bdDistrict" class="select2-basic" name="district" required>
 						<option value="">@lang('Select an option…')</option>
 						@foreach ($states as $state)
+							@if($state->available)
 							<option value="{{ $state->price }}">
 								@lang($state->state) {{ $state->price }}
 							</option>
+							@else
+							<option value="">
+								@lang($state->state) @lang('Unavailable')
+							</option>
+							@endif
 						@endforeach
 					</select>
 				</div>

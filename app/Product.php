@@ -16,6 +16,11 @@ class Product extends Model implements Buyable, HasMedia
 {
 	use SoftDeletes, CanBeBought, InteractsWithMedia;
 
+	/**
+	 * The attributes that should be cast.
+	 *
+	 * @var array
+	 */
 	protected $casts = [
 		'display_sizes' => 'bool',
 		'display_colors' => 'bool',
