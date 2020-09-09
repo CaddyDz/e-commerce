@@ -2,11 +2,10 @@
 
 namespace App\Nova;
 
-use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Fields\Number;
+use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Http\Requests\NovaRequest;
+use Laravel\Nova\Fields\Number;
 
 class Shipping extends Resource
 {
@@ -44,7 +43,7 @@ class Shipping extends Resource
 		return [
 			ID::make()->sortable(),
 			Text::make(__('State'), 'state')->readonly(),
-			Number::make(__('Price'), 'price')->required()
+			Number::make(__('Price'), 'price')->required()->updateRules('required', 'integer'),
 		];
 	}
 

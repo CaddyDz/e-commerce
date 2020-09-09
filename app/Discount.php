@@ -7,6 +7,11 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Discount extends Model
 {
+	/**
+	 * The attributes that should be cast.
+	 *
+	 * @var array
+	 */
 	protected $casts = [
 		'expires_at' => 'date'
 	];
