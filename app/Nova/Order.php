@@ -137,6 +137,7 @@ class Order extends Resource
 			BelongsToMany::make(__('Products'), 'products', Product::class)->fields(function () {
 				return [
 					Number::make(__('Quantity'), 'quantity'),
+					Text::make(__('Size'), 'size'),
 				];
 			}),
 		];

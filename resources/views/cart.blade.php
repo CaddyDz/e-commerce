@@ -34,6 +34,8 @@
 					<tr>
 						<th class="name" colspan="2">@lang('Product')</th>
 						<th class="price">@lang('Price')</th>
+						<th class="price">@lang('Size')</th>
+						<th class="price">@lang('Color')</th>
 						<th class="quantity">@lang('Quantity')</th>
 						<th class="subtotal">@lang('Total')</th>
 						<th class="remove">&nbsp;</th>
@@ -43,7 +45,7 @@
 					@foreach ($cart as $item)
 					<tr>
 						<td class="thumbnail">
-							<a href="product-details.html">
+							<a href="{{ route('product', ['product' => $item->model]) }}">
 								<img src="{{ secure_asset('storage/' . $item->model->image) }}">
 							</a>
 						</td>
@@ -54,6 +56,20 @@
 						</td>
 						<td class="price">
 							<span>{{ $item->price }}</span>
+						</td>
+						<td class="price">
+							<span>
+								{{ $item->options->has('size') ? size($item->options->size) : '' }}
+							</span>
+						</td>
+						<td class="price">
+							@if($item->options->has('color'))
+							<div class="product-colors">
+								<label data-bg-color="{{ color($item->options->color) }}"></label>
+							</div>
+							@else
+								<span>N/A</span>
+							@endif
 						</td>
 						<td class="quantity">
 							<div class="product-quantity">

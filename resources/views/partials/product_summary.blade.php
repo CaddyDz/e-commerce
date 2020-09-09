@@ -14,7 +14,8 @@
 						<td class="value">
 							<div class="product-sizes">
 								@foreach($product->sizes as $size)
-									<a href="#">{{ $size->label }}</a>
+									<input type="radio" name="size" value="{{ $size->id }}" id="size-{{ $size->id }}" hidden>
+									<label for="size-{{ $size->id }}">{{ $size->label }}</label>
 								@endforeach
 							</div>
 						</td>
@@ -26,8 +27,9 @@
 						<td class="value">
 							<div class="product-colors">
 								@foreach($product->colors as $color)
-									<a href="#" data-bg-color="{{ $color->color }}">
-									</a>
+									<input type="radio" name="color" value="{{ $color->id }}" id="color-{{ $color->id }}" hidden>
+									<label for="color-{{ $color->id }}" data-bg-color="{{ $color->color }}">
+									</label>
 								@endforeach
 							</div>
 						</td>

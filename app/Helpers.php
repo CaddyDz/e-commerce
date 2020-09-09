@@ -2,6 +2,9 @@
 
 declare(strict_types=1);
 
+use App\Size;
+use App\Color;
+
 function sluggify($string)
 {
 	// replace non letter or digits by -
@@ -27,4 +30,14 @@ function sluggify($string)
 	}
 
 	return $url;
+}
+
+function size(int $id): string
+{
+	return __(Size::find($id)->label);
+}
+
+function color(int $id): string
+{
+	return __(Color::find($id)->color);
 }
