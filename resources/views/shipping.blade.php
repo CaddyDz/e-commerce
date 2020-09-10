@@ -48,7 +48,9 @@
 
                         <div class="col-md-6 col-12 learts-mb-30">
                             <p class="text-heading fw-600 learts-mb-10">Frais de livraison</p>
-                            <p>La liste des frais de livraison bientot disponible sur le site</p>
+                            @foreach($shippings as $shipping)
+                            <p> {{ $shipping->state }} : {{ $shipping->price }} </p>
+                            @endforeach
                         </div>
 
    

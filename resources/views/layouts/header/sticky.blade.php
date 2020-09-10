@@ -35,7 +35,7 @@
 								<li>
 									<a href="/faq">
 										<span class="menu-text">
-											Questions?
+											FAQs?
 										</span>
 									</a>
 								</li>

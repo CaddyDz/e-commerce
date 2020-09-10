@@ -71,6 +71,10 @@
 				<button class="category-toggle">
 					<i class="fal fa-bars"></i> @lang('Browse Categories')</button>
 				<ul class="header-category-list">
+				<li><a href="/">
+								<img src="" alt="">@lang('Home')
+							</a>
+				</li>
 					@foreach($categories as $category)
 						<li>
 							<a href="{{ route('category', ['category' => $category]) }}">

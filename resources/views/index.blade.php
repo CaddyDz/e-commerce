@@ -27,6 +27,7 @@
 	<div class="section section-fluid learts-pt-30">
 		<div class="container">
 			<div class="category-banner1-carousel">
+			    
 				@foreach ($brands as $brand)
 					@include('partials.brand')
 				@endforeach

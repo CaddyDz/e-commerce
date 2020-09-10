@@ -93,5 +93,7 @@
 	"Home": "Accueil",
 	"You could either go back or go to homepage": "Vous pouvez revenir en arrière ou aller à la page d'accueil",
 	"Go back": "Retourner",
-	"Homepage": "Page d'accueil"
+	"Homepage": "Page d'accueil",
+	"Order Confirmed!": "Commande Validé!",
+	"Your order has been placed and will be processed shortly.":"Votre Commande a été validé, et sera traitée dans les prochaines 24H"
 }
