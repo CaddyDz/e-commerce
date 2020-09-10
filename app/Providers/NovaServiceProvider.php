@@ -2,9 +2,9 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\Facades\Gate;
-use Laravel\Nova\Cards\Help;
 use Laravel\Nova\Nova;
+use Illuminate\Support\Facades\Gate;
+use Laravel\Nova\Events\ServingNova;
 use Laravel\Nova\NovaApplicationServiceProvider;
 
 class NovaServiceProvider extends NovaApplicationServiceProvider
@@ -16,6 +16,9 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
 	 */
 	public function boot()
 	{
+		Nova::serving(function (ServingNova $event) {
+			Nova::style('blueflix', __DIR__ . '/../../resources/css/theme.css');
+		});
 		parent::boot();
 	}
 
