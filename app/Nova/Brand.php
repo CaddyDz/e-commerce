@@ -65,7 +65,7 @@ class Brand extends Resource
 		return [
 			ID::make()->sortable(),
 			Avatar::make('Logo'),
-			Text::make(__('Name'))->required(),
+			Text::make(__('Name'), 'name')->required(),
 			BelongsTo::make(__('Category'), 'category', Category::class)->required(),
 		];
 	}
