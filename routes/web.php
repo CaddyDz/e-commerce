@@ -28,6 +28,6 @@ Route::get('/checkout', 'CheckoutController@index');
 Route::view('about', 'about');
 Route::view('tos', 'tos');
 Route::view('faq', 'faq');
-Route::view('shipping', 'shipping');
+Route::get('shipping', 'ShippingController@index');
 Route::post('applyCoupon', 'CheckoutController@applyCoupon');
 Route::post('/order', 'CheckoutController@store');
