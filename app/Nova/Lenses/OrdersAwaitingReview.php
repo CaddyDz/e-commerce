@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Nova\Lenses;
 
 use Laravel\Nova\Fields\ID;
