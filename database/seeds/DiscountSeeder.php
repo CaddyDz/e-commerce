@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use App\Product;
 use App\Discount;
 use Illuminate\Database\Seeder;
