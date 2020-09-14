@@ -5,18 +5,19 @@ declare(strict_types=1);
 namespace App\Http\Controllers;
 
 use App\Brand;
-use App\Discount;
 use App\Product;
+use App\Discount;
+use Illuminate\View\View;
 use Illuminate\Http\Request;
 
 class ProductsController extends Controller
 {
 	/**
-	 * Display a listing of the resource.
+	 * Display index view with products, brands and deal of the day.
 	 *
-	 * @return \Illuminate\Http\Response
+	 * @return \Illuminate\View\View
 	 */
-	public function index()
+	public function index(): View
 	{
 		$products = Product::all();
 		$brands = Brand::all();

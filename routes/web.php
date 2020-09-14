@@ -19,17 +19,17 @@ Route::get('/', 'ProductsController@index');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::post('/cart/add/{product}', 'CartController@add')->name('cart.add');
-Route::post('/cart/remove/{product}', 'CartController@remove')->name('cart.remove');
-Route::get('/products/{product}', 'ProductsController@show')->name('product');
-Route::get('/brands/{brand}', 'BrandsController@show')->name('brand');
-Route::get('/categories/{category}', 'CategoriesController@show')->name('category');
-Route::get('/cart', 'CartController@index')->name('cart');
-Route::get('/checkout', 'CheckoutController@index');
+Route::get('home', 'HomeController@index')->name('home');
+Route::post('cart/add/{product}', 'CartController@add')->name('cart.add');
+Route::post('cart/remove/{product}', 'CartController@remove')->name('cart.remove');
+Route::get('products/{product}', 'ProductsController@show')->name('product');
+Route::get('brands/{brand}', 'BrandsController@show')->name('brand');
+Route::get('categories/{category}', 'CategoriesController@show')->name('category');
+Route::get('cart', 'CartController@index')->name('cart');
+Route::get('checkout', 'CheckoutController@index');
 Route::view('about', 'about');
 Route::view('tos', 'tos');
 Route::view('faq', 'faq');
 Route::get('shipping', 'ShippingController@index');
 Route::post('applyCoupon', 'CheckoutController@applyCoupon');
-Route::post('/order', 'CheckoutController@store');
+Route::post('order', 'CheckoutController@store');
