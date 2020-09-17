@@ -20,11 +20,33 @@ use App\Nova\Lenses\OrdersAwaitingReview;
 use Laravel\Nova\Fields\BelongsToMany;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Select;
+use Laravel\Nova\Fields\Stack;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Textarea;
 
 class Order extends Resource
 {
+	/**
+	 * The visual style used for the table. Available options are 'tight' and 'default'.
+	 *
+	 * @var string
+	 */
+	public static $tableStyle = 'tight';
+
+	/**
+	 * Whether to show borders for each column on the X-axis.
+	 *
+	 * @var bool
+	 */
+	public static $showColumnBorders = true;
+
+	/**
+	 * Indicates whether Nova should prevent the user from leaving an unsaved form, losing their data.
+	 *
+	 * @var bool
+	 */
+	public static $preventFormAbandonment = true;
+
 	/**
 	 * Get the displayable label of the resource.
 	 *
@@ -128,15 +150,11 @@ class Order extends Resource
 				->sortable()
 				->exceptOnForms(),
 			BelongsTo::make(__('Reviewer'), 'reviewer', 'App\Nova\User')->sortable(),
-			Text::make(__('Last Name'), 'lastname'),
-			Text::make(__('First Name'), 'firstname'),
-			Text::make(__('Address 1'), 'address1'),
 			Text::make(__('Address 2'), 'address2')->hideFromIndex(),
 			Text::make(__('Town'), 'town')->hideFromIndex(),
 			Text::make(__('Zip Code'), 'zip')->hideFromIndex(),
 			Text::make(__('District'), 'district')->hideFromIndex(),
 			Text::make(__('Email'), 'email')->hideFromIndex(),
-			Text::make(__('Phone Number'), 'phone'),
 			Textarea::make(__('Notes'), 'notes')->hideFromIndex(),
 			BelongsToMany::make(__('Products'), 'products', Product::class)->fields(function () {
 				return [
@@ -144,6 +162,12 @@ class Order extends Resource
 					Text::make(__('Size'), 'size'),
 				];
 			}),
+			Stack::make(__('Client'), [
+				Text::make(__('Last Name'), 'lastname'),
+				Text::make(__('First Name'), 'firstname'),
+				Text::make(__('Address 1'), 'address1'),
+				Text::make(__('Phone Number'), 'phone'),
+			]),
 		];
 	}
 
@@ -198,7 +222,7 @@ class Order extends Resource
 	{
 		return [
 			new PrintOrder,
-			new ChangeOrderStatus,
+			(new ChangeOrderStatus())->showOnTableRow()
 		];
 	}
 
