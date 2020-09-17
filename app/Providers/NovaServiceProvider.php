@@ -7,6 +7,7 @@ namespace App\Providers;
 use Laravel\Nova\Nova;
 use Illuminate\Support\Facades\Gate;
 use Laravel\Nova\Events\ServingNova;
+use Zoxta\NovaCloudflareCard\NovaCloudflareCard;
 use Laravel\Nova\NovaApplicationServiceProvider;
 
 class NovaServiceProvider extends NovaApplicationServiceProvider
@@ -60,7 +61,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
 	protected function cards()
 	{
 		return [
-			// new Help,
+			new NovaCloudflareCard(),
 		];
 	}
 
