@@ -8,6 +8,7 @@ use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\BelongsToMany;
+use Laravel\Nova\Fields\Text;
 
 class Age extends Resource
 {
@@ -44,7 +45,7 @@ class Age extends Resource
 	{
 		return [
 			ID::make()->sortable(),
-			Number::make(__('Value'), 'value')->required(),
+			Text::make(__('Value'), 'value')->required(),
 			BelongsToMany::make(__('Product'), 'products', Product::class),
 		];
 	}
