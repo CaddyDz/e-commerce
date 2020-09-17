@@ -22,7 +22,8 @@
 		"scadini/nova-icon": "^0.2.1",
 		"timothyasp/nova-badge-field": "^1.0",
 		"timothyasp/nova-color-field": "master",
-		"vyuldashev/nova-permission": "^2.9"
+		"vyuldashev/nova-permission": "^2.9",
+		"zoxta/nova-cloudflare-card": "^1.0"
 	},
 	"require-dev": {
 		"facade/ignition": "^2.0",
