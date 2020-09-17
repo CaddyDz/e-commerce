@@ -11,6 +11,11 @@ class Order extends Model
 {
 	protected $guarded = []; // yolo
 
+	public function client()
+	{
+		return $this->belongsTo(User::class);
+	}
+
 	public function reviewer()
 	{
 		return $this->belongsTo(User::class, 'reviewer_id');

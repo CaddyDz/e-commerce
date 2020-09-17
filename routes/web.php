@@ -33,3 +33,4 @@ Route::view('faq', 'faq');
 Route::get('shipping', 'ShippingController@index');
 Route::post('applyCoupon', 'CheckoutController@applyCoupon');
 Route::post('order', 'CheckoutController@store');
+Route::get('print/order/{order}', 'OrdersController@print');

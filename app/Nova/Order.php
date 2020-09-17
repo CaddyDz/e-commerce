@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Nova;
 
+use App\Nova\Actions\PrintOrder;
 use App\Nova\Filters\OrdersByWorker;
 use NovaIcon\Icon;
 use Timothyasp\Badge\Badge;
@@ -194,7 +195,9 @@ class Order extends Resource
 	 */
 	public function actions(Request $request)
 	{
-		return [];
+		return [
+			new PrintOrder,
+		];
 	}
 
 	/**

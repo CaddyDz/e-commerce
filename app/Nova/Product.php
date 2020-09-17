@@ -99,8 +99,8 @@ class Product extends Resource
 			BelongsToMany::make(__('Orders'), 'orders', Order::class)->fields(function () {
 				return [
 					Number::make(__('Quantity'), 'quantity'),
-					Text::make(__('Size'), fn ($pivot) => size($pivot->size)),
-					Color::make(__('Color'), fn ($pivot) => color($pivot->color)),
+					Text::make(__('Size'), fn ($pivot) => $pivot->size ? size($pivot->size) : null),
+					Color::make(__('Color'), fn ($pivot) => $pivot->color ? color($pivot->color) : null),
 				];
 			}),
 		];

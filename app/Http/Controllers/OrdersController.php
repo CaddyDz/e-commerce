@@ -7,8 +7,13 @@ namespace App\Http\Controllers;
 use App\Order;
 use Illuminate\Http\Request;
 
-class OrderController extends Controller
+class OrdersController extends Controller
 {
+	public function print(Order $order)
+	{
+		return view('print.order', compact('order'));
+	}
+
 	/**
 	 * Display a listing of the resource.
 	 *
