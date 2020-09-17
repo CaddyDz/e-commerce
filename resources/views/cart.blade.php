@@ -58,12 +58,15 @@
 							<span>{{ $item->price }}</span>
 						</td>
 						<td class="price">
+							@if($item->options->size)
 							<span>
 								{{ $item->options->has('size') ? size($item->options->size) : '' }}
 							</span>
+							@endif
+							<span></span>
 						</td>
 						<td class="price">
-							@if($item->options->has('color'))
+							@if($item->options->color)
 							<div class="product-colors">
 								<label data-bg-color="{{ color($item->options->color) }}"></label>
 							</div>
