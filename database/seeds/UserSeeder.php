@@ -23,7 +23,6 @@ class UserSeeder extends Seeder
 		$worker = factory(User::class)->create([
 			'name' => 'worker',
 			'email' => 'worker@gmail.com',
-			'password' => bcrypt('notsecure'),
 		]);
 		$worker->assignRole('Worker');
 		factory(User::class, 50)->create();

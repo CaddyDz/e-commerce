@@ -20,7 +20,9 @@ class RolesAndPermissionsSeeder extends Seeder
 
 		$role = Role::create(['name' => 'Admin']);
 		Permission::create(['name' => 'Print']);
+		$access = Permission::create(['name' => 'Access Admin panel']);
 		$role->givePermissionTo(Permission::all());
-		Role::create(['name' => 'Worker']);
+		$worker = Role::create(['name' => 'Worker']);
+		$worker->givePermissionTo($access);
 	}
 }
