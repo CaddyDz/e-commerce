@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Nova;
 
+use App\Nova\Actions\ChangeOrderStatus;
 use App\Nova\Actions\PrintOrder;
 use App\Nova\Filters\OrdersByWorker;
 use NovaIcon\Icon;
@@ -197,6 +198,7 @@ class Order extends Resource
 	{
 		return [
 			new PrintOrder,
+			new ChangeOrderStatus,
 		];
 	}
 
