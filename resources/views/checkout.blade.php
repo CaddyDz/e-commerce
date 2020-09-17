@@ -162,16 +162,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="card">
-								<div class="card-header">
-									<button data-toggle="collapse" data-target="#payPalPayments">El-Dahabia <img src="" alt=""></button>
-								</div>
-								<div id="payPalPayments" class="collapse" data-parent="#paymentMethod">
-									<div class="card-body">
-										<p>Payer via carte El-Dahabia; Pas encore disponible.</p>
-									</div>
-								</div>
-							</div>
+							
 						</div>
 					</div>
 				</div>
