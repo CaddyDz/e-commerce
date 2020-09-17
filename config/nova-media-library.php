@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 return [
-    'enable-existing-media' => false,
+	'enable-existing-media' => false,
 ];
