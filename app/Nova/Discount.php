@@ -33,7 +33,16 @@ class Discount extends Resource
 	 * @var array
 	 */
 	public static $search = [
-		'id',
+		'id', 'value', 'expires_at'
+	];
+
+	/**
+	 * The relationship columns that should be searched.
+	 *
+	 * @var array
+	 */
+	public static $searchRelations = [
+		'product' => ['id', 'name', 'description', 'price'],
 	];
 
 	/**
@@ -47,7 +56,7 @@ class Discount extends Resource
 		return [
 			ID::make()->sortable(),
 			DateTime::make(__('Expires at'), 'expires_at')->sortable(),
-			BelongsTo::make(__('Product'), 'product', Product::class),
+			BelongsTo::make(__('Product'), 'product', Product::class)->sortable(),
 			Number::make(__('Percentage'), 'value'),
 		];
 	}
