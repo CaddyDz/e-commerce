@@ -4,14 +4,12 @@ declare(strict_types=1);
 
 namespace App\Nova;
 
-use App\Brand;
 use Laravel\Nova\Fields\ID;
 use Timothyasp\Color\Color;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Avatar;
 use Laravel\Nova\Fields\Number;
-use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Fields\BelongsTo;
@@ -84,11 +82,9 @@ class Product extends Resource
 	 */
 	public function fields(Request $request)
 	{
-		$brands = Brand::select('id', 'name')->pluck('name', 'id')->toArray();
 		return [
 			ID::make()->sortable(),
-			Select::make(__('Brand'), 'brand_id')->options($brands)->required(),
-			BelongsTo::make(__('Brand'), 'brand', 'App\Nova\Brand')->required(),
+			BelongsTo::make(__('Brand'), 'brand', Brand::class)->required(),
 			Text::make(__('Name'), 'name')->required(),
 			Textarea::make(__('Description'), 'description')->required(),
 			BelongsToMany::make(__('Sizes'), 'sizes', Size::class),
