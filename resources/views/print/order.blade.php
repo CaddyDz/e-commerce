@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>@lang('Order') {{ $order->id }}</title>
+	<title>@lang('Order') #{{ $order->id }}</title>
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -38,7 +38,7 @@
 						</h2>
 						<div>Address : {{ $order->address1 }} {{ $order->address2 }}</div>
 						<div>Téléphone : {{ $order->phone}}</div>
-						<div>Email : {{$order -> email}}S</div>
+						<div>Email : {{$order->email }}</div>
 					</div>
 				</div>
 			</header>
@@ -55,53 +55,52 @@
 						<div class="date">@lang('Date of receipt'): {{ $order->created_at }}</div>
 					</div>
 				</div>
-				<table border="0" cellspacing="0" cellpadding="0">
+				<table borders="0" cellspacing="0" cellpadding="0">
 					<thead>
 						<tr>
 							<th>#</th>
 							<th class="text-left">@lang('Designation')</th>
 							<th class="text-left">@lang('Brand')</th>
-							<th class="text-right">@lang('Price')</th>
-							<th class="text-right">@lang('Quantity')</th>
-							<!-- <th class="text-right">@lang('Sum')</th> -->
+							<th class="text-left">@lang('Size')</th>
+							<th class="text-left">@lang('Color')</th>
+							<th class="text-left">@lang('Age')</th>
+							<th class="text-left">@lang('Price')</th>
+							<th class="text-left">@lang('Quantity')</th>
+							<th class="text-left">@lang('Sum')</th>
 						</tr>
 					</thead>
 					<tbody>
-						@foreach ($order->products as $index => $part)
+						@foreach ($order->products as $index => $product)
 						<tr>
 							<td class="no">{{ $index + 1 }}</td>
 							<td class="text-left">
-								<h3>{{ $part->title }}</h3>
-								{{ $part->excerpt }} <br>
+								<h3>{{ $product->name }}</h3>
 							</td>
-							<td class="total">{{ $part->brand->name }}</td>
-							<td class="total">{{ $part->pivot->size }}</td>
-							<td class="total">{{ $part->pivot->color }}</td>
-							<td class="total">{{ $part->pivot->age }}</td>
-							<td class="unit">{{ $part->price }}</td>
-							<td class="qty">{{ $part->pivot->quantity }}</td>
-							<td class="total">{{ $part->price * $part->pivot->quantity }}</td>
+							<td class="unit text-left">{{ $product->brand->name }}</td>
+							<td class="unit text-left">{{ $product->pivot->size }}</td>
+							<td class="unit text-left">{{ $product->pivot->color }}</td>
+							<td class="unit text-left">{{ $product->pivot->age }}</td>
+							<td class="unit text-left">{{ $product->new_price }}</td>
+							<td class="qty">{{ $product->pivot->quantity }}</td>
+							<td class="total">
+								{{ $product->new_price * $product->pivot->quantity }}
+							</td>
 						</tr>
 						@endforeach
 					</tbody>
 					<tfoot>
-						@if ($order->display_vat)
 						<tr>
-							<td colspan="2"></td>
-							<td colspan="1"></td>
+							<td colspan="6"></td>
 							<td colspan="2">@lang('Subtotal')</td>
-							<td>{{ $order->subTotal }}</td>
+							<td>{{ $order->subtotal }}</td>
 						</tr>
 						<tr>
-							<td colspan="2"></td>
-							<td colspan="1"></td>
-							<td colspan="2">@lang('VAT') {{ $order->vat }}%</td>
-							<td>{{ $order->vatValue }}</td>
+							<td colspan="6"></td>
+							<td colspan="2">@lang('Shipping')</td>
+							<td>{{ $order->district }}</td>
 						</tr>
-						@endif
 						<tr>
-							<td colspan="2"></td>
-							<td colspan="1"></td>
+							<td colspan="6"></td>
 							<td colspan="2">@lang('Total')</td>
 							<td>{{ $order->total }}</td>
 						</tr>
@@ -122,7 +121,7 @@
 		<div></div>
 	</div>
 </div>
-<script src="{{ secure_asset('js/order.js') }}"></script>
+{{-- <script src="{{ secure_asset('js/order.js') }}"></script> --}}
 
 </body>
 </html>

@@ -52,6 +52,8 @@ class CheckoutController extends Controller
 			'phone' => $request->phone,
 			'zip' => $request->zip,
 			'notes' => $request->notes,
+			'subtotal' => Cart::total(),
+			'total' => floatval(Cart::total() + $request->district)
 		]);
 		foreach (Cart::content() as $product) {
 			$order->products()->attach($product->id, [

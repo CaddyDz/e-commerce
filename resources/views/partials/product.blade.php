@@ -20,6 +20,7 @@
 				<span class="old">{{ $product->price }}</span>
 				<span class="new">{{ $product->new_price }}</span>
 			@else
+			{{-- Don't get confused by the new css class, it's just the price since there's no discount --}}
 				<span class="new">{{ $product->price }}</span>
 			@endif
 		</span>

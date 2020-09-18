@@ -31,6 +31,8 @@ class CreateOrdersTable extends Migration
 			$table->string('district');
 			$table->string('email');
 			$table->string('phone');
+			$table->decimal('subtotal');
+			$table->decimal('total');
 			$table->text('notes')->nullable();
 			$table->timestamps();
 		});

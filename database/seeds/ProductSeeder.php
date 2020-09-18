@@ -19,8 +19,8 @@ class ProductSeeder extends Seeder
 		Storage::disk('public')->deleteDirectory('products');
 		Storage::disk('public')->makeDirectory('products');
 		foreach (Brand::all() as $brand) {
-			// Create 5 products for each brand
-			factory(Product::class, 5)->create([
+			// Create 2 products for each brand
+			factory(Product::class, 2)->create([
 				'brand_id' => $brand->id,
 			]);
 		}
