@@ -8,6 +8,7 @@ use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Gravatar;
+use Laravel\Nova\Fields\MorphToMany;
 use Laravel\Nova\Fields\Password;
 use Vyuldashev\NovaPermission\RoleBooleanGroup;
 use Vyuldashev\NovaPermission\PermissionBooleanGroup;
@@ -69,7 +70,14 @@ class User extends Resource
 
 			RoleBooleanGroup::make('Roles'),
 
-			PermissionBooleanGroup::make('Permissions'),
+			PermissionBooleanGroup::make('Permissions')->resolveUsing(function ($permissions, $user) {
+				$values = [];
+				foreach ($user->getAllPermissions() as $item) {
+					$values[$item->name] = true;
+				}
+
+				return $values;
+			}),
 		];
 	}
 
