@@ -168,7 +168,20 @@ class Order extends Resource
 				Text::make(__('Address 1'), 'address1'),
 				Text::make(__('Phone Number'), 'phone'),
 			]),
+			Stack::make(__('Products'), $this->products()),
 		];
+	}
+
+	public function products()
+	{
+		$products = [];
+		foreach ($this->products as $product) {
+			$products[] = Text::make(__('Name'), fn () => $product->name);
+			$products[] = Text::make(__('Quantity'), fn () => $product->pivot->quantity);
+			$products[] = Text::make(__('Color'), fn () => $product->pivot->color);
+			$products[] = Text::make(__('Size'), fn () => $product->pivot->size);
+		}
+		return $products;
 	}
 
 	/**
