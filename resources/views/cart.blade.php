@@ -101,12 +101,7 @@
 				</tbody>
 			</table>
 			<div class="row justify-content-between mb-n3">
-				<div class="col-auto mb-3">
-					<div class="cart-coupon">
-						<input type="text" placeholder="@lang('Enter your coupon code')">
-						<button class="btn"><i class="fal fa-gift"></i></button>
-					</div>
-				</div>
+				<div class="col-auto mb-3"></div>
 				<div class="col-auto">
 					<a class="btn btn-light btn-hover-dark mr-3 mb-3" href="/">
 						@lang('Continue Shopping')
