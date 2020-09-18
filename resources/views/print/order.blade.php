@@ -36,9 +36,9 @@
 								{{ config('app.name') }}
 							</a>
 						</h2>
-						<div>Address {{ $order->Address }}</div>
-						<div>Téléphone</div>
-						<div>Email</div>
+						<div>Address : {{ $order->address1 }} {{ $order->address2 }}</div>
+						<div>Téléphone : {{ $order->phone}}</div>
+						<div>Email : {{$order -> email}}S</div>
 					</div>
 				</div>
 			</header>
@@ -46,7 +46,7 @@
 				<div class="row contacts">
 					<div class="col invoice-to">
 						<div class="text-gray-light">@lang('Receipt for'):</div>
-						<h2 class="to">{{ $order->firstname }} {{ $order->secondname }} </h2>
+						<h2 class="to">{{ $order->firstname }} {{ $order->lastname}} </h2>
 						<div class="address">{{ optional($order->client)->address }}</div>
 						<div class="email"><a href="mailto:{{ optional($order->client)->email }}">{{ optional($order->client)->email }}</a></div>
 					</div>
@@ -63,7 +63,7 @@
 							<th class="text-left">@lang('Brand')</th>
 							<th class="text-right">@lang('Price')</th>
 							<th class="text-right">@lang('Quantity')</th>
-							<th class="text-right">@lang('Sum')</th>
+							<!-- <th class="text-right">@lang('Sum')</th> -->
 						</tr>
 					</thead>
 					<tbody>
@@ -75,6 +75,9 @@
 								{{ $part->excerpt }} <br>
 							</td>
 							<td class="total">{{ $part->brand->name }}</td>
+							<td class="total">{{ $part->pivot->size }}</td>
+							<td class="total">{{ $part->pivot->color }}</td>
+							<td class="total">{{ $part->pivot->age }}</td>
 							<td class="unit">{{ $part->price }}</td>
 							<td class="qty">{{ $part->pivot->quantity }}</td>
 							<td class="total">{{ $part->price * $part->pivot->quantity }}</td>
@@ -105,6 +108,7 @@
 					</tfoot>
 				</table>
 				<div class="thanks">@lang('Thank you!')</div>
+			<!--
 				<div class="notices">
 					<div>@lang('Notices'):</div>
 					<div class="notice"></div>
@@ -113,7 +117,7 @@
 			<footer>
 				@lang('Invoice was created on a computer and is valid without the signature and seal.')
 			</footer>
-		</div>
+		</div>-->
 		{{-- DO NOT DELETE THIS div. IT is responsible for showing footer always at the bottom --}}
 		<div></div>
 	</div>

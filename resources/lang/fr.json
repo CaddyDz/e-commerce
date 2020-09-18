@@ -99,5 +99,7 @@
 	"Date of receipt":"Date de la facture",
 	"Receipt":"Facture n°",
 	"Receipt for":"Facture pour",
-	"Sum":"Totale"
+	"Sum":"Total",
+	"print":"Imprimer",
+	"Thank you!":"Merci de nous avoir choisi"
 }
