@@ -67,7 +67,7 @@ class ShippingSeeder extends Seeder
 		foreach ($wilayas as $wilaya) {
 			Shipping::create([
 				'state' => $wilaya,
-				'price' => 100
+				'price' => rand(200, 10000)
 			]);
 		}
 	}

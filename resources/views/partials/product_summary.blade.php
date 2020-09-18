@@ -35,20 +35,6 @@
 						</td>
 					</tr>
 				@endif
-				@if($product->properties->isNotEmpty())
-					@foreach($product->properties as $property)
-						<tr>
-							<td class="label">
-								<span>
-									{{ $property->key }}
-								</span>
-							</td>
-							<td class="value">
-								{{ $property->value }}
-							</td>
-						</tr>
-					@endforeach
-				@endif
 				@if($product->ages->isNotEmpty())
 					<td class="label"><span>@lang('Available Ages')</span></td>
 					<td class="value">

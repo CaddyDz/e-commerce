@@ -90,7 +90,6 @@ class Product extends Resource
 			BelongsToMany::make(__('Sizes'), 'sizes', Size::class),
 			Boolean::make(__('Display Sizes'), 'display_sizes')->hideFromIndex(),
 			Boolean::make(__('Display Colors'), 'display_colors')->hideFromIndex(),
-			BelongsToMany::make(__('Properties'), 'properties', Property::class),
 			BelongsToMany::make(__('Ages'), 'ages', Age::class),
 			Number::make(__('Price'), 'price')->required(),
 			Avatar::make(__('Image'), 'image')->required(),
