@@ -101,7 +101,7 @@ class Product extends Resource
 					Text::make(__('Size'), fn ($pivot) => $pivot->size ? size($pivot->size) : null),
 					Color::make(__('Color'), fn ($pivot) => $pivot->color ? color($pivot->color) : null),
 				];
-			}),
+			})->hideFromDetail(),
 		];
 	}
 
