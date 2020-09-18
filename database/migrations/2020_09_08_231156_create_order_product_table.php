@@ -23,7 +23,6 @@ class CreateOrderProductTable extends Migration
 			$table->string('size')->nullable();
 			$table->string('age')->nullable();
 			$table->string('color')->nullable();
-			$table->json('properties')->nullable();
 		});
 	}
 

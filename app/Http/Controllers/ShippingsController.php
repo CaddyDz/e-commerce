@@ -6,9 +6,19 @@ namespace App\Http\Controllers;
 
 use App\Shipping;
 use Illuminate\Http\Request;
+use App\Http\Requests\ShippingRequest;
 
-class ShippingController extends Controller
+class ShippingsController extends Controller
 {
+	public function getPrice(ShippingRequest $request)
+	{
+		$shipping_cost = Shipping::find($request->id)->price;
+		return response([
+			'price' => $shipping_cost,
+			'cost' => number_format($shipping_cost, 2),
+		], 200);
+	}
+
 	/**
 	 * Display a listing of the resource.
 	 *

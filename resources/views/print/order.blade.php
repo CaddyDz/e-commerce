@@ -36,7 +36,14 @@
 								{{ config('app.name') }}
 							</a>
 						</h2>
-						<div>Address : {{ $order->address1 }} {{ $order->address2 }}</div>
+						<div>
+							Address : {{ $order->address1 }} <br>
+							@if($order->address2)
+								{{ $order->address2 }} <br>
+							@endif
+							{{ $order->town }} <br>
+							{{ $order->district }}
+						</div>
 						<div>Téléphone : {{ $order->phone}}</div>
 						<div>Email : {{$order->email }}</div>
 					</div>
@@ -97,7 +104,7 @@
 						<tr>
 							<td colspan="6"></td>
 							<td colspan="2">@lang('Shipping')</td>
-							<td>{{ $order->district }}</td>
+							<td>{{ $order->shipping_cost }}</td>
 						</tr>
 						<tr>
 							<td colspan="6"></td>

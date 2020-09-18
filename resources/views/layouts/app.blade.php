@@ -20,8 +20,6 @@
 	<link rel="stylesheet" href="/assets/css/vendor/vendor.min.css">
 	<link rel="stylesheet" href="/assets/css/plugins/plugins.min.css">
 	<link rel="stylesheet" href="/assets/css/style.min.css">
-	<script src="/assets/js/vendor/vue.js"></script>
-	<script src="/assets/js/vendor/axios.js"></script>
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 

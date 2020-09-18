@@ -88,11 +88,6 @@ class Product extends Model implements Buyable, HasMedia
 		return $this->belongsToMany(Age::class);
 	}
 
-	public function properties()
-	{
-		return $this->belongsToMany(Property::class);
-	}
-
 	/**
 	 * get product images
 	 *

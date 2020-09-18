@@ -32,6 +32,7 @@ class CreateOrdersTable extends Migration
 			$table->string('email');
 			$table->string('phone');
 			$table->decimal('subtotal');
+			$table->decimal('shipping_cost');
 			$table->decimal('total');
 			$table->text('notes')->nullable();
 			$table->timestamps();

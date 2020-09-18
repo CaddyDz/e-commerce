@@ -30,18 +30,6 @@
 <!-- Checkout Section Start -->
 <div class="section section-padding">
 	<div class="container">
-		{{-- <div class="checkout-coupon">
-			<p class="coupon-toggle">@lang('Have a coupon?') <a href="#checkout-coupon-form" data-toggle="collapse">@lang('Click here to enter your code')</a></p>
-			<div id="checkout-coupon-form" class="collapse">
-				<div class="coupon-form" id="coupon">
-					<p>@lang('If you have a coupon code, please apply it below. ')</p>
-						<input class="learts-mb-10" type="text" placeholder="@lang('Coupon code')" v-model="coupon">
-						<button class="btn btn-dark btn-outline-hover-dark learts-mb-10" @click="applyCoupon">
-							@lang('apply coupon')
-						</button>
-				</div>
-			</div>
-		</div> --}}
 		<div class="section-title2">
 			<h2 class="title">@lang('Billing details')</h2>
 		</div>
@@ -75,7 +63,7 @@
 						<option value="">@lang('Select an option…')</option>
 						@foreach ($states as $state)
 							@if($state->available)
-							<option value="{{ $state->price }}">
+							<option value="{{ $state->id }}">
 								@lang($state->state) {{ $state->price }}
 							</option>
 							@else
@@ -133,7 +121,7 @@
 						<tfoot>
 							<tr class="subtotal">
 								<th>@lang('Subtotal')</th>
-								<td><span>{{ Cart::total() }}</span></td>
+								<td><span id="total">{{ Cart::total() }}</span></td>
 							</tr>
 							<tr class="subtotal">
 								<th>@lang('Shipping')</th>

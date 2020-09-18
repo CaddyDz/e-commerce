@@ -23,7 +23,6 @@ class CartController extends Controller
 			'size' => $request->size,
 			'color' => $request->color,
 			'age' => $request->age,
-			'properties' => $request->properties,
 		]);
 		return redirect(url()->previous('/'));
 	}

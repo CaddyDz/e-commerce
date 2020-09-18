@@ -6,8 +6,8 @@ namespace App\Http\Controllers;
 
 use App\Order;
 use App\Shipping;
-use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
+use Gloudemans\Shoppingcart\Facades\Cart;
 
 class CheckoutController extends Controller
 {
@@ -22,11 +22,6 @@ class CheckoutController extends Controller
 		return view('checkout', compact('states'));
 	}
 
-	public function applyCoupon(Request $request)
-	{
-		session(['coupon' => $request->coupon]);
-	}
-
 	public function store(Request $request)
 	{
 		if (Cart::content()->isEmpty()) {
@@ -37,23 +32,25 @@ class CheckoutController extends Controller
 			'firstname' => 'bail|required|string',
 			'address1' => 'bail|required|string',
 			'town' => 'bail|required|string',
-			'district' => 'bail|required|string',
+			'district' => 'bail|required|integer|exists:shippings,id',
 			'email' => 'bail|required|email',
 			'phone' => $this->phone_rules(),
 		]);
+		$shipping = Shipping::find($request->district);
 		$order = Order::create([
 			'firstname' => $request->firstname,
 			'lastname' => $request->lastname,
 			'address1' => $request->address1,
 			'address2' => $request->address2,
 			'town' => $request->town,
-			'district' => $request->district,
+			'district' => $shipping->state,
 			'email' => $request->email,
 			'phone' => $request->phone,
 			'zip' => $request->zip,
 			'notes' => $request->notes,
 			'subtotal' => Cart::total(),
-			'total' => floatval(Cart::total() + $request->district)
+			'shipping_cost' => $shipping->price,
+			'total' => floatval(Cart::total() + $shipping->price)
 		]);
 		foreach (Cart::content() as $product) {
 			$order->products()->attach($product->id, [
