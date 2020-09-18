@@ -23,7 +23,8 @@ class CartController extends Controller
 		Cart::add($product, $request->quantity, [
 			'size' => $request->size,
 			'color' => $request->color,
-			'properties' => $request->properties
+			'age' => $request->age,
+			'properties' => $request->properties,
 		]);
 		// request()->session()->flash('success', "$product->name added to cart!");
 		return redirect(url()->previous('/'));

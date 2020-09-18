@@ -49,6 +49,17 @@
 						</tr>
 					@endforeach
 				@endif
+				@if($product->ages->isNotEmpty())
+					<td class="label"><span>@lang('Available Ages')</span></td>
+					<td class="value">
+						<div class="product-sizes">
+							@foreach($product->ages as $age)
+								<input type="radio" name="age" value="{{ $age->id }}" id="age-{{ $age->id }}" hidden>
+								<label for="age-{{ $age->id }}">{{ $age->value }}</label>
+							@endforeach
+						</div>
+					</td>
+				@endif
 				<tr>
 					<td class="label"><span>@lang('Quantity')</span></td>
 					<td class="value">

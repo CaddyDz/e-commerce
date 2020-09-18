@@ -57,7 +57,8 @@ class CheckoutController extends Controller
 			$order->products()->attach($product->id, [
 				'quantity' => $product->qty,
 				'size' => $product->options->size,
-				'color' => $product->options->color
+				'color' => $product->options->color,
+				'age' => $product->options->age,
 			]);
 		}
 		if (auth()->check()) {

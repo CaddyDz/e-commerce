@@ -16,7 +16,6 @@
 						<li class="breadcrumb-item active">{{ $product->name }}</li>
 					</ul>
 				</div>
-
 			</div>
 		</div>
 	</div>

@@ -74,6 +74,14 @@
 								<span>N/A</span>
 							@endif
 						</td>
+						<td class="price">
+							@if($item->options->age)
+							<span>
+								{{ $item->options->has('age') ? age($item->options->age) : '' }}
+							</span>
+							@endif
+							<span></span>
+						</td>
 						<td class="quantity">
 							<div class="product-quantity">
 								<span class="qty-btn minus"><i class="ti-minus"></i></span>

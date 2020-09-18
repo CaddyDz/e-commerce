@@ -180,8 +180,9 @@ class Order extends Resource
 		foreach ($this->products as $product) {
 			$products[] = Text::make(__('Name'), fn () => $product->name);
 			$products[] = Text::make(__('Quantity'), fn () => $product->pivot->quantity);
-			$products[] = Text::make(__('Color'), fn () => $product->pivot->color);
-			$products[] = Text::make(__('Size'), fn () => $product->pivot->size);
+			$products[] = Text::make(__('Color'), fn () => color($product->pivot->color));
+			$products[] = Text::make(__('Size'), fn () => size($product->pivot->size));
+			$products[] = Text::make(__('Age'), fn () => age($product->pivot->age));
 		}
 		return $products;
 	}

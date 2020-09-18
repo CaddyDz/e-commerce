@@ -95,6 +95,7 @@ class Product extends Resource
 			Boolean::make(__('Display Sizes'), 'display_sizes')->hideFromIndex(),
 			Boolean::make(__('Display Colors'), 'display_colors')->hideFromIndex(),
 			BelongsToMany::make(__('Properties'), 'properties', Property::class),
+			BelongsToMany::make(__('Ages'), 'ages', Age::class),
 			Number::make(__('Price'), 'price')->required(),
 			Avatar::make(__('Image'), 'image')->required(),
 			Boolean::make(__('Available'), 'available'),

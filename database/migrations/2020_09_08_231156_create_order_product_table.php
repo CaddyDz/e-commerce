@@ -21,6 +21,7 @@ class CreateOrderProductTable extends Migration
 			$table->unsignedBigInteger('product_id');
 			$table->unsignedBigInteger('quantity')->default(1);
 			$table->string('size')->nullable();
+			$table->string('age')->nullable();
 			$table->string('color')->nullable();
 			$table->json('properties')->nullable();
 		});

@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use App\Age;
 use App\Size;
 use App\Color;
 
@@ -32,12 +33,18 @@ function sluggify($string)
 	return $url;
 }
 
-function size(int $id): string
+function size($id)
 {
-	return __(Size::find($id)->label);
+	return __(optional(Size::find($id))->label);
 }
 
-function color(int $id): string
+function age($id)
 {
-	return __(Color::find($id)->color);
+	info($id);
+	return optional(Age::find($id))->value;
+}
+
+function color($id)
+{
+	return __(optional(Color::find($id))->color);
 }

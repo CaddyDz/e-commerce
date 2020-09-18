@@ -65,7 +65,7 @@ class Product extends Model implements Buyable, HasMedia
 
 	public function getNewPriceAttribute()
 	{
-		return round($this->price - $this->price * $this->discount->value / 100);
+		return round($this->price - $this->price * optional($this->discount)->value / 100);
 	}
 
 	public function registerMediaCollections(): void
@@ -81,6 +81,11 @@ class Product extends Model implements Buyable, HasMedia
 	public function colors()
 	{
 		return $this->belongsToMany(Color::class);
+	}
+
+	public function ages()
+	{
+		return $this->belongsToMany(Age::class);
 	}
 
 	public function properties()
@@ -103,6 +108,6 @@ class Product extends Model implements Buyable, HasMedia
 
 	public function orders()
 	{
-		return $this->belongsToMany(Order::class)->withPivot(['quantity', 'size', 'color']);
+		return $this->belongsToMany(Order::class)->withPivot(['quantity', 'size', 'color', 'age']);
 	}
 }
