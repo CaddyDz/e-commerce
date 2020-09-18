@@ -144,10 +144,9 @@
 									<div class="col-md-6 col-12 learts-mb-30">
 										<h4 class="title">@lang('Shipping Address') <a href="#" class="edit-link">edit</a></h4>
 										<address>
-											<p><strong>Alex Tuntuni</strong></p>
-											<p>1355 Market St, Suite 900 <br>
-												San Francisco, CA 94103</p>
-											<p>Mobile: (123) 456-7890</p>
+											<p><strong>{{ $user->name }}</strong></p>
+											<p>{{ $user->address }} <br></p>
+											<p>Mobile: {{ $user->phone }}</p>
 										</address>
 									</div>
 
