@@ -33,7 +33,7 @@
 					<div class="myaccount-tab-list nav">
 						<a href="#dashboad" class="active" data-toggle="tab">@lang('Dashboard') <i class="far fa-home"></i></a>
 						<a href="#orders" data-toggle="tab">@lang('Orders') <i class="far fa-file-alt"></i></a>
-						<a href="#download" data-toggle="tab">Download <i class="far fa-arrow-to-bottom"></i></a>
+						
 						<a href="#address" data-toggle="tab">@lang('address') <i class="far fa-map-marker-alt"></i></a>
 						<a href="#account-info" data-toggle="tab">@lang('Account Details') <i class="far fa-user"></i></a>
 						<a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
@@ -88,7 +88,7 @@
 													<td>{{ $order->id }}</td>
 													<td>{{ $order->created_at }}</td>
 													<td>@lang($order->status)</td>
-													<td>$3000</td>
+													<td>{{ $order->total }}</td>
 													<td>
 														<a href="shopping-cart.html">
 															@lang('View')
@@ -103,37 +103,7 @@
 						</div>
 						<!-- Single Tab Content End -->
 
-						<!-- Single Tab Content Start -->
-						<div class="tab-pane fade" id="download">
-							<div class="myaccount-content download">
-								<div class="table-responsive">
-									<table class="table">
-										<thead>
-											<tr>
-												<th>Product</th>
-												<th>Date</th>
-												<th>Expire</th>
-												<th>Download</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>Haven - Free Real Estate PSD Template</td>
-												<td>Aug 22, 2018</td>
-												<td>Yes</td>
-												<td><a href="#"><i class="far fa-arrow-to-bottom mr-1"></i> Download File</a></td>
-											</tr>
-											<tr>
-												<td>HasTech - Profolio Business Template</td>
-												<td>Sep 12, 2018</td>
-												<td>Never</td>
-												<td><a href="#"><i class="far fa-arrow-to-bottom mr-1"></i> Download File</a></td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
-						</div>
+					
 						<!-- Single Tab Content End -->
 
 						<!-- Single Tab Content Start -->

@@ -36,7 +36,7 @@
 								{{ config('app.name') }}
 							</a>
 						</h2>
-						<div>Address</div>
+						<div>Address {{ $order->Address }}</div>
 						<div>Téléphone</div>
 						<div>Email</div>
 					</div>
@@ -46,7 +46,7 @@
 				<div class="row contacts">
 					<div class="col invoice-to">
 						<div class="text-gray-light">@lang('Receipt for'):</div>
-						<h2 class="to">{{ optional($order->client)->name }}</h2>
+						<h2 class="to">{{ $order->firstname }} {{ $order->secondname }} </h2>
 						<div class="address">{{ optional($order->client)->address }}</div>
 						<div class="email"><a href="mailto:{{ optional($order->client)->email }}">{{ optional($order->client)->email }}</a></div>
 					</div>

@@ -152,6 +152,7 @@ class Order extends Resource
 				->exceptOnForms(),
 			BelongsTo::make(__('Reviewer'), 'reviewer', 'App\Nova\User')->sortable(),
 			Button::make(__('Validate'), 'validate-order'),
+			
 			Text::make(__('Address 2'), 'address2')->hideFromIndex(),
 			Text::make(__('Town'), 'town')->hideFromIndex(),
 			Text::make(__('Zip Code'), 'zip')->hideFromIndex(),
@@ -167,8 +168,13 @@ class Order extends Resource
 			Stack::make(__('Client'), [
 				Text::make(__('Last Name'), 'lastname'),
 				Text::make(__('First Name'), 'firstname'),
-				Text::make(__('Address 1'), 'address1'),
 				Text::make(__('Phone Number'), 'phone'),
+				Text::make(__('Address 1'), 'address1'),
+				Text::make(__('Address 2'), 'address2'),
+				Text::make(__('Town'), 'town'),
+				Text::make(__('District'), 'district'),
+				Textarea::make(__('Notes'), 'notes'),
+
 			]),
 			Stack::make(__('Products'), $this->products()),
 		];
@@ -179,6 +185,7 @@ class Order extends Resource
 		$products = [];
 		foreach ($this->products as $product) {
 			$products[] = Text::make(__('Name'), fn () => $product->name);
+			$products[] = Text::make(__('Price'), fn () => $product->price);
 			$products[] = Text::make(__('Quantity'), fn () => $product->pivot->quantity);
 			$products[] = Text::make(__('Color'), fn () => color($product->pivot->color));
 			$products[] = Text::make(__('Size'), fn () => size($product->pivot->size));
