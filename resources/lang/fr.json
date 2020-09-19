@@ -101,5 +101,21 @@
 	"Receipt for":"Facture à:",
 	"Sum":"Total",
 	"print":"Imprimer",
-	"Thank you!":"Merci de nous avoir choisi"
+	"Thank you!":"Merci de nous avoir choisi",
+	"Users":"Utilisateurs",
+	"Sizes":"Tailles",
+	"Colors":"Couleurs",
+	"Discounts":"Promotions",
+	"Shippings":"Livraison",
+	"Workers":"Employés",
+	"Orders Awaiting Review":"Nouvelle commande",
+	"Validated":"Confirmé",
+	"Awaiting review": "Nouvelle Commande",
+	"On hold":"Mis en Attente",
+	"Refused":"Rejeté",
+	"Validate":"Valider",
+	"Suspend":"Mettre en attente",
+	"Reject":"Rejeter",
+	"Print Order":"Imprimer",
+	"Change Order Status":"Changer le statut de la commande"
 }
