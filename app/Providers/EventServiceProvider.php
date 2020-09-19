@@ -4,12 +4,13 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
+use App\Listeners\RejectOrder;
+use App\Listeners\SuspendOrder;
 use App\Listeners\ValidateOrder;
+use NovaButton\Events\ButtonClick;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
-use Illuminate\Support\Facades\Event;
-use NovaButton\Events\ButtonClick;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -24,6 +25,8 @@ class EventServiceProvider extends ServiceProvider
 		],
 		ButtonClick::class => [
 			ValidateOrder::class,
+			SuspendOrder::class,
+			RejectOrder::class,
 		],
 	];
 
