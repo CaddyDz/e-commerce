@@ -23,6 +23,7 @@ use Laravel\Nova\Fields\Stack;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use NovaButton\Button;
 
 class Order extends Resource
 {
@@ -167,6 +168,9 @@ class Order extends Resource
 				->sortable()
 				->exceptOnForms(),
 			BelongsTo::make(__('Reviewer'), 'reviewer', 'App\Nova\User')->sortable()->hideFromIndex(),
+			Button::make(__('Validate'), 'validate-order')->reload(),
+			Button::make(__('Suspend'), 'suspend-order')->reload(),
+			Button::make(__('Reject'), 'reject-order')->reload(),
 			Text::make(__('Address 2'), 'address2')->hideFromIndex(),
 			Text::make(__('Town'), 'town')->hideFromIndex(),
 			Text::make(__('Zip Code'), 'zip')->hideFromIndex(),
