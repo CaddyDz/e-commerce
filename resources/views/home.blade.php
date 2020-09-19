@@ -34,7 +34,7 @@
 						<a href="#dashboad" class="active" data-toggle="tab">@lang('Dashboard') <i class="far fa-home"></i></a>
 						<a href="#orders" data-toggle="tab">@lang('Orders') <i class="far fa-file-alt"></i></a>
 						
-						<a href="#address" data-toggle="tab">@lang('address') <i class="far fa-map-marker-alt"></i></a>
+						<!-- <a href="#address" data-toggle="tab">@lang('address') <i class="far fa-map-marker-alt"></i></a> !-->
 						<a href="#account-info" data-toggle="tab">@lang('Account Details') <i class="far fa-user"></i></a>
 						<a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
 							@lang('Logout')
@@ -63,7 +63,7 @@
 										@csrf
 									</form>
 								</p>
-								<p>@lang('From your account dashboard you can view your') <span>@lang('recent orders')</span>, @lang('manage your') <span>@lang('shipping addresse')</span>, @lang('and') <span>@lang('edit your password and account details')</span>.</p>
+								<p>@lang('From your account dashboard you can view your') <span>@lang('recent orders')</span> @lang('and') <span>@lang('edit your password and account details')</span>.</p>
 							</div>
 						</div>
 						<!-- Single Tab Content End -->
@@ -105,8 +105,9 @@
 
 					
 						<!-- Single Tab Content End -->
-
+                        
 						<!-- Single Tab Content Start -->
+						<!--
 						<div class="tab-pane fade" id="address">
 							<div class="myaccount-content address">
 								<p>@lang('The following addresses will be used on the checkout page by default.')</p>
@@ -123,6 +124,7 @@
 								</div>
 							</div>
 						</div>
+						-->
 						<!-- Single Tab Content End -->
 
 						<!-- Single Tab Content Start -->

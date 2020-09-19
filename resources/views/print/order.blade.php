@@ -128,7 +128,7 @@
 		<div></div>
 	</div>
 </div>
-{{-- <script src="{{ secure_asset('js/order.js') }}"></script> --}}
+ <script src="{{ secure_asset('js/order.js') }}"></script> 
 
 </body>
 </html>
