@@ -9,7 +9,6 @@
 	<div class="container">
 		<div class="row">
 			<div class="col">
-
 				<div class="page-title">
 					<h1 class="title">
 						@lang('Login')
@@ -19,7 +18,6 @@
 						<li class="breadcrumb-item active">@lang('Login')</li>
 					</ul>
 				</div>
-
 			</div>
 		</div>
 	</div>
@@ -59,9 +57,6 @@
 												<input type="checkbox" class="form-check-input" id="rememberMe">
 												<label class="form-check-label" for="rememberMe">@lang('Remember me')</label>
 											</div>
-										</div>
-										<div class="col-12 learts-mb-20">
-											<a href="lost-password.html" class="fw-400">@lang('Lost your password?')</a>
 										</div>
 										<div class="col-12 learts-mb-20">
 											<a href="/register" class="fw-400">Vous n'avez pas de compte? Inscriver Vous!</a>
