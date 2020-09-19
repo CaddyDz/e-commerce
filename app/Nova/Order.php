@@ -168,9 +168,9 @@ class Order extends Resource
 				->sortable()
 				->exceptOnForms()->hideFromIndex(),
 			BelongsTo::make(__('Reviewer'), 'reviewer', 'App\Nova\User')->sortable()->hideFromIndex(),
-			Button::make(__('Validate'), 'validate-order')->reload(),
-			Button::make(__('Suspend'), 'suspend-order')->reload(),
-			Button::make(__('Reject'), 'reject-order')->reload(),
+			Button::make(__('Validate'), 'validate-order')->reload()->style('success'),
+			Button::make(__('Suspend'), 'suspend-order')->reload()->style('warning'),
+			Button::make(__('Reject'), 'reject-order')->reload()->style('danger'),
 			Text::make(__('Address 2'), 'address2')->hideFromIndex(),
 			Text::make(__('Town'), 'town')->hideFromIndex(),
 			Text::make(__('Zip Code'), 'zip')->hideFromIndex(),
