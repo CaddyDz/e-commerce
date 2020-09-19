@@ -24,6 +24,7 @@ class CreateProductsTable extends Migration
 			$table->string('image');
 			$table->boolean('display_sizes')->default(true);
 			$table->boolean('display_colors')->default(true);
+			$table->boolean('display_age')->default(true);
 			$table->string('slug')->unique();
 			$table->boolean('available')->default(true);
 			$table->timestamp('deleted_at')->nullable();

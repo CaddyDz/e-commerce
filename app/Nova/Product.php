@@ -71,6 +71,7 @@ class Product extends Resource
 		$product = new $model;
 		$product->display_sizes = true;
 		$product->display_colors = true;
+		$product->display_age = true;
 
 		return $product;
 	}
@@ -91,6 +92,7 @@ class Product extends Resource
 			BelongsToMany::make(__('Sizes'), 'sizes', Size::class),
 			Boolean::make(__('Display Sizes'), 'display_sizes')->hideFromIndex(),
 			Boolean::make(__('Display Colors'), 'display_colors')->hideFromIndex(),
+			Boolean::make(__('Display Age'), 'display_age')->hideFromIndex(),
 			BelongsToMany::make(__('Ages'), 'ages', Age::class),
 			Number::make(__('Price'), 'price')->required(),
 			Avatar::make(__('Image'), 'image')->required(),
