@@ -34,6 +34,8 @@ class Order extends Resource
 	 */
 	public static $tableStyle = 'tight';
 
+	public static $priority = 1;
+
 	/**
 	 * Whether to show borders for each column on the X-axis.
 	 *

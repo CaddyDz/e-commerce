@@ -22,6 +22,9 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
 		Nova::serving(function (ServingNova $event) {
 			Nova::style('blueflix', __DIR__ . '/../../resources/css/theme.css');
 		});
+		Nova::sortResourcesBy(function ($resource) {
+			return $resource::$priority ?? 9999;
+		});
 		parent::boot();
 	}
 
