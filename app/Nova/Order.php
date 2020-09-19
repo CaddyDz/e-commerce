@@ -152,7 +152,7 @@ class Order extends Resource
 				->exceptOnForms(),
 			BelongsTo::make(__('Reviewer'), 'reviewer', 'App\Nova\User')->sortable(),
 			Button::make(__('Validate'), 'validate-order'),
-			
+
 			Text::make(__('Address 2'), 'address2')->hideFromIndex(),
 			Text::make(__('Town'), 'town')->hideFromIndex(),
 			Text::make(__('Zip Code'), 'zip')->hideFromIndex(),
@@ -245,7 +245,7 @@ class Order extends Resource
 	{
 		return [
 			new PrintOrder,
-			(new ChangeOrderStatus())->showOnTableRow()
+			new ChangeOrderStatus(),
 		];
 	}
 
