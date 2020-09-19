@@ -12,6 +12,7 @@ use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Size extends Resource
 {
+	public static $priority = 6;
 	/**
 	 * The model the resource corresponds to.
 	 *

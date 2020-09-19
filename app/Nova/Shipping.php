@@ -11,6 +11,7 @@ use Laravel\Nova\Fields\Number;
 
 class Shipping extends Resource
 {
+	public static $priority = 9;
 	/**
 	 * The model the resource corresponds to.
 	 *

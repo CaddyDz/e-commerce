@@ -13,6 +13,7 @@ use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Discount extends Resource
 {
+	public static $priority = 8;
 	/**
 	 * The model the resource corresponds to.
 	 *

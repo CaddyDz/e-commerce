@@ -15,6 +15,7 @@ use Vyuldashev\NovaPermission\PermissionBooleanGroup;
 
 class User extends Resource
 {
+	public static $priority = 10;
 	/**
 	 * The model the resource corresponds to.
 	 *

@@ -13,6 +13,7 @@ use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Brand extends Resource
 {
+	public static $priority = 3;
 	/**
 	 * Get the displayable label of the resource.
 	 *

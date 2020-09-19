@@ -12,6 +12,7 @@ use Timothyasp\Color\Color as ColorField;
 
 class Color extends Resource
 {
+	public static $priority = 5;
 	/**
 	 * The model the resource corresponds to.
 	 *

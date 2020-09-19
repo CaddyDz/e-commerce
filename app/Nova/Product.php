@@ -18,6 +18,7 @@ use Ebess\AdvancedNovaMediaLibrary\Fields\Images;
 
 class Product extends Resource
 {
+	public static $priority = 4;
 	/**
 	 * Get the displayable label of the resource.
 	 *

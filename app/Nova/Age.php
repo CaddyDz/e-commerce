@@ -12,6 +12,7 @@ use Laravel\Nova\Fields\Text;
 
 class Age extends Resource
 {
+	public static $priority = 7;
 	/**
 	 * The model the resource corresponds to.
 	 *

@@ -8,6 +8,7 @@ use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Worker extends User
 {
+	public static $priority = 11;
 	/**
 	 * Get the displayable label of the resource.
 	 *
