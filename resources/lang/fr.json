@@ -117,5 +117,11 @@
 	"Suspend":"Mettre en attente",
 	"Reject":"Rejeter",
 	"Print Order":"Imprimer",
-	"Change Order Status":"Changer le statut de la commande"
+	"Change Order Status":"Changer le statut de la commande",
+	"Available":"disponible",
+	"Display Sizes":"Ajouter taille",
+	"Display Colors":"Ajouter Couleur",
+	"State":"Wilaya",
+	"Display Age":"Ajouter Age"
+
 }

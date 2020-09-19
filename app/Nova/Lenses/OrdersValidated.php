@@ -55,7 +55,8 @@ class OrdersValidated extends Lens
 			'orders.town',
 			'orders.district',
 			'orders.notes',
-			'orders.reviewer_id'
+			'orders.reviewer_id',
+			'orders.shipping_cost',
 		];
 	}
 
@@ -78,6 +79,7 @@ class OrdersValidated extends Lens
 				Text::make(__('Address 2'), 'address2'),
 				Text::make(__('Town'), 'town'),
 				Text::make(__('District'), 'district'),
+				Text::make(__('Shipping'), 'shipping_cost'),
 				Textarea::make(__('Notes'), 'notes'),
 			]),
 			Stack::make(__('Products'), $this->products()),

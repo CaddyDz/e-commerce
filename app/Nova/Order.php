@@ -131,7 +131,7 @@ class Order extends Resource
 	public function fields(Request $request)
 	{
 		return [
-			ID::make()->sortable()->hideFromIndex(),
+			ID::make()->sortable(),
 			Icon::make('')
 				->icon(
 					fn (): string => $this->icon
@@ -167,6 +167,7 @@ class Order extends Resource
 				])->displayUsingLabels()
 				->sortable()
 				->exceptOnForms()->hideFromIndex(),
+			
 			BelongsTo::make(__('Reviewer'), 'reviewer', 'App\Nova\User')->sortable()->hideFromIndex(),
 			Button::make(__('Validate'), 'validate-order')->reload()->style('success'),
 			Button::make(__('Suspend'), 'suspend-order')->reload()->style('warning'),
@@ -191,7 +192,9 @@ class Order extends Resource
 				Text::make(__('Address 2'), 'address2'),
 				Text::make(__('Town'), 'town'),
 				Text::make(__('District'), 'district'),
+				Text::make(__('Shipping'), 'shipping_cost'),
 				Textarea::make(__('Notes'), 'notes'),
+				
 			]),
 			Stack::make(__('Products'), $this->products()),
 		];
