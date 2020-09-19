@@ -227,7 +227,6 @@ class Order extends Resource
 	public function filters(Request $request)
 	{
 		return [
-			new OrderStatus(),
 			new OrdersByWorker()
 		];
 	}
