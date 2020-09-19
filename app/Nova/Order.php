@@ -23,6 +23,7 @@ use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Stack;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Textarea;
+use Laravel\Nova\Http\Requests\NovaRequest;
 use NovaButton\Button;
 
 class Order extends Resource
@@ -35,6 +36,18 @@ class Order extends Resource
 	public static $tableStyle = 'tight';
 
 	public static $priority = 1;
+
+	/**
+	 * Build an "index" query for the given resource.
+	 *
+	 * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
+	 * @param  \Illuminate\Database\Eloquent\Builder  $query
+	 * @return \Illuminate\Database\Eloquent\Builder
+	 */
+	public static function indexQuery(NovaRequest $request, $query)
+	{
+		return $query->where('status', 'pending');
+	}
 
 	/**
 	 * Whether to show borders for each column on the X-axis.
@@ -90,9 +103,9 @@ class Order extends Resource
 	 * @var array
 	 */
 	public static $search = [
-		'id','phone','lastname',
+		'id', 'phone', 'lastname',
 	];
-    public static $searchRelations=[
+	public static $searchRelations = [
 		'products' => ['name'],
 		'reviewer' => ['name'],
 	];
@@ -128,7 +141,7 @@ class Order extends Resource
 						'pending' => 'text-info',
 						'validated' => 'text-success',
 						'rejected' => 'text-danger',
-						'suspended' =>'text-black',
+						'suspended' => 'text-black',
 					];
 
 					return $options[$this->status];
