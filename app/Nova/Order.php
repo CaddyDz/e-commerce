@@ -235,10 +235,10 @@ class Order extends Resource
 	public function lenses(Request $request)
 	{
 		return [
-			new OrdersAwaitingReview(),
-			new OrdersValidated(),
-			new OrdersRejected(),
-			new OrdersSuspended()
+			// new OrdersAwaitingReview(),
+			// new OrdersValidated(),
+			// new OrdersRejected(),
+			// new OrdersSuspended()
 		];
 	}
 
