@@ -27,6 +27,14 @@ class CartController extends Controller
 		return redirect(url()->previous('/'));
 	}
 
+	public function update(Request $request)
+	{
+		foreach ($request->quantity as $rowId => $quantity) {
+			Cart::update($rowId, $quantity);
+		}
+		return back();
+	}
+
 	public function remove(string $rowId)
 	{
 		Cart::remove($rowId);
