@@ -40,7 +40,6 @@ function size($id)
 
 function age($id)
 {
-	info($id);
 	return optional(Age::find($id))->value;
 }
 
