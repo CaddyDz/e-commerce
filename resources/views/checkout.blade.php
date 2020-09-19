@@ -84,7 +84,7 @@
 				</div>
 				<div class="col-md-6 col-12 learts-mb-30">
 					<label for="bdPhone">@lang('Phone') <abbr class="required">*</abbr></label>
-					<input type="tel" id="bdPhone" name="phone" required pattern="(0)(5|6|7|9)(4|5|6|7|8)[0-9]{7}" >
+					<input type="tel" id="bdPhone" name="phone" required pattern="(0)(5|6|7|9)(4|5|6|7|8|9)[0-9]{7}" >
 				</div>
 				<div class="col-12 learts-mb-20">
 					<label for="bdOrderNote">@lang('Order Notes (optional)')</label>

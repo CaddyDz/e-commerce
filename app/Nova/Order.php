@@ -90,9 +90,12 @@ class Order extends Resource
 	 * @var array
 	 */
 	public static $search = [
-		'id',
+		'id','phone','lastname',
 	];
-
+    public static $searchRelations=[
+		'products' => ['name'],
+		'reviewer' => ['name'],
+	];
 
 	/**
 	 * Get a fresh instance of the model represented by the resource.
@@ -125,7 +128,7 @@ class Order extends Resource
 						'pending' => 'text-info',
 						'validated' => 'text-success',
 						'rejected' => 'text-danger',
-						'suspended' => 'text-black',
+						'suspended' =>'text-black',
 					];
 
 					return $options[$this->status];
