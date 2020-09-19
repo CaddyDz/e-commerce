@@ -64,8 +64,8 @@ class OrdersRejected extends Lens
 		return [
 			ID::make('ID', 'id'),
 			BelongsTo::make(__('Reviewer'), 'reviewer', 'App\Nova\User')->sortable(),
-			Button::make(__('Validate'), 'validate-order'),
-			Button::make(__('Suspend'), 'suspend-order'),
+			Button::make(__('Validate'), 'validate-order')->reload(),
+			Button::make(__('Suspend'), 'suspend-order')->reload(),
 			Stack::make(__('Client'), [
 				Text::make(__('Last Name'), 'lastname'),
 				Text::make(__('First Name'), 'firstname'),
