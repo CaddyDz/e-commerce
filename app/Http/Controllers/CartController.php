@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 
 use App\Product;
 use Illuminate\Http\Request;
+use App\Http\Requests\UpdateCartRequest;
 use Gloudemans\Shoppingcart\Facades\Cart;
 
 class CartController extends Controller
@@ -25,6 +26,14 @@ class CartController extends Controller
 			'age' => $request->age,
 		]);
 		return redirect(url()->previous('/'));
+	}
+
+	public function update(UpdateCartRequest $request)
+	{
+		foreach ($request->quantity as $rowId => $quantity) {
+			Cart::update($rowId, $quantity);
+		}
+		return back();
 	}
 
 	public function remove(string $rowId)

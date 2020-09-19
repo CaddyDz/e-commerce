@@ -20,12 +20,16 @@ Route::get('/', 'ProductsController@index');
 Auth::routes();
 
 Route::get('home', 'HomeController@index')->name('home');
-Route::post('cart/add/{product}', 'CartController@add')->name('cart.add');
-Route::post('cart/remove/{product}', 'CartController@remove')->name('cart.remove');
+
+Route::prefix('cart')->name('cart')->group(function () {
+	Route::get('/', 'CartController@index');
+	Route::post('add/{product}', 'CartController@add')->name('.add');
+	Route::post('update', 'CartController@update')->name('.update');
+	Route::post('remove/{product}', 'CartController@remove')->name('.remove');
+});
 Route::get('products/{product}', 'ProductsController@show')->name('product');
 Route::get('brands/{brand}', 'BrandsController@show')->name('brand');
 Route::get('categories/{category}', 'CategoriesController@show')->name('category');
-Route::get('cart', 'CartController@index')->name('cart');
 Route::get('checkout', 'CheckoutController@index');
 Route::view('about', 'about');
 Route::view('tos', 'tos');

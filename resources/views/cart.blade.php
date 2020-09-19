@@ -8,7 +8,6 @@
 	<div class="container">
 		<div class="row">
 			<div class="col">
-
 				<div class="page-title">
 					<h1 class="title">@lang('Cart')</h1>
 					<ul class="breadcrumb">
@@ -28,7 +27,8 @@
 <!-- Shopping Cart Section Start -->
 <div class="section section-padding">
 	<div class="container">
-		<form class="cart-form" action="#">
+		<form class="cart-form" action="{{ route('cart.update') }}" method="POST">
+			@csrf
 			<table class="cart-wishlist-table table">
 				<thead>
 					<tr>
@@ -55,7 +55,7 @@
 							</a>
 						</td>
 						<td class="price">
-							<span>{{ $item->price }}</span>
+							<span id="price-{{ $item->model->id }}">{{ $item->price }}</span>
 						</td>
 						<td class="price">
 							@if($item->options->size)
@@ -84,12 +84,20 @@
 						</td>
 						<td class="quantity">
 							<div class="product-quantity">
-								<span class="qty-btn minus"><i class="ti-minus"></i></span>
-								<input type="text" class="input-qty" value="{{ $item->qty }}">
-								<span class="qty-btn plus"><i class="ti-plus"></i></span>
+								<span class="qty-btn minus" data-product="{{ $item->model->id }}">
+									<i class="ti-minus"></i>
+								</span>
+								<input type="text" class="input-qty" value="{{ $item->qty }}" name="quantity[{{ $item->rowId }}]">
+								<span class="qty-btn plus" data-product="{{ $item->model->id }}">
+									<i class="ti-plus"></i>
+								</span>
 							</div>
 						</td>
-						<td class="subtotal"><span>{{ $item->subtotal }}</span></td>
+						<td class="subtotal">
+							<span id="sum-{{ $item->model->id }}" class="product_sum">
+								{{ $item->subtotal }}
+							</span>
+						</td>
 						<td class="remove">
 							<a href="{{ route('cart.remove', ['product' => $item->rowId]) }}" class="btn" onclick="event.preventDefault();document.getElementById('remove-cart-{{ $item->rowId }}').submit();">×</a>
 							<form action="{{ route('cart.remove', ['product' => $item->rowId]) }}" method="post" style="display: none;" id="remove-cart-{{ $item->rowId }}">
@@ -116,13 +124,13 @@
 			<h2 class="title">@lang('Cart totals')</h2>
 			<table>
 				<tbody>
-					<tr class="subtotal">
-						<th>@lang('Subtotal')</th>
-						<td><span class="amount">{{ Cart::total() }} DZD</span></td>
-					</tr>
 					<tr class="total">
 						<th>@lang('Total')</th>
-						<td><strong><span class="amount">{{ Cart::total() }} DZD</span></strong></td>
+						<td>
+							<strong>
+								<span class="amount" id="cart-total">{{ Cart::total() }} DZD</span>
+							</strong>
+						</td>
 					</tr>
 				</tbody>
 			</table>
@@ -135,3 +143,7 @@
 </div>
 <!-- Shopping Cart Section End -->
 @stop
+
+@push('scripts')
+	<script src="{{ secure_asset('js/cart.js') }}"></script>
+@endpush

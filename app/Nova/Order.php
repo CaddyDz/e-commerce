@@ -114,7 +114,7 @@ class Order extends Resource
 	public function fields(Request $request)
 	{
 		return [
-			ID::make()->sortable(),
+			ID::make()->sortable()->hideFromIndex(),
 			Icon::make('')
 				->icon(
 					fn (): string => $this->icon
@@ -127,7 +127,7 @@ class Order extends Resource
 					];
 
 					return $options[$this->status];
-				})->exceptOnForms(),
+				})->exceptOnForms()->hideFromIndex(),
 			Select::make(__('Status'), 'status')
 				->options([
 					'pending' => __('Awaiting review'),
@@ -150,9 +150,12 @@ class Order extends Resource
 				])->displayUsingLabels()
 				->sortable()
 				->exceptOnForms(),
-			BelongsTo::make(__('Reviewer'), 'reviewer', 'App\Nova\User')->sortable(),
-			Button::make(__('Validate'), 'validate-order'),
-			
+			BelongsTo::make(__('Reviewer'), 'reviewer', 'App\Nova\User')->sortable()->hideFromIndex(),
+			Button::make(__('Validate'), 'validate-order')->canSee(fn () => $this->status != 'validated'),
+			Button::make(__('Suspend'), 'suspend-order')->canSee(fn () =>
+			$this->status != 'suspended' && $this->status != 'validated'),
+			Button::make(__('Reject'), 'reject-order')->canSee(fn () =>
+			$this->status != 'rejected' && $this->status != 'validated'),
 			Text::make(__('Address 2'), 'address2')->hideFromIndex(),
 			Text::make(__('Town'), 'town')->hideFromIndex(),
 			Text::make(__('Zip Code'), 'zip')->hideFromIndex(),
@@ -174,7 +177,6 @@ class Order extends Resource
 				Text::make(__('Town'), 'town'),
 				Text::make(__('District'), 'district'),
 				Textarea::make(__('Notes'), 'notes'),
-
 			]),
 			Stack::make(__('Products'), $this->products()),
 		];
@@ -245,7 +247,7 @@ class Order extends Resource
 	{
 		return [
 			new PrintOrder,
-			(new ChangeOrderStatus())->showOnTableRow()
+			new ChangeOrderStatus(),
 		];
 	}
 
