@@ -18,6 +18,13 @@ use Laravel\Nova\Http\Requests\LensRequest;
 class OrdersSuspended extends Lens
 {
 	/**
+	 * The displayable name of the lens.
+	 *
+	 * @var string
+	 */
+	public $name = 'Commandes En Attentes';
+
+	/**
 	 * Get the query builder / paginator for the lens.
 	 *
 	 * @param  \Laravel\Nova\Http\Requests\LensRequest  $request

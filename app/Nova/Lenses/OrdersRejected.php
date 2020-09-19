@@ -18,6 +18,12 @@ use Laravel\Nova\Http\Requests\LensRequest;
 class OrdersRejected extends Lens
 {
 	/**
+	 * The displayable name of the lens.
+	 *
+	 * @var string
+	 */
+	public $name = 'commandes rejetés';
+	/**
 	 * Get the query builder / paginator for the lens.
 	 *
 	 * @param  \Laravel\Nova\Http\Requests\LensRequest  $request
