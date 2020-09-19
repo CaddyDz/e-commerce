@@ -16,7 +16,6 @@ use Laravel\Nova\Fields\BelongsTo;
 use App\Nova\Lenses\OrdersRejected;
 use App\Nova\Lenses\OrdersSuspended;
 use App\Nova\Lenses\OrdersValidated;
-use App\Nova\Lenses\OrdersAwaitingReview;
 use Laravel\Nova\Fields\BelongsToMany;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Select;
@@ -24,7 +23,6 @@ use Laravel\Nova\Fields\Stack;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\NovaRequest;
-use NovaButton\Button;
 
 class Order extends Resource
 {
@@ -169,11 +167,6 @@ class Order extends Resource
 				->sortable()
 				->exceptOnForms(),
 			BelongsTo::make(__('Reviewer'), 'reviewer', 'App\Nova\User')->sortable()->hideFromIndex(),
-			Button::make(__('Validate'), 'validate-order')->canSee(fn () => $this->status != 'validated'),
-			Button::make(__('Suspend'), 'suspend-order')->canSee(fn () =>
-			$this->status != 'suspended' && $this->status != 'validated'),
-			Button::make(__('Reject'), 'reject-order')->canSee(fn () =>
-			$this->status != 'rejected' && $this->status != 'validated'),
 			Text::make(__('Address 2'), 'address2')->hideFromIndex(),
 			Text::make(__('Town'), 'town')->hideFromIndex(),
 			Text::make(__('Zip Code'), 'zip')->hideFromIndex(),
@@ -248,10 +241,9 @@ class Order extends Resource
 	public function lenses(Request $request)
 	{
 		return [
-			// new OrdersAwaitingReview(),
-			// new OrdersValidated(),
-			// new OrdersRejected(),
-			// new OrdersSuspended()
+			new OrdersValidated,
+			new OrdersRejected,
+			new OrdersSuspended,
 		];
 	}
 
