@@ -151,7 +151,7 @@ class Order extends Resource
 					'validated' => __('Validated'),
 					'rejected' => __('Refused'),
 					'suspended' => __('On hold'),
-				])->onlyOnForms()->displayUsingLabels(),
+				])->onlyOnForms()->displayUsingLabels()->hideFromIndex(),
 			Badge::make(__('Status'), 'status')
 				->options([
 					'pending' => __('Awaiting review'),
@@ -166,7 +166,7 @@ class Order extends Resource
 					'rejected' => '#ca404d',
 				])->displayUsingLabels()
 				->sortable()
-				->exceptOnForms(),
+				->exceptOnForms()->hideFromIndex(),
 			BelongsTo::make(__('Reviewer'), 'reviewer', 'App\Nova\User')->sortable()->hideFromIndex(),
 			Button::make(__('Validate'), 'validate-order')->reload(),
 			Button::make(__('Suspend'), 'suspend-order')->reload(),
