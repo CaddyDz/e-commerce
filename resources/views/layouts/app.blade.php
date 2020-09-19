@@ -20,7 +20,7 @@
 	<link rel="stylesheet" href="/assets/css/vendor/vendor.min.css">
 	<link rel="stylesheet" href="/assets/css/plugins/plugins.min.css">
 	<link rel="stylesheet" href="/assets/css/style.min.css">
-	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="https://unpkg.com/sweetalert@2.1.2/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
