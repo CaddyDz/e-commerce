@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', __($category->name))
+
 @section('content')
 	<!-- Page Title/Header Start -->
 	<div class="page-title-section section" data-bg-image="">
