@@ -34,6 +34,6 @@ Route::get('checkout', 'CheckoutController@index');
 Route::view('about', 'about');
 Route::view('tos', 'tos');
 Route::view('faq', 'faq');
-Route::get('shipping', 'ShippingController@index');
+Route::get('shipping', 'ShippingsController@index');
 Route::post('order', 'CheckoutController@store');
 Route::get('print/order/{order}', 'OrdersController@print');
