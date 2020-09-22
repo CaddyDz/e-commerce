@@ -1,7 +1,7 @@
 <h3 class="product-title">{{ $product->name }}</h3>
 <div class="product-price">{{ $product->newPrice }} Dzd </div>
 <div class="product-description">
-	<p>{{ $product->descrption }}</p>
+	<p>{!! $product->description !!}</p>
 </div>
 <form action="{{ route('cart.add', ['product' => $product]) }}" method="post">
 	@csrf

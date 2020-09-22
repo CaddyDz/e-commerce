@@ -7,11 +7,11 @@ namespace App\Nova;
 use Laravel\Nova\Fields\ID;
 use Timothyasp\Color\Color;
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\Trix;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Avatar;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Boolean;
-use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\BelongsToMany;
 use Ebess\AdvancedNovaMediaLibrary\Fields\Images;
@@ -88,7 +88,7 @@ class Product extends Resource
 			ID::make()->sortable(),
 			BelongsTo::make(__('Brand'), 'brand', Brand::class)->required(),
 			Text::make(__('Name'), 'name')->required(),
-			Textarea::make(__('Description'), 'description')->required(),
+			Trix::make(__('Description'), 'description')->required(),
 			BelongsToMany::make(__('Sizes'), 'sizes', Size::class),
 			Boolean::make(__('Display Sizes'), 'display_sizes')->hideFromIndex(),
 			Boolean::make(__('Display Colors'), 'display_colors')->hideFromIndex(),
