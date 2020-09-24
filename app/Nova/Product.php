@@ -15,6 +15,7 @@ use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\BelongsToMany;
 use Ebess\AdvancedNovaMediaLibrary\Fields\Images;
+use Laravel\Nova\Fields\Textarea;
 
 class Product extends Resource
 {
@@ -88,7 +89,7 @@ class Product extends Resource
 			ID::make()->sortable(),
 			BelongsTo::make(__('Brand'), 'brand', Brand::class)->rules('required'),
 			Text::make(__('Name'), 'name')->rules('required'),
-			Trix::make(__('Description'), 'description')->rules('required'),
+			Textarea::make(__('Description'), 'description')->rules('required'),
 			BelongsToMany::make(__('Sizes'), 'sizes', Size::class),
 			Boolean::make(__('Display Sizes'), 'display_sizes')->hideFromIndex(),
 			Boolean::make(__('Display Colors'), 'display_colors')->hideFromIndex(),
