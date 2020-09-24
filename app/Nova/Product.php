@@ -86,17 +86,17 @@ class Product extends Resource
 	{
 		return [
 			ID::make()->sortable(),
-			BelongsTo::make(__('Brand'), 'brand', Brand::class)->required(),
-			Text::make(__('Name'), 'name')->required(),
-			Trix::make(__('Description'), 'description')->required(),
+			BelongsTo::make(__('Brand'), 'brand', Brand::class)->rules('required'),
+			Text::make(__('Name'), 'name')->rules('required'),
+			Trix::make(__('Description'), 'description')->rules('required'),
 			BelongsToMany::make(__('Sizes'), 'sizes', Size::class),
 			Boolean::make(__('Display Sizes'), 'display_sizes')->hideFromIndex(),
 			Boolean::make(__('Display Colors'), 'display_colors')->hideFromIndex(),
 			BelongsToMany::make(__('Colors'), 'colors', Color::class),
 			Boolean::make(__('Display Age'), 'display_age')->hideFromIndex(),
 			BelongsToMany::make(__('Ages'), 'ages', Age::class),
-			Number::make(__('Price'), 'price')->required(),
-			Avatar::make(__('Image'), 'image')->required(),
+			Number::make(__('Price'), 'price')->rules('required'),
+			Avatar::make(__('Image'), 'image')->rules('required'),
 			Boolean::make(__('Available'), 'available'),
 			Images::make(__('Images'), 'images')->hideFromIndex(),
 			BelongsToMany::make(__('Orders'), 'orders', Order::class)->fields(function () {
