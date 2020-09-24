@@ -45,7 +45,7 @@
 							{{ $order->district }}
 						</div>
 						<div>Téléphone : {{ $order->phone}}</div>
-						<div>Email : {{$order->email }}</div>
+						<!-- <div>Email : {{$order->email }}</div> -->
 					</div>
 				</div>
 			</header>

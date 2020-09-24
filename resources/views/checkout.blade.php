@@ -78,6 +78,7 @@
 					<label for="bdPostcode">@lang('Postcode') / ZIP (optionel)</label>
 					<input type="text" id="bdPostcode" name="zip">
 				</div>
+				<!--
 				<div class="col-md-6 col-12 learts-mb-20">
 					<label for="bdEmail">@lang('Email address') <abbr class="required">*</abbr></label>
 					<input type="email" id="bdEmail" name="email" required>
