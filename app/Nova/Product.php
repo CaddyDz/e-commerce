@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
-use Timothyasp\Color\Color;
+use Timothyasp\Color\Color as ColorField;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Trix;
 use Laravel\Nova\Fields\Text;
@@ -92,6 +92,7 @@ class Product extends Resource
 			BelongsToMany::make(__('Sizes'), 'sizes', Size::class),
 			Boolean::make(__('Display Sizes'), 'display_sizes')->hideFromIndex(),
 			Boolean::make(__('Display Colors'), 'display_colors')->hideFromIndex(),
+			BelongsToMany::make(__('Colors'), 'colors', Color::class),
 			Boolean::make(__('Display Age'), 'display_age')->hideFromIndex(),
 			BelongsToMany::make(__('Ages'), 'ages', Age::class),
 			Number::make(__('Price'), 'price')->required(),
@@ -102,7 +103,7 @@ class Product extends Resource
 				return [
 					Number::make(__('Quantity'), 'quantity'),
 					Text::make(__('Size'), fn ($pivot) => $pivot->size ? size($pivot->size) : null),
-					Color::make(__('Color'), fn ($pivot) => $pivot->color ? color($pivot->color) : null),
+					ColorField::make(__('Color'), fn ($pivot) => $pivot->color ? color($pivot->color) : null),
 				];
 			})->hideFromDetail(),
 		];
