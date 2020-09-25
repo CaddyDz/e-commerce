@@ -7,7 +7,7 @@
 						contact@dlaladz.com
 					</p>
 					<p class="phone">
-						(+213)
+						(+213793803812)
 					</p>
 					<p class="copyright learts-mt-40">
 						&copy; {{ date('Y') }} {{ config('app.name') }}. All Rights Reserved
@@ -25,8 +25,8 @@
 					</div>
 					<div class="col learts-mb-40">
 						<ul class="widget-list">
-							<li> <i class="fab fa-facebook-f"></i> <a href="https://www.facebook.com/">Facebook</a></li>
-							<li> <i class="fab fa-instagram"></i> <a href="https://www.instagram.com/">Instagram</a></li>
+							<li> <i class="fab fa-facebook-f"></i> <a href="https://www.facebook.com/Dlaladz-102386704956213">Facebook</a></li>
+							<li> <i class="fab fa-instagram"></i> <a href="https://www.instagram.com/dlala.shop">Instagram</a></li>
 						</ul>
 					</div>
 				</div>
