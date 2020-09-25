@@ -36,6 +36,7 @@
 						<th class="price">@lang('Price')</th>
 						<th class="price">@lang('Size')</th>
 						<th class="price">@lang('Color')</th>
+						<th class="quantity">@lang('Age')</th>
 						<th class="quantity">@lang('Quantity')</th>
 						<th class="subtotal">@lang('Total')</th>
 						<th class="remove">&nbsp;</th>
