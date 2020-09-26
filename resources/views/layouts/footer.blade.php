@@ -26,7 +26,7 @@
 					<div class="col learts-mb-40">
 						<ul class="widget-list">
 							<li> <i class="fab fa-facebook-f"></i> <a href="https://www.facebook.com/Dlaladz-102386704956213">Facebook</a></li>
-							<li> <i class="fab fa-instagram"></i> <a href="https://www.instagram.com/dlala.shop">Instagram</a></li>
+							<li> <i class="fab fa-instagram"></i> <a href="https://www.instagram.com/dlala__dz">Instagram</a></li>
 						</ul>
 					</div>
 				</div>

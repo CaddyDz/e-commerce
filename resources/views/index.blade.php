@@ -63,7 +63,7 @@
 			<!-- Section Title Start -->
 			<div class="section-title2 text-center">
 				<h3 class="sub-title">@lang('Follow us on Instagram')</h3>
-				<h2 class="title">@</h2>
+				<h2 class="title"> <a href="https://www.instagram.com/dlala__dz"> @dlala__dz </a>  </h2>
 			</div>
 			<!-- Section Title End -->
 
