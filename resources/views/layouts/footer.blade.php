@@ -4,10 +4,10 @@
 			<div class="col-xl-4 col-lg-5 col-12 learts-mb-40">
 				<div class="widget-contact">
 					<p class="email">
-						contact@dlaladz.com
+						<a href="mailto:contact@dlaladz.com">contact@dlaladz.com</a>
 					</p>
 					<p class="phone">
-						(+213793803812)
+						<a href="tel:0793803812">(+213793803812)</a>
 					</p>
 					<p class="copyright learts-mt-40">
 						&copy; {{ date('Y') }} {{ config('app.name') }}. All Rights Reserved
@@ -25,8 +25,8 @@
 					</div>
 					<div class="col learts-mb-40">
 						<ul class="widget-list">
-							<li> <i class="fab fa-facebook-f"></i> <a href="https://www.facebook.com/Dlaladz-102386704956213">Facebook</a></li>
-							<li> <i class="fab fa-instagram"></i> <a href="https://www.instagram.com/dlala.shop">Instagram</a></li>
+							<li> <i class="fab fa-facebook-f"></i> <a href="https://www.facebook.com/Dlaladz-102386704956213" target="_blank">Facebook</a></li>
+							<li> <i class="fab fa-instagram"></i> <a href="https://www.instagram.com/dlala.shop" target="_blank">Instagram</a></li>
 						</ul>
 					</div>
 				</div>
