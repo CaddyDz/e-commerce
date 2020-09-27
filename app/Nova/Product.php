@@ -88,7 +88,9 @@ class Product extends Resource
 		return [
 			ID::make()->sortable(),
 			BelongsTo::make(__('Brand'), 'brand', Brand::class)->rules('required'),
-			Text::make(__('Name'), 'name')->rules('required'),
+			Text::make(__('Name'), 'name')->rules('required')
+				->creationRules('unique:products,name')
+				->updateRules('unique:products,name,{{resourceId}}'),
 			Textarea::make(__('Description'), 'description')->rules('required'),
 			BelongsToMany::make(__('Sizes'), 'sizes', Size::class),
 			Boolean::make(__('Display Sizes'), 'display_sizes')->hideFromIndex(),
