@@ -22,6 +22,7 @@
 		"laravel/ui": "^2.1",
 		"optimistdigital/nova-multiselect-field": "^1.9",
 		"scadini/nova-icon": "^0.2.1",
+		"sentry/sentry-laravel": "^1.9",
 		"timothyasp/nova-badge-field": "^1.0",
 		"timothyasp/nova-color-field": "master",
 		"titasgailius/search-relations": "^1.0",
@@ -29,6 +30,7 @@
 		"zoxta/nova-cloudflare-card": "^1.0"
 	},
 	"require-dev": {
+		"barryvdh/laravel-ide-helper": "^2.8",
 		"facade/ignition": "^2.0",
 		"fzaninotto/faker": "^1.9.1",
 		"mockery/mockery": "^1.3.1",
