@@ -31,3 +31,7 @@
 .bg-grad-sidebar {
   background-image: linear-gradient(0deg, #333333 0%, #333333 100%);
 }
+
+body {
+	overflow-x: hidden;
+}
