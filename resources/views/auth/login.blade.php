@@ -3,33 +3,11 @@
 @section('title', __('Login'))
 
 @section('content')
-
-<!-- Page Title/Header Start -->
-<div class="page-title-section section" data-bg-image="">
-	<div class="container">
-		<div class="row">
-			<div class="col">
-				<div class="page-title">
-					<h1 class="title">
-						@lang('Login')
-					</h1>
-					<ul class="breadcrumb">
-						<li class="breadcrumb-item"><a href="/">@lang('Home')</a></li>
-						<li class="breadcrumb-item active">@lang('Login')</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- Page Title/Header End -->
-
 <!-- Login & Register Section Start -->
 <div class="section section-padding">
 	<div class="container">
-		<div class="row no-gutters">
-			<div class="col-lg-3"></div>
-			<div class="col-lg-6">
+		<div class="row no-gutters justify-content-center">
+			<div class="col-md-6">
 				<div class="user-login-register bg-light">
 					<div class="login-register-title">
 						<h2 class="title">@lang('Login')</h2>
@@ -68,7 +46,6 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-3"></div>
 		</div>
 	</div>
 </div>
