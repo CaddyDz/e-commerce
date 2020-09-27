@@ -16,3 +16,4 @@ public/vendor/
 .php_cs.cache
 *.db
 public/assets/images/product/
+_ide_helper.php

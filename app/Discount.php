@@ -7,6 +7,27 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
+/**
+ * App\Discount
+ *
+ * @property int $id
+ * @property int $product_id
+ * @property \Illuminate\Support\Carbon $expires_at
+ * @property int $value
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Product $product
+ * @method static \Illuminate\Database\Eloquent\Builder|Discount newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Discount newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Discount query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Discount whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Discount whereExpiresAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Discount whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Discount whereProductId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Discount whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Discount whereValue($value)
+ * @mixin \Eloquent
+ */
 class Discount extends Model
 {
 	/**
