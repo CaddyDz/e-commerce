@@ -24,11 +24,7 @@
 </head>
 
 <body>
-	@include('layouts.header.topbar')
-	@include('layouts.header.header')
-	@include('layouts.header.sticky')
-	@include('layouts.header.mobile')
-	@include('layouts.header.mobile_sticky')
+	@include('layouts.header')
 	<!-- OffCanvas Cart Start -->
 	<div id="offcanvas-cart" class="offcanvas offcanvas-cart">
 		<div class="inner">

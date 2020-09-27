@@ -17,29 +17,24 @@
 			<div class="col d-none d-xl-block">
 				<nav class="site-main-menu">
 					<ul>
-						<li class="has-children" class="pull-right">
-							<a href="#"><span class="menu-text">Menu</span></a>
-							<ul class="sub-menu">
-								<li>
-									<a href="/about">
-										<span class="menu-text">@lang('About us')</span>
-									</a>
-								</li>
-								<li>
-									<a href="/shipping">
-										<span class="menu-text">
-											@lang('Shipping policy')
-										</span>
-									</a>
-								</li>
-								<li>
-									<a href="/faq">
-										<span class="menu-text">
-											FAQs?
-										</span>
-									</a>
-								</li>
-							</ul>
+						<li>
+							<a href="/about">
+								<span class="menu-text">@lang('About us')</span>
+							</a>
+						</li>
+						<li>
+							<a href="/shipping">
+								<span class="menu-text">
+									@lang('Shipping policy')
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="/faq">
+								<span class="menu-text">
+									FAQs?
+								</span>
+							</a>
 						</li>
 					</ul>
 				</nav>
@@ -52,13 +47,6 @@
 					<div class="header-login">
 						<a href="/home"><i class="fal fa-user"></i></a>
 					</div>
-					<!--
-						<div class="header-search d-none d-sm-block">
-							<a href="#offcanvas-search" class="offcanvas-toggle"><i class="fal fa-search"></i></a>
-						</div>
-						<div class="header-wishlist">
-							<a href="#offcanvas-wishlist" class="offcanvas-toggle"><span class="wishlist-count">3</span><i class="fal fa-heart"></i></a>
-						</div> -->
 					<div class="header-cart">
 						<a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count">{{ $cart->count() }}</span><i class="fal fa-shopping-cart"></i></a>
 					</div>
@@ -74,7 +62,6 @@
 				</div>
 			</div>
 			<!-- Header Tools End -->
-
 		</div>
 	</div>
 
