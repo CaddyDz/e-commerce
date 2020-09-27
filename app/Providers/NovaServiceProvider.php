@@ -5,8 +5,9 @@ declare(strict_types=1);
 namespace App\Providers;
 
 use Laravel\Nova\Nova;
-use Illuminate\Support\Facades\Gate;
+use KABBOUCHI\LogsTool\LogsTool;
 use Laravel\Nova\Events\ServingNova;
+use Illuminate\Support\Facades\Gate;
 use Zoxta\NovaCloudflareCard\NovaCloudflareCard;
 use Laravel\Nova\NovaApplicationServiceProvider;
 
@@ -87,6 +88,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
 			\Vyuldashev\NovaPermission\NovaPermissionTool::make()->canSee(function ($request) {
 				return $request->user()->hasRole('Admin');
 			}),
+			LogsTool::make()->canSee(fn ($request) => $request->user()->hasRole('Admin')),
 		];
 	}
 
