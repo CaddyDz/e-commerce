@@ -32,7 +32,6 @@ Route::get('brands/{brand}', 'BrandsController@show')->name('brand');
 Route::get('categories/{category}', 'CategoriesController@show')->name('category');
 Route::get('checkout', 'CheckoutController@index');
 Route::view('about', 'about');
-Route::view('tos', 'tos');
 Route::view('faq', 'faq');
 Route::get('shipping', 'ShippingsController@index');
 Route::post('order', 'CheckoutController@store');
