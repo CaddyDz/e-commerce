@@ -6,7 +6,6 @@ namespace App\Providers;
 
 use Laravel\Nova\Nova;
 use KABBOUCHI\LogsTool\LogsTool;
-use Laravel\Nova\Events\ServingNova;
 use Illuminate\Support\Facades\Gate;
 use Zoxta\NovaCloudflareCard\NovaCloudflareCard;
 use Laravel\Nova\NovaApplicationServiceProvider;
@@ -20,9 +19,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
 	 */
 	public function boot()
 	{
-		Nova::serving(function (ServingNova $event) {
-			Nova::style('blueflix', __DIR__ . '/../../resources/css/theme.css');
-		});
+		Nova::serving(fn () => Nova::style('dlala', resource_path('css/theme.css')));
 		Nova::sortResourcesBy(function ($resource) {
 			return $resource::$priority ?? 9999;
 		});
