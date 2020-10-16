@@ -23,6 +23,7 @@
 		"optimistdigital/nova-multiselect-field": "^1.9",
 		"scadini/nova-icon": "^0.2.1",
 		"sentry/sentry-laravel": "^1.9",
+		"tightenco/nova-google-analytics": "^0.1.7",
 		"timothyasp/nova-badge-field": "^1.0",
 		"timothyasp/nova-color-field": "master",
 		"titasgailius/search-relations": "^1.0",

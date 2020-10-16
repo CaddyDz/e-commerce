@@ -9,6 +9,9 @@ use KABBOUCHI\LogsTool\LogsTool;
 use Illuminate\Support\Facades\Gate;
 use Zoxta\NovaCloudflareCard\NovaCloudflareCard;
 use Laravel\Nova\NovaApplicationServiceProvider;
+use Tightenco\NovaGoogleAnalytics\VisitorsMetric;
+use Tightenco\NovaGoogleAnalytics\PageViewsMetric;
+use Tightenco\NovaGoogleAnalytics\MostVisitedPagesCard;
 
 class NovaServiceProvider extends NovaApplicationServiceProvider
 {
@@ -60,7 +63,10 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
 	protected function cards()
 	{
 		return [
+			new PageViewsMetric,
+			new VisitorsMetric,
 			new NovaCloudflareCard(),
+			new MostVisitedPagesCard,
 		];
 	}
 

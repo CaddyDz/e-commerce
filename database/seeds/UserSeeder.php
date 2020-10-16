@@ -17,7 +17,7 @@ class UserSeeder extends Seeder
 		// Admin user
 		$admin = factory(User::class)->create([
 			'name' => 'admin',
-			'email' => 'admin@amel.dev',
+			'email' => 'admin@dlala.dev',
 		]);
 		$admin->assignRole('Admin');
 		$worker = factory(User::class)->create([
