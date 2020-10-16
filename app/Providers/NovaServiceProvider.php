@@ -5,10 +5,12 @@ declare(strict_types=1);
 namespace App\Providers;
 
 use Laravel\Nova\Nova;
+use App\Exceptions\Handler;
 use KABBOUCHI\LogsTool\LogsTool;
 use Illuminate\Support\Facades\Gate;
 use Zoxta\NovaCloudflareCard\NovaCloudflareCard;
 use Laravel\Nova\NovaApplicationServiceProvider;
+use Laravel\Nova\Exceptions\NovaExceptionHandler;
 use Tightenco\NovaGoogleAnalytics\VisitorsMetric;
 use Tightenco\NovaGoogleAnalytics\PageViewsMetric;
 use Tightenco\NovaGoogleAnalytics\MostVisitedPagesCard;
@@ -68,6 +70,16 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
 			new NovaCloudflareCard(),
 			new MostVisitedPagesCard,
 		];
+	}
+
+	/**
+	 * Register Nova's custom exception handler.
+	 *
+	 * @return void
+	 */
+	protected function registerExceptionHandler()
+	{
+		$this->app->bind(NovaExceptionHandler::class, Handler::class);
 	}
 
 	/**
