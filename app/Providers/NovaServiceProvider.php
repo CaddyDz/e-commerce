@@ -22,7 +22,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
 	 *
 	 * @return void
 	 */
-	public function boot()
+	public function boot(): void
 	{
 		Nova::serving(fn () => Nova::style('dlala', resource_path('css/theme.css')));
 		Nova::sortResourcesBy(function ($resource) {
@@ -36,7 +36,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
 	 *
 	 * @return void
 	 */
-	protected function routes()
+	protected function routes(): void
 	{
 		Nova::routes()
 			->withAuthenticationRoutes()
@@ -50,11 +50,9 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
 	 *
 	 * @return void
 	 */
-	protected function gate()
+	protected function gate(): void
 	{
-		Gate::define('viewNova', function ($user) {
-			return $user->hasPermissionTo('Access Admin panel');
-		});
+		Gate::define('viewNova', fn ($user): bool => $user->hasPermissionTo('Access Admin panel'));
 	}
 
 	/**
@@ -62,7 +60,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
 	 *
 	 * @return array
 	 */
-	protected function cards()
+	protected function cards(): array
 	{
 		return [
 			new PageViewsMetric,
