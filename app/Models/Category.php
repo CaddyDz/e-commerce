@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
- * App\Category
+ * App\Models\Category
  *
  * @property int $id
  * @property string $name
@@ -34,7 +34,7 @@ class Category extends Model
 		return $this->hasMany(Brand::class);
 	}
 
-	public function getRouteKeyName()
+	public function getRouteKeyName(): string
 	{
 		return 'slug';
 	}

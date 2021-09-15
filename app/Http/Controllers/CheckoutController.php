@@ -4,8 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
-use App\Order;
-use App\Shipping;
+use App\{Order, Shipping};
 use Illuminate\Http\Request;
 use Gloudemans\Shoppingcart\Facades\Cart;
 

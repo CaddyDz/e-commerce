@@ -2,12 +2,14 @@
 
 declare(strict_types=1);
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 /**
- * App\Order
+ * App\Models\Order
  *
  * @property int $id
  * @property int|null $reviewer_id
@@ -61,12 +63,12 @@ class Order extends Model
 {
 	protected $guarded = []; // yolo
 
-	public function client()
+	public function client(): BelongsTo
 	{
 		return $this->belongsTo(User::class);
 	}
 
-	public function reviewer()
+	public function reviewer(): BelongsTo
 	{
 		return $this->belongsTo(User::class, 'reviewer_id');
 	}
@@ -87,7 +89,7 @@ class Order extends Model
 		}
 	}
 
-	public function products()
+	public function products(): BelongsToMany
 	{
 		return $this->BelongsToMany(Product::class)->withPivot(['quantity', 'size', 'color', 'age']);
 	}

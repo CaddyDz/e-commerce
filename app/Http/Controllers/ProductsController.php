@@ -4,11 +4,9 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
-use App\Brand;
-use App\Product;
-use App\Discount;
 use Illuminate\View\View;
 use Illuminate\Http\Request;
+use App\{Brand, Discount, Product};
 
 class ProductsController extends Controller
 {

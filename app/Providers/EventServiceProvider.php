@@ -4,11 +4,9 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
-use App\Listeners\RejectOrder;
-use App\Listeners\SuspendOrder;
-use App\Listeners\ValidateOrder;
 use NovaButton\Events\ButtonClick;
 use Illuminate\Auth\Events\Registered;
+use App\Listeners\{RejectOrder, SuspendOrder, ValidateOrder};
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 

@@ -4,16 +4,13 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
-use Laravel\Nova\Nova;
 use App\Exceptions\Handler;
 use KABBOUCHI\LogsTool\LogsTool;
 use Illuminate\Support\Facades\Gate;
 use Zoxta\NovaCloudflareCard\NovaCloudflareCard;
-use Laravel\Nova\NovaApplicationServiceProvider;
 use Laravel\Nova\Exceptions\NovaExceptionHandler;
-use Tightenco\NovaGoogleAnalytics\VisitorsMetric;
-use Tightenco\NovaGoogleAnalytics\PageViewsMetric;
-use Tightenco\NovaGoogleAnalytics\MostVisitedPagesCard;
+use Laravel\Nova\{Nova, NovaApplicationServiceProvider};
+use Tightenco\NovaGoogleAnalytics\{MostVisitedPagesCard, PageViewsMetric, VisitorsMetric};
 
 class NovaServiceProvider extends NovaApplicationServiceProvider
 {
@@ -25,9 +22,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
 	public function boot(): void
 	{
 		Nova::serving(fn () => Nova::style('dlala', resource_path('css/theme.css')));
-		Nova::sortResourcesBy(function ($resource) {
-			return $resource::$priority ?? 9999;
-		});
+		Nova::sortResourcesBy(fn ($resource) => $resource::$priority ?? 9999);
 		parent::boot();
 	}
 
@@ -98,9 +93,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
 	public function tools()
 	{
 		return [
-			\Vyuldashev\NovaPermission\NovaPermissionTool::make()->canSee(function ($request) {
-				return $request->user()->hasRole('Admin');
-			}),
+			\Vyuldashev\NovaPermission\NovaPermissionTool::make()->canSee(fn ($request) => $request->user()->hasRole('Admin')),
 			LogsTool::make()->canSee(fn ($request) => $request->user()->hasRole('Admin')),
 		];
 	}

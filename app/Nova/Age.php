@@ -4,11 +4,8 @@ declare(strict_types=1);
 
 namespace App\Nova;
 
-use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\Number;
-use Laravel\Nova\Fields\BelongsToMany;
-use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\{BelongsToMany, ID, Number, Text};
 
 class Age extends Resource
 {

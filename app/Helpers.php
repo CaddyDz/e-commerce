@@ -2,9 +2,7 @@
 
 declare(strict_types=1);
 
-use App\Age;
-use App\Size;
-use App\Color;
+use App\Models\{Age, Color, Size};
 
 function sluggify($string)
 {

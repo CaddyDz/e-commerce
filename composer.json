@@ -11,24 +11,24 @@
 		"php": "^8.0",
 		"bumbummen99/shoppingcart": "^2.9",
 		"dillingham/nova-button": "^1.0",
-		"ebess/advanced-nova-media-library": "^3.2",
+		"ebess/advanced-nova-media-library": "^3.4",
 		"fideloper/proxy": "^4.2",
 		"fruitcake/laravel-cors": "^2.0",
 		"guzzlehttp/guzzle": "^6.3",
 		"kabbouchi/nova-logs-tool": "^0.3.0",
-		"laravel/framework": "^7.22.2",
+		"laravel/framework": "^8.32",
 		"laravel/nova": "~3.0",
 		"laravel/tinker": "^2.0",
-		"laravel/ui": "^2.1",
+		"laravel/ui": "^3.1",
 		"optimistdigital/nova-multiselect-field": "^1.9",
 		"scadini/nova-icon": "^0.2.1",
-		"sentry/sentry-laravel": "^1.9",
+		"sentry/sentry-laravel": "^2.4.1",
 		"tightenco/nova-google-analytics": "^0.1.7",
 		"timothyasp/nova-badge-field": "^1.0",
 		"timothyasp/nova-color-field": "master",
 		"titasgailius/search-relations": "^1.0",
 		"vyuldashev/nova-permission": "^2.9",
-		"zoxta/nova-cloudflare-card": "^1.0"
+		"zoxta/nova-cloudflare-card": "master"
 	},
 	"require-dev": {
 		"barryvdh/laravel-ide-helper": "^2.8",
@@ -88,6 +88,10 @@
 		{
 			"type": "vcs",
 			"url": "https://github.com/CaddyDz/nova-color-field"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/Zidweb/nova-cloudflare-card"
 		}
 	]
 }

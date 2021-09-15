@@ -5,10 +5,8 @@ declare(strict_types=1);
 namespace App\Nova;
 
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\BelongsToMany;
-use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Http\Requests\NovaRequest;
 use Timothyasp\Color\Color as ColorField;
+use Laravel\Nova\Fields\{BelongsToMany, ID};
 
 class Color extends Resource
 {

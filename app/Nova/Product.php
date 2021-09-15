@@ -4,18 +4,10 @@ declare(strict_types=1);
 
 namespace App\Nova;
 
-use Laravel\Nova\Fields\ID;
-use Timothyasp\Color\Color as ColorField;
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\Trix;
-use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\Avatar;
-use Laravel\Nova\Fields\Number;
-use Laravel\Nova\Fields\Boolean;
-use Laravel\Nova\Fields\BelongsTo;
-use Laravel\Nova\Fields\BelongsToMany;
+use Timothyasp\Color\Color as ColorField;
 use Ebess\AdvancedNovaMediaLibrary\Fields\Images;
-use Laravel\Nova\Fields\Textarea;
+use Laravel\Nova\Fields\{Avatar, BelongsTo, BelongsToMany, Boolean, ID, Number, Text, Textarea, Trix};
 
 class Product extends Resource
 {

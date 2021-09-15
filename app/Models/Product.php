@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App;
+namespace App\Models;
 
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\Models\Media;
@@ -64,6 +64,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @method static \Illuminate\Database\Query\Builder|Product withTrashed()
  * @method static \Illuminate\Database\Query\Builder|Product withoutTrashed()
  * @mixin \Eloquent
+ * @property int $display_age
+ * @method static \Illuminate\Database\Eloquent\Builder|Product whereDisplayAge($value)
  */
 class Product extends Model implements Buyable, HasMedia
 {

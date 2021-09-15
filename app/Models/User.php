@@ -2,15 +2,16 @@
 
 declare(strict_types=1);
 
-namespace App;
+namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Foundation\Auth\User as Authenticatable;
 use Spatie\Permission\Traits\HasRoles;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
 /**
- * App\User
+ * App\Models\User
  *
  * @property int $id
  * @property string $name
@@ -47,9 +48,9 @@ use Illuminate\Notifications\Notifiable;
  * @method static \Illuminate\Database\Eloquent\Builder|User whereUpdatedAt($value)
  * @mixin \Eloquent
  */
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
-	use Notifiable, HasRoles;
+	use HasRoles, Notifiable;
 
 	/**
 	 * The attributes that are mass assignable.
@@ -78,7 +79,7 @@ class User extends Authenticatable
 		'email_verified_at' => 'datetime',
 	];
 
-	public function orders()
+	public function orders(): HasMany
 	{
 		return $this->hasMany(Order::class);
 	}

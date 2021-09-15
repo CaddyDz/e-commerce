@@ -2,12 +2,13 @@
 
 declare(strict_types=1);
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 /**
- * App\Age
+ * App\Models\Age
  *
  * @property int $id
  * @property string $value
@@ -26,7 +27,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Age extends Model
 {
-	public function products()
+	public function products(): BelongsToMany
 	{
 		return $this->belongsToMany(Product::class);
 	}

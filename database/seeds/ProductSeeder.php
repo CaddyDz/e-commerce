@@ -2,8 +2,7 @@
 
 declare(strict_types=1);
 
-use App\Brand;
-use App\Product;
+use App\{Brand, Product};
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Storage;
 

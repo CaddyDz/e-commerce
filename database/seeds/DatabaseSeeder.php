@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-use App\Nova\Category;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder

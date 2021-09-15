@@ -4,13 +4,9 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
-use App\Order;
-use App\Product;
-use App\Category;
-use App\Observers\OrderObserver;
-use App\Observers\CategoryObserver;
-use App\Observers\ProductsObserver;
 use Illuminate\Support\ServiceProvider;
+use App\Models\{Category, Order, Product};
+use App\Observers\{CategoryObserver, OrderObserver, ProductsObserver};
 
 class ObserversServiceProvider extends ServiceProvider
 {
@@ -19,7 +15,7 @@ class ObserversServiceProvider extends ServiceProvider
 	 *
 	 * @return void
 	 */
-	public function boot()
+	public function boot(): void
 	{
 		Product::observe(ProductsObserver::class);
 		Order::observe(OrderObserver::class);

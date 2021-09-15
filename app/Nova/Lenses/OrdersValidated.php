@@ -5,14 +5,10 @@ declare(strict_types=1);
 namespace App\Nova\Lenses;
 
 use App\Order;
-use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Lenses\Lens;
-use Laravel\Nova\Fields\Stack;
-use Laravel\Nova\Fields\Textarea;
-use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Http\Requests\LensRequest;
+use Laravel\Nova\Fields\{BelongsTo, ID, Stack, Text, Textarea};
 
 class OrdersValidated extends Lens
 {

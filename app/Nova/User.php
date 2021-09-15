@@ -4,12 +4,9 @@ declare(strict_types=1);
 
 namespace App\Nova;
 
-use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\Password;
-use Vyuldashev\NovaPermission\RoleBooleanGroup;
-use Vyuldashev\NovaPermission\PermissionBooleanGroup;
+use Laravel\Nova\Fields\{ID, Password, Text};
+use Vyuldashev\NovaPermission\{PermissionBooleanGroup, RoleBooleanGroup};
 
 class User extends Resource
 {

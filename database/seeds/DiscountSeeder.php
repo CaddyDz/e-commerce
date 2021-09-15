@@ -2,8 +2,7 @@
 
 declare(strict_types=1);
 
-use App\Product;
-use App\Discount;
+use App\{Discount, Product};
 use Illuminate\Database\Seeder;
 
 class DiscountSeeder extends Seeder

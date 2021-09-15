@@ -2,12 +2,13 @@
 
 declare(strict_types=1);
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 /**
- * App\Color
+ * App\Models\Color
  *
  * @property int $id
  * @property string $color
@@ -26,7 +27,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Color extends Model
 {
-	public function products()
+	public function products(): BelongsToMany
 	{
 		return $this->belongsToMany(Product::class);
 	}
