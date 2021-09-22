@@ -87,10 +87,6 @@
 		},
 		{
 			"type": "vcs",
-			"url": "https://github.com/CaddyDz/nova-color-field"
-		},
-		{
-			"type": "vcs",
 			"url": "https://github.com/Zidweb/nova-cloudflare-card"
 		}
 	]
