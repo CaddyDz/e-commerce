@@ -85,9 +85,5 @@
 			"type": "composer",
 			"url": "https://nova.laravel.com"
 		},
-		{
-			"type": "vcs",
-			"url": "https://github.com/Zidweb/nova-cloudflare-card"
-		}
 	]
 }
