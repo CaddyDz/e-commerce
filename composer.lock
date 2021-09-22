@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a4c5a3cac366bcdde9090bd51878f700",
+    "content-hash": "11a105c11d4cc88fa282b92bd19ebbcd",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -185,16 +185,16 @@
         },
         {
             "name": "bumbummen99/shoppingcart",
-            "version": "2.10.0",
+            "version": "4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bumbummen99/LaravelShoppingcart.git",
-                "reference": "2d11e6ad582bf99b7e4f02459d1339394b2b1fa7"
+                "reference": "f2c763e311b0fc58b2dfdfa2c41c6318a7c884e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bumbummen99/LaravelShoppingcart/zipball/2d11e6ad582bf99b7e4f02459d1339394b2b1fa7",
-                "reference": "2d11e6ad582bf99b7e4f02459d1339394b2b1fa7",
+                "url": "https://api.github.com/repos/bumbummen99/LaravelShoppingcart/zipball/f2c763e311b0fc58b2dfdfa2c41c6318a7c884e1",
+                "reference": "f2c763e311b0fc58b2dfdfa2c41c6318a7c884e1",
                 "shasum": ""
             },
             "require": {
@@ -250,9 +250,9 @@
             ],
             "support": {
                 "issues": "https://github.com/bumbummen99/LaravelShoppingcart/issues",
-                "source": "https://github.com/bumbummen99/LaravelShoppingcart/tree/2.10.0"
+                "source": "https://github.com/bumbummen99/LaravelShoppingcart/tree/4.0.0"
             },
-            "time": "2020-09-12T00:58:25+00:00"
+            "time": "2021-01-18T23:55:30+00:00"
         },
         {
             "name": "cakephp/chronos",
@@ -2316,7 +2316,7 @@
             "dist": {
                 "type": "path",
                 "url": "./nova",
-                "reference": "4ba9fb7ea196e0039e61cbea574e570a6b15535c"
+                "reference": "1569a1a4f693ebf64440c60bee198de046700cae"
             },
             "require": {
                 "brick/money": "^0.5.0",
