@@ -22,10 +22,10 @@ Auth::routes(['reset' => false, 'verify' => false]);
 Route::get('home', 'HomeController@index')->name('home');
 
 Route::prefix('cart')->name('cart')->group(function () {
-	Route::get('/', 'CartController@index');
-	Route::post('add/{product}', 'CartController@add')->name('.add');
-	Route::post('update', 'CartController@update')->name('.update');
-	Route::post('remove/{product}', 'CartController@remove')->name('.remove');
+    Route::get('/', 'CartController@index');
+    Route::post('add/{product}', 'CartController@add')->name('.add');
+    Route::post('update', 'CartController@update')->name('.update');
+    Route::post('remove/{product}', 'CartController@remove')->name('.remove');
 });
 Route::get('products/{product}', 'ProductsController@show')->name('product');
 Route::get('brands/{brand}', 'BrandsController@show')->name('brand');

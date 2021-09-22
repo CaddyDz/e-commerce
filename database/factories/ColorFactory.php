@@ -8,7 +8,7 @@ use App\Color;
 use Faker\Generator as Faker;
 
 $factory->define(Color::class, function (Faker $faker) {
-	return [
-		'color' => $faker->colorName
-	];
+    return [
+        'color' => $faker->colorName
+    ];
 });
