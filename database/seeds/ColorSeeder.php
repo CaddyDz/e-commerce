@@ -7,13 +7,13 @@ use Illuminate\Database\Seeder;
 
 class ColorSeeder extends Seeder
 {
-	/**
-	 * Run the database seeds.
-	 *
-	 * @return void
-	 */
-	public function run()
-	{
-		factory(Color::class, 100)->create();
-	}
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        factory(Color::class, 100)->create();
+    }
 }

@@ -8,8 +8,8 @@ use App\Discount;
 use Faker\Generator as Faker;
 
 $factory->define(Discount::class, function (Faker $faker) {
-	return [
-		'expires_at' => now()->addDays(rand(1, 5)),
-		'value' => rand(1, 50)
-	];
+    return [
+        'expires_at' => now()->addDays(rand(1, 5)),
+        'value' => rand(1, 50)
+    ];
 });
