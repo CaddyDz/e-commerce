@@ -10,7 +10,6 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
-/nova
 public/vendor/
 public/vendor/
 .php_cs.cache
