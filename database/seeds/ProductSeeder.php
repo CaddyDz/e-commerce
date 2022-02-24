@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use App\{Brand, Product};
+use App\Models\{Brand, Product};
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Storage;
 
@@ -19,7 +19,7 @@ class ProductSeeder extends Seeder
         Storage::disk('public')->makeDirectory('products');
         foreach (Brand::all() as $brand) {
             // Create 2 products for each brand
-            factory(Product::class, 2)->create([
+            Product::factory(2)->create([
                 'brand_id' => $brand->id,
             ]);
         }

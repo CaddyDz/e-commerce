@@ -1,19 +1,25 @@
 <?php
 
-declare(strict_types=1);
+namespace Database\Factories;
 
-/** @var \Illuminate\Database\Eloquent\Factory $factory */
+use Illuminate\Database\Eloquent\Factories\Factory;
 
-use App\Brand;
-use Faker\Generator as Faker;
-
-$factory->define(Brand::class, function (Faker $faker) {
-    return [
-        'name' => $faker->company,
-        'logo' => 'brands/' . $faker->file(
+class BrandFactory extends Factory
+{
+    /**
+     * Define the model's default state.
+     *
+     * @return array
+     */
+    public function definition(): array
+    {
+        return [
+            			'name' => $this->faker->company,
+        'logo' => 'brands/' . $this->faker->file(
             $sourceDir = 'public/assets/images/brands',
             $targetDir = storage_path('/app/public/brands'),
             false
         ),
-    ];
-});
+        ];
+    }
+}

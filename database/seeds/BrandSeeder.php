@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use App\{Brand, Category};
+use App\Models\{Brand, Category};
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Storage;
 
@@ -19,7 +19,7 @@ class BrandSeeder extends Seeder
         Storage::disk('public')->makeDirectory('brands');
         $cats = Category::select('id')->pluck('id')->toArray();
         foreach ($cats as $cat) {
-            factory(Brand::class, 2)->create([
+            Brand::factory(2)->create([
                 'category_id' => $cat
             ]);
         }

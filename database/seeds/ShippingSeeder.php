@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use App\Shipping;
+use App\Models\Shipping;
 use Illuminate\Database\Seeder;
 
 class ShippingSeeder extends Seeder

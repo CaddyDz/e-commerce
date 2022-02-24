@@ -1,22 +1,28 @@
 <?php
 
-declare(strict_types=1);
+namespace Database\Factories;
 
-/** @var \Illuminate\Database\Eloquent\Factory $factory */
+use Illuminate\Database\Eloquent\Factories\Factory;
 
-use App\Product;
-use Faker\Generator as Faker;
-
-$factory->define(Product::class, function (Faker $faker) {
-    return [
-        'name' => $faker->unique()->realText(20),
-        'description' => $faker->realText(1500),
-        'price' => $faker->randomFloat(2, 1000, 10000),
-        'image' => 'products/' . $faker->file(
+class ProductFactory extends Factory
+{
+    /**
+     * Define the model's default state.
+     *
+     * @return array
+     */
+    public function definition()
+    {
+        return [
+            'name' => $this->faker->unique()->realText(20),
+        'description' => $this->faker->realText(1500),
+        'price' => $this->faker->randomFloat(2, 1000, 10000),
+        'image' => 'products/' . $this->faker->file(
             $sourceDir = 'public/assets/images/product/s328',
             $targetDir = storage_path('/app/public/products'),
             false
         ),
-        'available' => $faker->boolean($chancesOfGettingTrue = 90)
-    ];
-});
+        'available' => $this->faker->boolean($chancesOfGettingTrue = 90)
+        ];
+    }
+}

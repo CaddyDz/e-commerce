@@ -35,7 +35,7 @@ class Brand extends Resource
      *
      * @var string
      */
-    public static $model = 'App\Brand';
+    public static $model = 'App\Models\Brand';
 
     /**
      * The single value that should be used to represent the resource when being displayed.

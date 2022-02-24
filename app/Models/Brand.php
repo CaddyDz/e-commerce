@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\{Model, SoftDeletes};
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\{BelongsTo, HasMany};
 
 /**
@@ -17,8 +18,8 @@ use Illuminate\Database\Eloquent\Relations\{BelongsTo, HasMany};
  * @property \Illuminate\Support\Carbon|null $deleted_at
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property-read \App\Category $category
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Product[] $products
+ * @property-read \App\Models\Category $category
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Product[] $products
  * @property-read int|null $products_count
  * @method static \Illuminate\Database\Eloquent\Builder|Brand newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Brand newQuery()
@@ -37,7 +38,7 @@ use Illuminate\Database\Eloquent\Relations\{BelongsTo, HasMany};
  */
 class Brand extends Model
 {
-    use SoftDeletes;
+    use HasFactory, SoftDeletes;
 
     public function products(): HasMany
     {

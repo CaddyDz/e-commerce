@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace App\Observers;
 
-use App\Category;
+use App\Models\Category;
 
 class CategoryObserver
 {
     /**
      * Handle the category "creating" event.
      *
-     * @param  \App\Category  $category
+     * @param  \App\Models\Category  $category
      * @return void
      */
     public function creating(Category $category)
@@ -22,7 +22,7 @@ class CategoryObserver
     /**
      * Handle the category "updating" event.
      *
-     * @param  \App\Category  $category
+     * @param  \App\Models\Category  $category
      * @return void
      */
     public function updating(Category $category)

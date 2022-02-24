@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use App\{Discount, Product};
+use App\Models\{Discount, Product};
 use Illuminate\Database\Seeder;
 
 class DiscountSeeder extends Seeder
@@ -16,7 +16,7 @@ class DiscountSeeder extends Seeder
     {
         $products = Product::take(20)->select('id')->pluck('id');
         foreach ($products as $product) {
-            factory(Discount::class)->create([
+            Discount::factory()->create([
                 'product_id' => $product,
             ]);
         }

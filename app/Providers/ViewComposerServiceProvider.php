@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
-use App\Category;
+use App\Models\Category;
 use Illuminate\Support\ServiceProvider;
 use Gloudemans\Shoppingcart\Facades\Cart;
 

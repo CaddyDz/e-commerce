@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
-use App\Brand;
+use App\Models\Brand;
 use Illuminate\Http\Request;
 
 class BrandsController extends Controller
@@ -43,7 +43,7 @@ class BrandsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Brand  $brand
+     * @param  \App\Models\Brand  $brand
      * @return \Illuminate\Http\Response
      */
     public function show(Brand $brand)
@@ -54,7 +54,7 @@ class BrandsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Brand  $brand
+     * @param  \App\Models\Brand  $brand
      * @return \Illuminate\Http\Response
      */
     public function edit(Brand $brand)
@@ -66,7 +66,7 @@ class BrandsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Brand  $brand
+     * @param  \App\Models\Brand  $brand
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Brand $brand)
@@ -77,7 +77,7 @@ class BrandsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Brand  $brand
+     * @param  \App\Models\Brand  $brand
      * @return \Illuminate\Http\Response
      */
     public function destroy(Brand $brand)

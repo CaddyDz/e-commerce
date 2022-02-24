@@ -15,7 +15,7 @@ class Age extends Resource
      *
      * @var string
      */
-    public static $model = 'App\Age';
+    public static $model = 'App\Models\Age';
 
     /**
      * The single value that should be used to represent the resource when being displayed.

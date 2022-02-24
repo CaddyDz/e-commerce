@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use App\User;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class UserSeeder extends Seeder
@@ -12,19 +12,19 @@ class UserSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(): void
     {
         // Admin user
-        $admin = factory(User::class)->create([
+        $admin = User::factory()->create([
             'name' => 'admin',
-            'email' => 'admin@dlala.dev',
+            'email' => 'admin@dlala.test',
         ]);
         $admin->assignRole('Admin');
-        $worker = factory(User::class)->create([
+        $worker = User::factory()->create([
             'name' => 'worker',
             'email' => 'worker@gmail.com',
         ]);
         $worker->assignRole('Worker');
-        factory(User::class, 50)->create();
+        User::factory(50)->create();
     }
 }

@@ -7,7 +7,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * App\Shipping
+ * App\Models\Shipping
  *
  * @property int $id
  * @property string $state

@@ -15,7 +15,7 @@ class Size extends Resource
      *
      * @var string
      */
-    public static $model = 'App\Size';
+    public static $model = 'App\Models\Size';
 
     /**
      * The single value that should be used to represent the resource when being displayed.

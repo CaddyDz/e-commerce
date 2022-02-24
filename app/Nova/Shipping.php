@@ -15,7 +15,7 @@ class Shipping extends Resource
      *
      * @var string
      */
-    public static $model = 'App\Shipping';
+    public static $model = 'App\Models\Shipping';
 
     /**
      * The single value that should be used to represent the resource when being displayed.

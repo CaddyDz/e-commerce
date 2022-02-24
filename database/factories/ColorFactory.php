@@ -1,14 +1,20 @@
 <?php
 
-declare(strict_types=1);
+namespace Database\Factories;
 
-/** @var \Illuminate\Database\Eloquent\Factory $factory */
+use Illuminate\Database\Eloquent\Factories\Factory;
 
-use App\Color;
-use Faker\Generator as Faker;
-
-$factory->define(Color::class, function (Faker $faker) {
-    return [
-        'color' => $faker->colorName
-    ];
-});
+class ColorFactory extends Factory
+{
+    /**
+     * Define the model's default state.
+     *
+     * @return array
+     */
+    public function definition()
+    {
+        return [
+            'color' => $this->faker->colorName
+        ];
+    }
+}

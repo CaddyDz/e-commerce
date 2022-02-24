@@ -1,15 +1,21 @@
 <?php
 
-declare(strict_types=1);
+namespace Database\Factories;
 
-/** @var \Illuminate\Database\Eloquent\Factory $factory */
+use Illuminate\Database\Eloquent\Factories\Factory;
 
-use App\Discount;
-use Faker\Generator as Faker;
-
-$factory->define(Discount::class, function (Faker $faker) {
-    return [
-        'expires_at' => now()->addDays(rand(1, 5)),
+class DiscountFactory extends Factory
+{
+    /**
+     * Define the model's default state.
+     *
+     * @return array
+     */
+    public function definition()
+    {
+        return [
+                    'expires_at' => now()->addDays(rand(1, 5)),
         'value' => rand(1, 50)
-    ];
-});
+        ];
+    }
+}

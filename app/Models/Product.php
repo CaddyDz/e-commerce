@@ -7,11 +7,12 @@ namespace App\Models;
 use Gloudemans\Shoppingcart\CanBeBought;
 use Gloudemans\Shoppingcart\Contracts\Buyable;
 use Illuminate\Database\Eloquent\{Model, SoftDeletes};
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Spatie\MediaLibrary\{HasMedia, InteractsWithMedia};
 use Illuminate\Database\Eloquent\Relations\{BelongsTo, HasOne};
 
 /**
- * App\Product
+ * App\Models\Product
  *
  * @property int $id
  * @property int $brand_id
@@ -26,9 +27,9 @@ use Illuminate\Database\Eloquent\Relations\{BelongsTo, HasOne};
  * @property \Illuminate\Support\Carbon|null $deleted_at
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Age[] $ages
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Age[] $ages
  * @property-read int|null $ages_count
- * @property-read \App\Brand $brand
+ * @property-read \App\Models\Brand $brand
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Color[] $colors
  * @property-read int|null $colors_count
  * @property-read \App\Discount|null $discount
@@ -38,7 +39,7 @@ use Illuminate\Database\Eloquent\Relations\{BelongsTo, HasOne};
  * @property-read int|null $media_count
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Order[] $orders
  * @property-read int|null $orders_count
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Size[] $sizes
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Size[] $sizes
  * @property-read int|null $sizes_count
  * @method static \Illuminate\Database\Eloquent\Builder|Product newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Product newQuery()
@@ -65,7 +66,7 @@ use Illuminate\Database\Eloquent\Relations\{BelongsTo, HasOne};
  */
 class Product extends Model implements Buyable, HasMedia
 {
-    use CanBeBought, InteractsWithMedia, SoftDeletes;
+    use CanBeBought, HasFactory, InteractsWithMedia, SoftDeletes;
 
     /**
      * The attributes that should be cast.

@@ -7,6 +7,7 @@ namespace App\Models;
 use Spatie\Permission\Traits\HasRoles;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -50,7 +51,8 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
  */
 class User extends Authenticatable implements MustVerifyEmail
 {
-    use HasRoles, Notifiable;
+    use HasFactory, HasRoles, Notifiable;
+protected $guard_name = 'web';
 
     /**
      * The attributes that are mass assignable.

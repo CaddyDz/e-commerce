@@ -26,7 +26,7 @@ class BrandPolicy
      * Determine whether the user can view the model.
      *
      * @param  \App\User  $user
-     * @param  \App\Brand  $brand
+     * @param  \App\Models\Brand  $brand
      * @return mixed
      */
     public function view(User $user, Brand $brand)
@@ -49,7 +49,7 @@ class BrandPolicy
      * Determine whether the user can update the model.
      *
      * @param  \App\User  $user
-     * @param  \App\Brand  $brand
+     * @param  \App\Models\Brand  $brand
      * @return mixed
      */
     public function update(User $user, Brand $brand)
@@ -61,7 +61,7 @@ class BrandPolicy
      * Determine whether the user can delete the model.
      *
      * @param  \App\User  $user
-     * @param  \App\Brand  $brand
+     * @param  \App\Models\Brand  $brand
      * @return mixed
      */
     public function delete(User $user, Brand $brand)
@@ -73,7 +73,7 @@ class BrandPolicy
      * Determine whether the user can restore the model.
      *
      * @param  \App\User  $user
-     * @param  \App\Brand  $brand
+     * @param  \App\Models\Brand  $brand
      * @return mixed
      */
     public function restore(User $user, Brand $brand)
@@ -85,7 +85,7 @@ class BrandPolicy
      * Determine whether the user can permanently delete the model.
      *
      * @param  \App\User  $user
-     * @param  \App\Brand  $brand
+     * @param  \App\Models\Brand  $brand
      * @return mixed
      */
     public function forceDelete(User $user, Brand $brand)

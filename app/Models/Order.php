@@ -31,7 +31,7 @@ use Illuminate\Database\Eloquent\Relations\{BelongsTo, BelongsToMany};
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\User $client
  * @property-read string $icon
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Product[] $products
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Product[] $products
  * @property-read int|null $products_count
  * @property-read \App\User|null $reviewer
  * @method static \Illuminate\Database\Eloquent\Builder|Order newModelQuery()

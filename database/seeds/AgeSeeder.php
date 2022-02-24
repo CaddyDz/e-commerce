@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use App\Age;
+use App\Models\Age;
 use Illuminate\Database\Seeder;
 
 class AgeSeeder extends Seeder

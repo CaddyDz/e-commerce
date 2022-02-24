@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
-use App\Product;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Http\Requests\UpdateCartRequest;
 use Gloudemans\Shoppingcart\Facades\Cart;

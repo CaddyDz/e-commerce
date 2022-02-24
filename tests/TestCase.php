@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests;
 
-use App\User;
+use App\Models\User;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 
 abstract class TestCase extends BaseTestCase
@@ -20,7 +20,7 @@ abstract class TestCase extends BaseTestCase
     */
     protected function login($user = null)
     {
-        $user = $user ?: factory(User::class)->create();
+        $user = $user ?: User::factory()->create();
         $this->be($user);
 
         return $this;

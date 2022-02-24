@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use App\Size;
+use App\Models\Size;
 use Illuminate\Database\Seeder;
 
 class SizeSeeder extends Seeder

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use App\Color;
+use App\Models\Color;
 use Illuminate\Database\Seeder;
 
 class ColorSeeder extends Seeder
@@ -14,6 +14,6 @@ class ColorSeeder extends Seeder
      */
     public function run()
     {
-        factory(Color::class, 100)->create();
+        Color::factory(100)->create();
     }
 }

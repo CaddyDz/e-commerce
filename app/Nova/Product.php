@@ -37,7 +37,7 @@ class Product extends Resource
      *
      * @var string
      */
-    public static $model = 'App\Product';
+    public static $model = 'App\Models\Product';
 
     /**
      * The single value that should be used to represent the resource when being displayed.
