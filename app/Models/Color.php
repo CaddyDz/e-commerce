@@ -28,9 +28,9 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  */
 class Color extends Model
 {
-    use HasFactory;
-    public function products(): BelongsToMany
-    {
-        return $this->belongsToMany(Product::class);
-    }
+	use HasFactory;
+	public function products(): BelongsToMany
+	{
+		return $this->belongsToMany(Product::class);
+	}
 }

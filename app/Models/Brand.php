@@ -38,15 +38,15 @@ use Illuminate\Database\Eloquent\Relations\{BelongsTo, HasMany};
  */
 class Brand extends Model
 {
-    use HasFactory, SoftDeletes;
+	use HasFactory, SoftDeletes;
 
-    public function products(): HasMany
-    {
-        return $this->hasMany(Product::class);
-    }
+	public function products(): HasMany
+	{
+		return $this->hasMany(Product::class);
+	}
 
-    public function category(): BelongsTo
-    {
-        return $this->belongsTo(Category::class);
-    }
+	public function category(): BelongsTo
+	{
+		return $this->belongsTo(Category::class);
+	}
 }

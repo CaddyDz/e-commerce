@@ -12,37 +12,37 @@ use Illuminate\Queue\InteractsWithQueue;
 
 class PrintOrder extends Action
 {
-    use InteractsWithQueue, Queueable;
+	use InteractsWithQueue, Queueable;
 
-    /**
-     * Get the displayable name of the action.
-     */
-    public function name(): string
-    {
-        return __('Print Order');
-    }
+	/**
+	 * Get the displayable name of the action.
+	 */
+	public function name(): string
+	{
+		return __('Print Order');
+	}
 
-    /**
-     * Perform the action on the given models.
-     *
-     * @param  \Laravel\Nova\Fields\ActionFields  $fields
-     * @param  \Illuminate\Support\Collection  $models
-     * @return mixed
-     */
-    public function handle(ActionFields $fields, Collection $models)
-    {
-        foreach ($models as $order) {
-            return Action::redirect("/print/order/$order->id");
-        }
-    }
+	/**
+	 * Perform the action on the given models.
+	 *
+	 * @param  \Laravel\Nova\Fields\ActionFields  $fields
+	 * @param  \Illuminate\Support\Collection  $models
+	 * @return mixed
+	 */
+	public function handle(ActionFields $fields, Collection $models)
+	{
+		foreach ($models as $order) {
+			return Action::redirect("/print/order/$order->id");
+		}
+	}
 
-    /**
-     * Get the fields available on the action.
-     *
-     * @return array
-     */
-    public function fields()
-    {
-        return [];
-    }
+	/**
+	 * Get the fields available on the action.
+	 *
+	 * @return array
+	 */
+	public function fields()
+	{
+		return [];
+	}
 }

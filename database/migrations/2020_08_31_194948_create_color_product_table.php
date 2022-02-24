@@ -8,27 +8,27 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateColorProductTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    public function up()
-    {
-        Schema::create('color_product', function (Blueprint $table) {
-            $table->unsignedBigInteger('product_id');
-            $table->unsignedBigInteger('color_id');
-            $table->unique(['product_id', 'color_id']);
-        });
-    }
+	/**
+	 * Run the migrations.
+	 *
+	 * @return void
+	 */
+	public function up()
+	{
+		Schema::create('color_product', function (Blueprint $table) {
+			$table->unsignedBigInteger('product_id');
+			$table->unsignedBigInteger('color_id');
+			$table->unique(['product_id', 'color_id']);
+		});
+	}
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::dropIfExists('color_product');
-    }
+	/**
+	 * Reverse the migrations.
+	 *
+	 * @return void
+	 */
+	public function down()
+	{
+		Schema::dropIfExists('color_product');
+	}
 }

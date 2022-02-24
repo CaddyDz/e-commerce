@@ -60,36 +60,36 @@ use Illuminate\Database\Eloquent\Relations\{BelongsTo, BelongsToMany};
  */
 class Order extends Model
 {
-    protected $guarded = []; // yolo
+	protected $guarded = []; // yolo
 
-    public function client(): BelongsTo
-    {
-        return $this->belongsTo(User::class);
-    }
+	public function client(): BelongsTo
+	{
+		return $this->belongsTo(User::class);
+	}
 
-    public function reviewer(): BelongsTo
-    {
-        return $this->belongsTo(User::class, 'reviewer_id');
-    }
+	public function reviewer(): BelongsTo
+	{
+		return $this->belongsTo(User::class, 'reviewer_id');
+	}
 
-    public function getIconAttribute(): string
-    {
-        switch ($this->status) {
-            case 'pending':
-                return 'entypo:circular-graph';
-            case 'suspended':
-                return 'entypo:controller-paus';
-            case 'validated':
-                return 'entypo:check';
-            case 'rejected':
-                return 'entypo:circle-with-cross';
-            default:
-                return 'entypo:controller-play';
-        }
-    }
+	public function getIconAttribute(): string
+	{
+		switch ($this->status) {
+			case 'pending':
+				return 'entypo:circular-graph';
+			case 'suspended':
+				return 'entypo:controller-paus';
+			case 'validated':
+				return 'entypo:check';
+			case 'rejected':
+				return 'entypo:circle-with-cross';
+			default:
+				return 'entypo:controller-play';
+		}
+	}
 
-    public function products(): BelongsToMany
-    {
-        return $this->BelongsToMany(Product::class)->withPivot(['quantity', 'size', 'color', 'age']);
-    }
+	public function products(): BelongsToMany
+	{
+		return $this->BelongsToMany(Product::class)->withPivot(['quantity', 'size', 'color', 'age']);
+	}
 }

@@ -9,15 +9,15 @@ use Illuminate\Foundation\Testing\{RefreshDatabase, WithFaker};
 
 class CartTest extends TestCase
 {
-    /**
-     * Assert we can access cart content.
-     *
-     * @return void
-     */
-    public function test_cart_content(): void
-    {
-        $response = $this->get('/');
+	/**
+	 * Assert we can access cart content.
+	 *
+	 * @return void
+	 */
+	public function test_cart_content(): void
+	{
+		$response = $this->get('/');
 
-        $response->assertStatus(200);
-    }
+		$response->assertStatus(200);
+	}
 }

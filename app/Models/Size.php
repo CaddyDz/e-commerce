@@ -29,8 +29,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  */
 class Size extends Model
 {
-    public function products(): BelongsToMany
-    {
-        return $this->belongsToMany(Product::class);
-    }
+	public function products(): BelongsToMany
+	{
+		return $this->belongsToMany(Product::class);
+	}
 }

@@ -10,15 +10,15 @@ use App\Observers\{CategoryObserver, OrderObserver, ProductsObserver};
 
 class ObserversServiceProvider extends ServiceProvider
 {
-    /**
-     * Bootstrap services.
-     *
-     * @return void
-     */
-    public function boot(): void
-    {
-        Product::observe(ProductsObserver::class);
-        Order::observe(OrderObserver::class);
-        Category::observe(CategoryObserver::class);
-    }
+	/**
+	 * Bootstrap services.
+	 *
+	 * @return void
+	 */
+	public function boot(): void
+	{
+		Product::observe(ProductsObserver::class);
+		Order::observe(OrderObserver::class);
+		Category::observe(CategoryObserver::class);
+	}
 }

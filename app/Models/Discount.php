@@ -31,18 +31,18 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  */
 class Discount extends Model
 {
-    use HasFactory;
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'expires_at' => 'date'
-    ];
+	use HasFactory;
+	/**
+	 * The attributes that should be cast.
+	 *
+	 * @var array
+	 */
+	protected $casts = [
+		'expires_at' => 'date'
+	];
 
-    public function product(): BelongsTo
-    {
-        return $this->belongsTo(Product::class);
-    }
+	public function product(): BelongsTo
+	{
+		return $this->belongsTo(Product::class);
+	}
 }

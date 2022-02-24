@@ -8,28 +8,28 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateSizesTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    public function up()
-    {
-        Schema::create('sizes', function (Blueprint $table) {
-            $table->id();
-            $table->string('code');
-            $table->string('label');
-            $table->timestamps();
-        });
-    }
+	/**
+	 * Run the migrations.
+	 *
+	 * @return void
+	 */
+	public function up()
+	{
+		Schema::create('sizes', function (Blueprint $table) {
+			$table->id();
+			$table->string('code');
+			$table->string('label');
+			$table->timestamps();
+		});
+	}
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::dropIfExists('sizes');
-    }
+	/**
+	 * Reverse the migrations.
+	 *
+	 * @return void
+	 */
+	public function down()
+	{
+		Schema::dropIfExists('sizes');
+	}
 }
