@@ -25,6 +25,7 @@
 	},
 	"require-dev": {
 		"barryvdh/laravel-ide-helper": "^2.8",
+		"brianium/paratest": "^6.4",
 		"facade/ignition": "^2.0",
 		"fakerphp/faker": "^1.13",
 		"mockery/mockery": "^1.3.1",
