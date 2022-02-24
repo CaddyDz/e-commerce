@@ -1,18 +1,9 @@
-# amel shop
+# E-commerce
 
-e commcerce website, that contains many brans
+Your average e-commerce site
 
-## user (admin user, signed user)
-products (buyable products)
-brands (used to categorize)
-
-### Dababase structre
-
-1-Brand : 
-- name 
-- logo
-2- product :
-- Name
-- Excert
-- Price
-- Size
+[![Laravel](https://github.com/CaddyDz/e-commerce/actions/workflows/laravel.yml/badge.svg)](https://github.com/CaddyDz/e-commerce/actions/workflows/laravel.yml)
+[![Laravel](https://github.com/CaddyDz/e-commerce/actions/workflows/laravel.yml/badge.svg)](https://github.com/CaddyDz/e-commerce/actions/workflows/laravel.yml)
+[![Check & fix styling](https://github.com/CaddyDz/e-commerce/actions/workflows/php-cs-fixer.yml/badge.svg)](https://github.com/CaddyDz/e-commerce/actions/workflows/php-cs-fixer.yml)
+[![/* Todo: */ => issue](https://github.com/CaddyDz/e-commerce/actions/workflows/todo.yml/badge.svg)](https://github.com/CaddyDz/e-commerce/actions/workflows/todo.yml)
+[![.github/workflows/analyze.yml](https://github.com/CaddyDz/e-commerce/actions/workflows/analyze.yml/badge.svg)](https://github.com/CaddyDz/e-commerce/actions/workflows/analyze.yml)
