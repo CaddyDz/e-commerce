@@ -29,11 +29,11 @@ use Illuminate\Database\Eloquent\Relations\{BelongsTo, BelongsToMany};
  * @property string|null $notes
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property-read \App\User $client
+ * @property-read \App\Models\User $client
  * @property-read string $icon
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Product[] $products
  * @property-read int|null $products_count
- * @property-read \App\User|null $reviewer
+ * @property-read \App\Models\User|null $reviewer
  * @method static \Illuminate\Database\Eloquent\Builder|Order newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Order newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Order query()

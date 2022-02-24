@@ -16,7 +16,7 @@ abstract class TestCase extends BaseTestCase
      *
      * @param Illuminate\Contracts\Auth\Authenticatable
      *
-     * @return App\User authenticated
+     * @return App\Models\User authenticated
     */
     protected function login($user = null)
     {

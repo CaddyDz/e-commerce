@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Policies;
 
-use App\User;
+use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class UserPolicy
@@ -14,7 +14,7 @@ class UserPolicy
     /**
      * Determine whether the user can view any models.
      *
-     * @param \App\User $user the request performer.
+     * @param \App\Models\User $user the request performer.
      *
      * @return bool
      */
@@ -26,8 +26,8 @@ class UserPolicy
     /**
      * Determine whether the user can view the model.
      *
-     * @param \App\User $user the request performer.
-     * @param \App\User $model the action target user model.
+     * @param \App\Models\User $user the request performer.
+     * @param \App\Models\User $model the action target user model.
      *
      * @return bool
      */
@@ -39,8 +39,8 @@ class UserPolicy
     /**
      * Determine whether the user can create models.
      *
-     * @param \App\User $user the request performer.
-     * 
+     * @param \App\Models\User $user the request performer.
+     *
      * @return bool
      */
     public function create(User $user): bool
@@ -51,8 +51,8 @@ class UserPolicy
     /**
      * Determine whether the user can update the model.
      *
-     * @param \App\User $user the request performer.
-     * @param \App\User $model the action target user model.
+     * @param \App\Models\User $user the request performer.
+     * @param \App\Models\User $model the action target user model.
      *
      * @return bool
      */
@@ -64,8 +64,8 @@ class UserPolicy
     /**
      * Determine whether the user can delete the model.
      *
-     * @param \App\User $user the request performer.
-     * @param \App\User $model the action target user object.
+     * @param \App\Models\User $user the request performer.
+     * @param \App\Models\User $model the action target user object.
      *
      * @return bool
      */
@@ -77,8 +77,8 @@ class UserPolicy
     /**
      * Determine whether the user can restore the model.
      *
-     * @param \App\User $user the request performer.
-     * @param \App\User $model the action target user object.
+     * @param \App\Models\User $user the request performer.
+     * @param \App\Models\User $model the action target user object.
      *
      * @return bool
      */
@@ -90,8 +90,8 @@ class UserPolicy
     /**
      * Determine whether the user can permanently delete the model.
      *
-     * @param \App\User $user the request performer.
-     * @param \App\User $model the action target user object. 
+     * @param \App\Models\User $user the request performer.
+     * @param \App\Models\User $model the action target user object.
      *
      * @return bool
      */
