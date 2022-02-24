@@ -13,7 +13,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        php-versions: ["7.4"]
+        php-versions: ["8.0"]
 
     runs-on: ubuntu-latest
     if: "! contains(toJSON(github.event.commits.*.message), '[skip ci]')"
@@ -21,7 +21,7 @@ jobs:
     steps:
     - uses: shivammathur/setup-php@v2
       with:
-        php-version: '7.4'
+        php-version: '8.0'
     - uses: actions/checkout@v2
     - name: Authenticate dependencies
       run: composer config http-basic.nova.laravel.com ${{ secrets.NOVA_USERNAME }} ${{ secrets.NOVA_API_TOKEN }}
