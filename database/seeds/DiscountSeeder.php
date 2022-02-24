@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use App\Models\{Discount, Product};
 use Illuminate\Database\Seeder;
+use App\Models\{Discount, Product};
 
 class DiscountSeeder extends Seeder
 {

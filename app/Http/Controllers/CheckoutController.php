@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
-use App\Models\{Order, Shipping};
 use Illuminate\Http\Request;
+use App\Models\{Order, Shipping};
 use Gloudemans\Shoppingcart\Facades\Cart;
 
 class CheckoutController extends Controller

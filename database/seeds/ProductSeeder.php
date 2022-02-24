@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use App\Models\{Brand, Product};
 use Illuminate\Database\Seeder;
+use App\Models\{Brand, Product};
 use Illuminate\Support\Facades\Storage;
 
 class ProductSeeder extends Seeder
