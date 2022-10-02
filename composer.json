@@ -12,7 +12,7 @@
 		"laravel/framework": "^8.32",
 		"laravel/nova": "^3.22",
 		"laravel/tinker": "^2.0",
-		"laravel/ui": "^3.1",
+		"laravel/ui": "^3.4",
 		"optimistdigital/nova-multiselect-field": "^1.9",
 		"scadini/nova-icon": "^0.2.1",
 		"sentry/sentry-laravel": "^2.4.1",
