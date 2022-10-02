@@ -20,7 +20,7 @@
 		"timothyasp/nova-badge-field": "^1.0",
 		"timothyasp/nova-color-field": "master",
 		"titasgailius/search-relations": "^1.0",
-		"vyuldashev/nova-permission": "^2.9",
+		"vyuldashev/nova-permission": "^3.1",
 		"zoxta/nova-cloudflare-card": "master"
 	},
 	"require-dev": {
