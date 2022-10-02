@@ -24,7 +24,7 @@
 		"zoxta/nova-cloudflare-card": "master"
 	},
 	"require-dev": {
-		"barryvdh/laravel-ide-helper": "^2.8",
+		"barryvdh/laravel-ide-helper": "^2.12",
 		"brianium/paratest": "^6.4",
 		"facade/ignition": "^2.0",
 		"fakerphp/faker": "^1.13",
