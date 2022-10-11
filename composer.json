@@ -15,7 +15,7 @@
 		"laravel/ui": "^3.1",
 		"optimistdigital/nova-multiselect-field": "^1.9",
 		"scadini/nova-icon": "^0.2.1",
-		"sentry/sentry-laravel": "^2.4.1",
+		"sentry/sentry-laravel": "^2.14.1",
 		"tightenco/nova-google-analytics": "^0.3.1",
 		"timothyasp/nova-badge-field": "^1.0",
 		"timothyasp/nova-color-field": "master",
