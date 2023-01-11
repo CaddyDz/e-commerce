@@ -11,7 +11,7 @@
 		"kabbouchi/nova-logs-tool": "^0.3.0",
 		"laravel/framework": "^8.32",
 		"laravel/nova": "^3.22",
-		"laravel/tinker": "^2.0",
+		"laravel/tinker": "^2.8",
 		"laravel/ui": "^3.1",
 		"optimistdigital/nova-multiselect-field": "^1.9",
 		"scadini/nova-icon": "^0.2.1",
